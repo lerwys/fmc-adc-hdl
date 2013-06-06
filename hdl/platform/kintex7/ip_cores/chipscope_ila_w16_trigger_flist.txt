@@ -1,0 +1,12 @@
+# Output products list for <chipscope_ila_w16_trigger>
+chipscope_ila_w16_trigger.asy
+chipscope_ila_w16_trigger.cdc
+chipscope_ila_w16_trigger.gise
+chipscope_ila_w16_trigger.ngc
+chipscope_ila_w16_trigger.v
+chipscope_ila_w16_trigger.veo
+chipscope_ila_w16_trigger.xco
+chipscope_ila_w16_trigger.xise
+chipscope_ila_w16_trigger_flist.txt
+chipscope_ila_w16_trigger_readme.txt
+chipscope_ila_w16_trigger_xmdf.tcl

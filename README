@@ -1,0 +1,27 @@
+==============================================================================
+
+Repository containing the FPGA firmware for two FMC boards:
+FMC ADC 130M (active and passive) and FMC ADC 250M (active and passive) firmware.
+Currently it supports ML605 (Virtex6) KC705 (Kintex7) kits from Xilinx.
+
+==============================================================================
+
+Synthesis Instructions:
+
+  -> Go to a syn directory. It must have a top manifest file:
+    cd /hdl/syn/path_to_syn_design
+
+  -> Run the following commands. You must have hdlmake2 command available
+      in your PATH environment variable (see https://github.com/lerwys/hdl-make2)
+
+  -> Create the synthesis makefile and an ISE project
+
+1 - hdlmake2 --make-ise --ise-proj
+
+  -> Compile the source files locally
+
+2 - make local
+
+  -> Load the generated .bit file with iMPACT or other tool
+
+3 - impact

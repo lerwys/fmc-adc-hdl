@@ -1,0 +1,224 @@
+#--------------------------------
+#       Virtex6 Board ML605
+#--------------------------------
+
+NET "sys_clk_i_n"                             LOC = H9   | IOSTANDARD = LVDS_25; # 5 on U11, 5 on U89 (DNP)
+NET "sys_clk_i_p"                             LOC = J9   | IOSTANDARD = LVDS_25; # 4 on U11, 4 on U89 (DNP)
+
+NET "rs232_rxd_i"                             LOC = J24  | IOSTANDARD = LVCMOS25; # 25 on U34
+NET "rs232_txd_o"                             LOC = J25  | IOSTANDARD = LVCMOS25; # 24 on U34
+
+#--------------------------------
+#       FMC Connector HPC
+#--------------------------------
+
+NET  "fmc_prsnt_i"                            LOC = AP25 | IOSTANDARD = "LVCMOS25";
+NET  "fmc_pg_m2c_i"                           LOC = AK29 | IOSTANDARD = "LVCMOS25"; // LA31_N
+
+// Trigger
+NET "fmc_trig_dir_o"                          LOC = AK27 | IOSTANDARD = "LVCMOS25"; // LA28_P
+NET "fmc_trig_term_o"                         LOC = AL25 | IOSTANDARD = "LVCMOS25"; // LA26_N
+NET "fmc_trig_val_o_p"                        LOC = AG25 | IOSTANDARD = "BLVDS_25"; // LA32_P
+NET "fmc_trig_val_o_n"                        LOC = AG26 | IOSTANDARD = "BLVDS_25"; // LA32_N
+
+// Si571 clock gen
+NET "si571_scl_pad"                           LOC = AE32 | IOSTANDARD = "LVCMOS25"; // HA12_N
+NET "si571_sda_pad"                           LOC = AE31 | IOSTANDARD = "LVCMOS25"; // HA13_P
+NET "fmc_si571_oe_o"                          LOC = AD32 | IOSTANDARD = "LVCMOS25"; // HA12_P
+
+// AD9510 clock distribution PLL
+NET "spi_ad9510_cs"                           LOC = AN18 | IOSTANDARD = "LVCMOS25";  // LA13_N
+NET "spi_ad9510_sclk_o"                       LOC = AP19 | IOSTANDARD = "LVCMOS25"; // LA13_P
+NET "spi_ad9510_mosi_o"                       LOC = AL18 | IOSTANDARD = "LVCMOS25"; // LA09_N
+NET "spi_ad9510_miso_i"                       LOC = AN19 | IOSTANDARD = "LVCMOS25"; // LA14_P
+NET "fmc_pll_function_o"                      LOC = AN20 | IOSTANDARD = "LVCMOS25"; // LA14_N
+NET "fmc_pll_status_i"                        LOC = AM18 | IOSTANDARD = "LVCMOS25"; // LA09_P
+
+#NET "fmc_fpga_clk_p"                         LOC = K24  | IOSTANDARD = "LVDS_25"; // CLK0_M2C_P
+#NET "fmc_fpga_clk_n"                         LOC = K23  | IOSTANDARD = "LVDS_25"; // CLK0_M2C_N
+
+// Clock reference selection (TS3USB221)
+NET "fmc_clk_sel_o"                           LOC = AL29 | IOSTANDARD = "LVCMOS25"; // LA31_P
+
+// EEPROM (multiplexer PCA9548)
+NET "eeprom_scl_pad"                          LOC = AK9  | IOSTANDARD ="LVCMOS25"; # SCL C30
+NET "eeprom_sda_pad"                          LOC = AE9  | IOSTANDARD ="LVCMOS25"; # SDA C31
+
+// LM75 temperature monitor (can be used without multiplexer on KC705 board)
+NET "lm75_scl_pad"                            LOC = AP30 | IOSTANDARD = "LVCMOS25"; // LA27_P
+NET "lm75_sda_pad"                            LOC = AP31 | IOSTANDARD = "LVCMOS25"; // LA27_N
+NET "fmc_lm75_temp_alarm_i"                   LOC = AJ27 | IOSTANDARD = "LVCMOS25"; // LA28_N
+
+// LTC ADC control pins
+NET "fmc_adc_pga_o"                           LOC = AG20 | IOSTANDARD = "LVCMOS25"; // LA06_P
+NET "fmc_adc_shdn_o"                          LOC = AL20 | IOSTANDARD = "LVCMOS25"; // LA10_N
+NET "fmc_adc_dith_o"                          LOC = AM20 | IOSTANDARD = "LVCMOS25"; // LA10_P
+NET "fmc_adc_rand_o"                          LOC = AG21 | IOSTANDARD = "LVCMOS25"; // LA06_N
+
+// LEDs
+NET "fmc_led1_o"                              LOC = AN23 | IOSTANDARD = "LVCMOS25"; // LA16_N
+NET "fmc_led2_o"                              LOC = AP22 | IOSTANDARD = "LVCMOS25"; // LA16_P
+NET "fmc_led3_o"                              LOC = AM25 | IOSTANDARD = "LVCMOS25";  // LA26_P
+
+NET "board_led1_o"                            LOC = AC22 | IOSTANDARD = LVCMOS25 | DRIVE = 12 | SLEW = SLOW; // User led 0
+NET "board_led2_o"                            LOC = AC24 | IOSTANDARD = LVCMOS25 | DRIVE = 12 | SLEW = SLOW; // User led 1
+NET "board_led3_o"                            LOC = AE22 | IOSTANDARD = LVCMOS25 | DRIVE = 12 | SLEW = SLOW; // User led 2
+
+#--------------------------------
+#       FMC Connector HPC
+#         LTC ADC lines
+#--------------------------------
+
+// ADC0
+NET "fmc_adc0_clk"                            LOC = AN27  | IOSTANDARD = "LVCMOS25"; // LA17_CC_P
+
+NET "fmc_adc0_data[0]"                        LOC = AN30  | IOSTANDARD = "LVCMOS25"; // LA24_P
+NET "fmc_adc0_data[1]"                        LOC = AM30  | IOSTANDARD = "LVCMOS25"; // LA24_N
+NET "fmc_adc0_data[2]"                        LOC = AN28  | IOSTANDARD = "LVCMOS25"; // LA25_P
+NET "fmc_adc0_data[3]"                        LOC = AM28  | IOSTANDARD = "LVCMOS25"; // LA25_N
+NET "fmc_adc0_data[4]"                        LOC = AN29  | IOSTANDARD = "LVCMOS25"; // LA21_P
+NET "fmc_adc0_data[5]"                        LOC = AP29  | IOSTANDARD = "LVCMOS25"; // LA21_N
+NET "fmc_adc0_data[6]"                        LOC = AP27  | IOSTANDARD = "LVCMOS25"; // LA22_P
+NET "fmc_adc0_data[7]"                        LOC = AP26  | IOSTANDARD = "LVCMOS25"; // LA22_N
+NET "fmc_adc0_data[8]"                        LOC = AM26  | IOSTANDARD = "LVCMOS25"; // LA23_N
+NET "fmc_adc0_data[9]"                        LOC = AN24  | IOSTANDARD = "LVCMOS25"; // LA19_N
+NET "fmc_adc0_data[10]"                       LOC = AJ25  | IOSTANDARD = "LVCMOS25"; // LA18_CC_N
+NET "fmc_adc0_data[11]"                       LOC = AL26  | IOSTANDARD = "LVCMOS25"; // LA23_P
+NET "fmc_adc0_data[12]"                       LOC = AL24  | IOSTANDARD = "LVCMOS25"; // LA20_N
+NET "fmc_adc0_data[13]"                       LOC = AN25  | IOSTANDARD = "LVCMOS25"; // LA19_P
+NET "fmc_adc0_data[14]"                       LOC = AH25  | IOSTANDARD = "LVCMOS25"; // LA18_CC_P
+NET "fmc_adc0_data[15]"                       LOC = AK23  | IOSTANDARD = "LVCMOS25"; // LA20_P
+NET "fmc_adc0_of"                             LOC = AL28  | IOSTANDARD = "LVCMOS25"; // LA29_P
+
+// ADC1
+NET "fmc_adc1_clk"                            LOC = V30   | IOSTANDARD = "LVCMOS25"; // HA17_CC_P
+
+NET "fmc_adc1_data[15]"                       LOC = AD34  | IOSTANDARD = "LVCMOS25"; // HA10_P
+NET "fmc_adc1_data[14]"                       LOC = AG33  | IOSTANDARD = "LVCMOS25"; // HA11_P
+NET "fmc_adc1_data[13]"                       LOC = AC34  | IOSTANDARD = "LVCMOS25"; // HA10_N
+NET "fmc_adc1_data[12]"                       LOC = AG32  | IOSTANDARD = "LVCMOS25"; // HA11_N
+NET "fmc_adc1_data[11]"                       LOC = AB32  | IOSTANDARD = "LVCMOS25"; // HA15_P
+NET "fmc_adc1_data[10]"                       LOC = AA30  | IOSTANDARD = "LVCMOS25"; // HA14_P
+NET "fmc_adc1_data[9]"                        LOC = AC32  | IOSTANDARD = "LVCMOS25"; // HA15_N
+NET "fmc_adc1_data[8]"                        LOC = AA31  | IOSTANDARD = "LVCMOS25"; // HA14_N
+NET "fmc_adc1_data[7]"                        LOC = T34   | IOSTANDARD = "LVCMOS25"; // HA18_N
+NET "fmc_adc1_data[6]"                        LOC = T33   | IOSTANDARD = "LVCMOS25"; // HA18_P
+NET "fmc_adc1_data[5]"                        LOC = U32   | IOSTANDARD = "LVCMOS25"; // HA19_N
+NET "fmc_adc1_data[4]"                        LOC = U31   | IOSTANDARD = "LVCMOS25"; // HA21_P
+NET "fmc_adc1_data[3]"                        LOC = U28   | IOSTANDARD = "LVCMOS25"; // HA22_P
+NET "fmc_adc1_data[2]"                        LOC = U30   | IOSTANDARD = "LVCMOS25"; // HA21_N
+NET "fmc_adc1_data[1]"                        LOC = U26   | IOSTANDARD = "LVCMOS25"; // HA23_P
+NET "fmc_adc1_data[0]"                        LOC = V29   | IOSTANDARD = "LVCMOS25"; // HA22_N
+NET "fmc_adc1_of"                             LOC = U27   | IOSTANDARD = "LVCMOS25"; // HA23_N
+
+// ADC2
+NET "fmc_adc2_clk"                            LOC = AF20  | IOSTANDARD = "LVCMOS25"; // LA00_CC_P
+
+NET "fmc_adc2_data[15]"                       LOC = AK19  | IOSTANDARD = "LVCMOS25"; // LA01_CC_P
+NET "fmc_adc2_data[14]"                       LOC = AC20  | IOSTANDARD = "LVCMOS25"; // LA02_P
+NET "fmc_adc2_data[13]"                       LOC = AL19  | IOSTANDARD = "LVCMOS25"; // LA01_CC_N
+NET "fmc_adc2_data[12]"                       LOC = AD20  | IOSTANDARD = "LVCMOS25"; // LA02_N
+NET "fmc_adc2_data[11]"                       LOC = AD19  | IOSTANDARD = "LVCMOS25"; // LA03_N
+NET "fmc_adc2_data[10]"                       LOC = AC19  | IOSTANDARD = "LVCMOS25"; // LA03_P
+NET "fmc_adc2_data[9]"                        LOC = AE19  | IOSTANDARD = "LVCMOS25"; // LA04_N
+NET "fmc_adc2_data[8]"                        LOC = AF19  | IOSTANDARD = "LVCMOS25"; // LA04_P
+NET "fmc_adc2_data[7]"                        LOC = AH22  | IOSTANDARD = "LVCMOS25"; // LA05_N
+NET "fmc_adc2_data[6]"                        LOC = AG22  | IOSTANDARD = "LVCMOS25"; // LA05_P
+NET "fmc_adc2_data[5]"                        LOC = AJ22  | IOSTANDARD = "LVCMOS25"; // LA08_N
+NET "fmc_adc2_data[4]"                        LOC = AK22  | IOSTANDARD = "LVCMOS25"; // LA08_P
+NET "fmc_adc2_data[3]"                        LOC = AJ21  | IOSTANDARD = "LVCMOS25"; // LA07_N
+NET "fmc_adc2_data[2]"                        LOC = AK21  | IOSTANDARD = "LVCMOS25"; // LA07_P
+NET "fmc_adc2_data[1]"                        LOC = AL21  | IOSTANDARD = "LVCMOS25"; // LA12_N
+NET "fmc_adc2_data[0]"                        LOC = AM21  | IOSTANDARD = "LVCMOS25"; // LA12_P
+NET "fmc_adc2_of"                             LOC = AM22  | IOSTANDARD = "LVCMOS25"; // LA11_P
+
+// ADC3
+NET "fmc_adc3_clk"                            LOC = AD29  | IOSTANDARD = "LVCMOS25"; // HA01_CC_P
+
+NET "fmc_adc3_data[15]"                       LOC = AF33  | IOSTANDARD = "LVCMOS25"; // HA00_CC_N
+NET "fmc_adc3_data[14]"                       LOC = AE33  | IOSTANDARD = "LVCMOS25"; // HA00_CC_P
+NET "fmc_adc3_data[13]"                       LOC = AC27  | IOSTANDARD = "LVCMOS25"; // HA05_N
+NET "fmc_adc3_data[12]"                       LOC = AB27  | IOSTANDARD = "LVCMOS25"; // HA05_P
+NET "fmc_adc3_data[11]"                       LOC = AC28  | IOSTANDARD = "LVCMOS25"; // HA04_N
+NET "fmc_adc3_data[10]"                       LOC = AB28  | IOSTANDARD = "LVCMOS25"; // HA04_P
+NET "fmc_adc3_data[9]"                        LOC = AB31  | IOSTANDARD = "LVCMOS25"; // HA09_N
+NET "fmc_adc3_data[8]"                        LOC = AB30  | IOSTANDARD = "LVCMOS25"; // HA09_P
+NET "fmc_adc3_data[7]"                        LOC = Y26   | IOSTANDARD = "LVCMOS25"; // HA03_N
+NET "fmc_adc3_data[6]"                        LOC = AA25  | IOSTANDARD = "LVCMOS25"; // HA03_P
+NET "fmc_adc3_data[5]"                        LOC = AG31  | IOSTANDARD = "LVCMOS25"; // HA08_P
+NET "fmc_adc3_data[4]"                        LOC = AB25  | IOSTANDARD = "LVCMOS25"; // HA02_P
+NET "fmc_adc3_data[3]"                        LOC = AA26  | IOSTANDARD = "LVCMOS25"; // HA07_P
+NET "fmc_adc3_data[2]"                        LOC = AC25  | IOSTANDARD = "LVCMOS25"; // HA02_N
+NET "fmc_adc3_data[1]"                        LOC = AA28  | IOSTANDARD = "LVCMOS25"; // HA06_P
+NET "fmc_adc3_data[0]"                        LOC = AB26  | IOSTANDARD = "LVCMOS25"; // HA07_N
+NET "fmc_adc3_of"                             LOC = AA29  | IOSTANDARD = "LVCMOS25"; // HA06_N
+
+#--------------------------------
+#     Pinout and Related I/O Constraints
+#--------------------------------
+
+# On ML605 kit, all clock pins are assigned to MRCC pins. However, two of them
+# (fmc_adc1_clk and fmc_adc3_clk) are located in the outer left/right column
+# I/Os. These locations cannot connect to BUFG primitives, only inner (center)
+# left/right column I/Os on the same half top/bottom can!
+#
+# For 7-series FPGAs there is no such impediment, apparently.
+
+#--------------------------------
+#       DIFF TERM
+#--------------------------------
+NET "sys_clk_i_p" DIFF_TERM = TRUE;
+NET "sys_clk_i_n" DIFF_TERM = TRUE;
+
+NET "fmc_trig_val_o_p" DIFF_TERM = TRUE;
+NET "fmc_trig_val_o_n" DIFF_TERM = TRUE;
+
+#NET "fmc_fpga_clk_p" DIFF_TERM = TRUE;
+#NET "fmc_fpga_clk_n" DIFF_TERM = TRUE;
+
+#--------------------------------
+#       Timing constraints
+#--------------------------------
+#--------------------------------
+#             Clocks
+#--------------------------------
+NET "sys_clk_i_p" TNM_NET = sys_clk_i_p;
+TIMESPEC TS_sys_clk_i_p = PERIOD "sys_clk_i_p" 200 MHz HIGH 50% INPUT_JITTER 50 ps;
+
+// real jitter is about 22ps peak-to-peak
+NET "fmc_adc0_clk" TNM_NET = fmc_adc0_clk;
+TIMESPEC TS_fmc_adc0_clk = PERIOD "fmc_adc0_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+
+NET "fmc_adc1_clk" TNM_NET = fmc_adc1_clk;
+TIMESPEC TS_fmc_adc1_clk = PERIOD "fmc_adc1_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+
+NET "fmc_adc2_clk" TNM_NET = fmc_adc2_clk;
+TIMESPEC TS_fmc_adc2_clk = PERIOD "fmc_adc2_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+
+NET "fmc_adc3_clk" TNM_NET = fmc_adc3_clk;
+TIMESPEC TS_fmc_adc3_clk = PERIOD "fmc_adc3_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+
+//NET "fmc_fpga_clk_p" TNM_NET = fmc_fpga_clk_p;
+//TIMESPEC TS_fmc_fpga_clk_p = PERIOD "fmc_fpga_clk_p" 130 MHz HIGH 50% INPUT_JITTER 40 ps;
+
+#--------------------------------
+#             Data
+#--------------------------------
+#INST "fmc_adc_130m_4ch_i/ltcInterface_adc0_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y1;
+#INST "fmc_adc_130m_4ch_i/ltcInterface_adc1_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y2;
+#INST "fmc_adc_130m_4ch_i/ltcInterface_adc2_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y0;
+#INST "fmc_adc_130m_4ch_i/ltcInterface_adc3_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y1; // same as ADC1
+
+// including 50ps jitter, for 130MHz clock
+// since design uses copy of input ADC clock
+// there is additional delay for clock/ data (tC)
+
+INST "fmc_adc0_data<*>" TNM = fmc_adc0_data;
+INST "fmc_adc1_data<*>" TNM = fmc_adc1_data;
+INST "fmc_adc2_data<*>" TNM = fmc_adc2_data;
+INST "fmc_adc3_data<*>" TNM = fmc_adc3_data;
+
+TIMEGRP "fmc_adc0_data" OFFSET = IN -0.7 ns VALID 7.6 ns BEFORE "fmc_adc0_clk";
+TIMEGRP "fmc_adc1_data" OFFSET = IN -0.7 ns VALID 7.6 ns BEFORE "fmc_adc1_clk";
+TIMEGRP "fmc_adc2_data" OFFSET = IN -0.7 ns VALID 7.6 ns BEFORE "fmc_adc2_clk";
+TIMEGRP "fmc_adc3_data" OFFSET = IN -0.7 ns VALID 7.6 ns BEFORE "fmc_adc3_clk";

@@ -1,0 +1,14 @@
+run
+-top example_chipscope_icon
+-ifn example_chipscope_icon.prj
+-ofmt NGC
+-ofn example_chipscope_icon.ngc
+-p xc7k325t-ffg900-2
+-ifmt mixed
+-opt_mode Speed
+-opt_level 2
+-read_cores YES
+-bufg 0
+-iobuf YES
+#-iob auto
+ 

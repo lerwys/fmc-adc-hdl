@@ -1,0 +1,1 @@
+./wbgen2 -D fmc_250m_4ch_regs.htm -l vhdl -V fmc_250m_4ch_regs.vhd fmc_250m_4ch_regs.wb

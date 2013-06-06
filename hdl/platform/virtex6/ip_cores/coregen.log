@@ -1,0 +1,51 @@
+CoreGen has not been configured with any user repositories.
+CoreGen has been configured with the following Xilinx repositories:
+ - '/opt/Xilinx/13.2/ISE_DS/ISE/coregen/' [reloaded]
+INFO:sim - Generating component instance 'adc_clk' of
+   'xilinx.com:ip:clk_wiz:3.2' from
+   '/opt/Xilinx/13.2/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/clk_wiz_
+   v3_2/component.xml'.
+Applying current project options...
+Finished applying current project options.
+WARNING:sim - A core named 'adc_clk' already exists in the project. Output
+   products for this core may be overwritten.
+Resolving generics for 'adc_clk'...
+WARNING:sim - A core named 'adc_clk' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'adc_clk'...
+Delivering associated files for 'adc_clk'...
+Delivered 3 files into directory
+/home/andrzej/Pulpit/FMC_projekt/FMC_ADC_130M_4CH/hdl/ip_cores/tmp/_cg/adc_clk
+Delivered 4 files into directory
+/home/andrzej/Pulpit/FMC_projekt/FMC_ADC_130M_4CH/hdl/ip_cores/tmp/_cg/adc_clk
+Delivered 1 file into directory
+/home/andrzej/Pulpit/FMC_projekt/FMC_ADC_130M_4CH/hdl/ip_cores/tmp/_cg/adc_clk
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '7k325t.nph' in environment
+/opt/Xilinx/13.2/ISE_DS/ISE/.
+ERROR:sim - Tcl error detected initializing IP data model:
+   syntax error in expression "600,000 / 1440,000": extra tokens at end of
+   expression
+       while executing
+   "expr $c_min_vco_freq / $c_max_vco_freq "
+       (procedure "clk_wiz_v3_2_utils::setup_valid_infreq_range_label2" line 16)
+       invoked from within
+   "clk_wiz_v3_2_utils::setup_valid_infreq_range_label2"
+       (file
+   "/opt/Xilinx/13.2/ISE_DS/ISE/coregen/ip/xilinx/primary/com/xilinx/ip/clk_wiz_
+   v3_2/gui/clk_wiz_v3_2.tcl" line 1057)
+ERROR:sim:824 - Something went wrong while preparing for IP customization.ERROR:sim - Clkout1_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - Clkout2_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - Clkout3_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - Clkout4_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - Clkout5_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - Clkout6_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - Clkout7_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - IP initializer could not set parameters on IP model
+ERROR:sim - Clkout1_Requested_Out_Freq: Invalid Double range '[4,687..933,000]'.
+ERROR:sim - Failed to initialize IP model.
+ERROR:sim - Failed to generate ASY schematic symbol.
+ERROR:sim - Failed to generate 'adc_clk'.  Failed to generate ASY schematic
+   symbol.
+
+Wrote CGP file for project 'adc_clk'.

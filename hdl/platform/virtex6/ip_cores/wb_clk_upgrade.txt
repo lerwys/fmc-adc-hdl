@@ -1,0 +1,5 @@
+Tue May 28 21:20:31 2013
+
+Upgraded wb_clk from Clocking Wizard 3.2 to Clocking Wizard 3.3
+
+No changes made to parameter values.

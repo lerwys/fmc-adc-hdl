@@ -8,20 +8,38 @@ Currently it supports ML605 (Virtex6) KC705 (Kintex7) kits from Xilinx.
 
 Synthesis Instructions:
 
+  -> Fetch all remote modules
+
+1 - hdlmake2 --fetch
+
   -> Go to a syn directory. It must have a top manifest file:
-    cd /hdl/syn/path_to_syn_design
+
+2 - cd hdl/syn/path_to_syn_design
 
   -> Run the following commands. You must have hdlmake2 command available
       in your PATH environment variable (see https://github.com/lerwys/hdl-make2)
 
   -> Create the synthesis makefile and an ISE project
 
-1 - hdlmake2 --make-ise --ise-proj
+3 - hdlmake2 --make-ise --ise-proj
 
   -> Compile the source files locally
 
-2 - make local
+4 - make local
 
-  -> Load the generated .bit file with iMPACT or other tool
+  -> Load the generated .bit file with iMPACT script.
 
-3 - impact
+5 - cd hdl/syn/loader
+
+  -> Execute script.
+
+      <bitstream> will usually be one of the following:
+
+      syn/fmc130m_kc705/kintex7_fmc_adc_130m_4ch.bit
+      syn/fmc130m_ml605/virtex6_fmc_adc_130m_4ch.bit
+      syn/fmc250m_kc705/kintex7_fmc_adc_250m_4ch.bit
+      syn/fmc250m_ml605/virtex6_fmc_adc_250m_4ch.bit
+
+6 - ./program_fpga <bitstream>
+
+

@@ -38,18 +38,36 @@ module ltcInterface(
 parameter IDELAY_SIGNAL_GROUP = "adc0_data_delay_group";
 parameter FPGA_DEVICE = "VIRTEX6";
 
+// Small fifo depth. This FIFO is intended just to cross phase-mismatched
+// clock domains (BUFR -> BUFG), but frequency locked
+localparam c_async_fifo_size = 16;
+localparam c_num_adc_bits = 17;
+localparam c_num_fifo_guard_bits = 3;
+
 genvar i;
 
 wire [16:0]adc0_del;
 wire [4:0]adc0_read_reg[16:0];
 
 wire adc0_data_in_w[16:0] = {adc0_ov_in, adc0_data_in[15:0]};
+wire [16:0]adc0_data_out_d;
+
 
 //clock signals
 wire adc0_clk_ibufg_out;
 wire adc0_clk_bufr_out;
 wire adc0_clk_bufg_in;
 wire adc0_clk_out_w;
+wire rst_n;
+
+// fifo signals
+reg adc_data_valid_out;
+wire adc_fifo_full;
+wire adc_fifo_empty;
+wire adc_fifo_wr;
+wire adc_fifo_rd;
+
+assign rst_n = !rst;
 
 // control value
 assign adc0_delay_reg_read[4:0] = adc0_read_reg[0];
@@ -98,7 +116,7 @@ BUFG BUFG_ADC0_CLK_inst (
    .I(adc0_clk_bufg_in)  // 1-bit input: Clock input
 );
 
-assign adc0_clk_out = !adc0_clk_out_w;
+assign adc0_clk_out = adc0_clk_out_w;
 
 // ===============================================
 //              Data path calibration
@@ -136,7 +154,7 @@ generate
             )
             IODELAYE1_adc0_inst (
               .CNTVALUEOUT(adc0_read_reg[i]), // 5-bit output: Counter value output
-              .DATAOUT(adc0_data_out[i]),         // 1-bit output: Delayed data output
+              .DATAOUT(adc0_data_out_d[i]),         // 1-bit output: Delayed data output
               .C(sys_clk),                     // 1-bit input: Clock input
               .CE(1'b0),                   // 1-bit input: Active high enable increment/decrement input
               .CINVCTRL(1'b0),       // 1-bit input: Dynamic clock inversion input
@@ -164,7 +182,7 @@ generate
             )
             IDELAYE2_adc0_inst (
                 .CNTVALUEOUT(adc0_read_reg[i]), // 5-bit output: Counter value output
-                .DATAOUT(adc0_data_out[i]),         // 1-bit output: Delayed data output
+                .DATAOUT(adc0_data_out_d[i]),         // 1-bit output: Delayed data output
                 .C(sys_clk),                     // 1-bit input: Clock input
                 .CE(1'b0),                   // 1-bit input: Active high enable increment/decrement input
                 .CINVCTRL(1'b0),       // 1-bit input: Dynamic clock inversion input
@@ -206,6 +224,58 @@ endgenerate
 //      .LDPIPEEN(1'b0),       // 1-bit input: Enable PIPELINE register to load data input
 //      .REGRST(rst)            // 1-bit input: Active-high reset tap-delay input
 //   );
+
+generate
+  if (FPGA_DEVICE == "VIRTEX6") begin: ADC_IDDR_VIRTEX6
+    // BUFG and BUFR/BUFIO are not guaranteed to be phase-matched,
+    // as they drive independently clock nets. Hence, a FIFO is needed to employ
+    // a clock domain crossing.
+    //inferred_async_fifo
+    generic_async_fifo #(
+      .g_data_width(c_num_adc_bits),
+      .g_size(c_async_fifo_size),
+      .g_almost_empty_threshold(c_num_fifo_guard_bits),
+      .g_almost_full_threshold(c_async_fifo_size - c_num_fifo_guard_bits)
+    ) async_fifo (
+      .rst_n_i     (rst_n),
+
+      // write port
+      .clk_wr_i    (adc0_clk_bufr_out),
+      .d_i         (adc0_data_out_d),
+      .we_i        (adc_fifo_wr),
+      //.we_i        (1'b1),
+      .wr_full_o   (adc_fifo_full),
+
+      // read port
+      .clk_rd_i    (adc0_clk_out_w),
+      .q_o         (adc0_data_out),
+      .rd_i        (adc_fifo_rd),
+      //.rd_i        (1'b1),
+      .rd_empty_o  (adc_fifo_empty)
+    );
+
+    // Generate valid signal for adc_data_o.
+    // Just delay the valid adc_fifo_rd signal as the fifo takes
+    // one clock cycle, after it has registered adc_fifo_rd, to output
+    // data on q_o port
+
+    always @(posedge adc0_clk_out_w)
+    begin
+        adc_data_valid_out <= adc_fifo_rd;
+
+        if (adc_fifo_empty) begin
+          adc_data_valid_out <= 1'b0;
+        end;
+    end;
+
+    assign adc_fifo_wr = ~adc_fifo_full;
+    assign adc_fifo_rd = ~adc_fifo_empty;
+  end
+  else if (FPGA_DEVICE == "7SERIES") begin: ADC_IDDR_7SERIES
+
+    assign adc0_data_out = adc0_data_out_d;
+  end
+endgenerate
 
 (* IODELAY_GROUP = IDELAY_SIGNAL_GROUP *) // Specifies group name for associated IDELAYs/ODELAYs and IDELAYCTRL
   IDELAYCTRL IDELAYCTRL_adc0_inst (

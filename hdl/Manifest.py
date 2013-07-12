@@ -10,16 +10,11 @@ def __dirs():
 		dirs.extend(["platform/virtex6/ip_cores"]);
 	elif (target == "xilinx" and syn_device[0:4].upper()=="XC7K"):
 		dirs.extend(["platform/kintex7/ip_cores"]);
+	elif (target == "xilinx" and syn_device[0:4].upper()=="XC7A"):
+		dirs.extend(["platform/artix7/ip_cores"]);
 	#else: #add paltform here and generate the corresponding ip cores
 	return dirs
 
 modules = {
-    "local" : __dirs(),
-
-    #"git" : [ "git://ohwr.org/hdl-core-lib/general-cores.git"
-    #        ]
-    "git" : [ "git://github.com/lerwys/general-cores.git"
-            ]
+    "local" : __dirs()
            }
-
-fetchto="ip_cores"

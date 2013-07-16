@@ -64,6 +64,8 @@ NET "board_led1_o"                            LOC = AC22 | IOSTANDARD = LVCMOS25
 NET "board_led2_o"                            LOC = AC24 | IOSTANDARD = LVCMOS25 | DRIVE = 12 | SLEW = SLOW; // User led 1
 NET "board_led3_o"                            LOC = AE22 | IOSTANDARD = LVCMOS25 | DRIVE = 12 | SLEW = SLOW; // User led 2
 
+NET "mmcm_led_o"                              LOC = AP24 | IOSTANDARD = LVCMOS25 | DRIVE = 12 | SLEW = SLOW; //  GPIO_LED_C – DS16
+
 #--------------------------------
 #       FMC Connector HPC
 #         LTC ADC lines
@@ -187,16 +189,20 @@ TIMESPEC TS_sys_clk_i_p = PERIOD "sys_clk_i_p" 200 MHz HIGH 50% INPUT_JITTER 50 
 
 // real jitter is about 22ps peak-to-peak
 NET "fmc_adc0_clk" TNM_NET = fmc_adc0_clk;
-TIMESPEC TS_fmc_adc0_clk = PERIOD "fmc_adc0_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+// TIMESPEC TS_fmc_adc0_clk = PERIOD "fmc_adc0_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+TIMESPEC TS_fmc_adc0_clk = PERIOD "fmc_adc0_clk" 112.583 MHz HIGH 50% INPUT_JITTER 50 ps;
 
 NET "fmc_adc1_clk" TNM_NET = fmc_adc1_clk;
-TIMESPEC TS_fmc_adc1_clk = PERIOD "fmc_adc1_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+// TIMESPEC TS_fmc_adc1_clk = PERIOD "fmc_adc1_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+TIMESPEC TS_fmc_adc1_clk = PERIOD "fmc_adc1_clk" 112.583 MHz HIGH 50% INPUT_JITTER 50 ps;
 
 NET "fmc_adc2_clk" TNM_NET = fmc_adc2_clk;
-TIMESPEC TS_fmc_adc2_clk = PERIOD "fmc_adc2_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+// TIMESPEC TS_fmc_adc2_clk = PERIOD "fmc_adc2_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+TIMESPEC TS_fmc_adc2_clk = PERIOD "fmc_adc2_clk" 112.583 MHz HIGH 50% INPUT_JITTER 50 ps;
 
 NET "fmc_adc3_clk" TNM_NET = fmc_adc3_clk;
-TIMESPEC TS_fmc_adc3_clk = PERIOD "fmc_adc3_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+// TIMESPEC TS_fmc_adc3_clk = PERIOD "fmc_adc3_clk" 130 MHz HIGH 50% INPUT_JITTER 50 ps;
+TIMESPEC TS_fmc_adc3_clk = PERIOD "fmc_adc3_clk" 112.583 MHz HIGH 50% INPUT_JITTER 50 ps;
 
 //NET "fmc_fpga_clk_p" TNM_NET = fmc_fpga_clk_p;
 //TIMESPEC TS_fmc_fpga_clk_p = PERIOD "fmc_fpga_clk_p" 130 MHz HIGH 50% INPUT_JITTER 40 ps;

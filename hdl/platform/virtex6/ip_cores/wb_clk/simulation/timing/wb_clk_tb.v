@@ -81,7 +81,7 @@ module wb_clk_tb ();
   wire        CLK_IN1_N   = ~CLK_IN1;
 
   // The high bits of the sampling counters
-  wire [3:1]  COUNT;
+  wire [2:1]  COUNT;
   // Status and control signals
   reg         RESET      = 0;
   wire        LOCKED;

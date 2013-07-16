@@ -46,5 +46,4 @@ wb_clk.veo
 wb_clk.xco
 wb_clk.xise
 wb_clk_flist.txt
-wb_clk_upgrade.txt
 wb_clk_xmdf.tcl

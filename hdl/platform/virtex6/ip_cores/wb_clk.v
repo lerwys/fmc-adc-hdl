@@ -57,7 +57,6 @@
 //----------------------------------------------------------------------------
 // CLK_OUT1___100.000______0.000______50.0______112.316_____89.971
 // CLK_OUT2___200.000______0.000______50.0_______98.146_____89.971
-// CLK_OUT3____20.000______0.000______50.0______155.330_____89.971
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -66,7 +65,7 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "wb_clk,clk_wiz_v3_3,{component_name=wb_clk,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=MMCM_ADV,num_out_clk=3,clkin1_period=5.000,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=MANUAL,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "wb_clk,clk_wiz_v3_3,{component_name=wb_clk,use_phase_alignment=false,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=MMCM_ADV,num_out_clk=2,clkin1_period=5.000,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=MANUAL,manual_override=false}" *)
 module wb_clk
  (// Clock in ports
   input         CLK_IN1_P,
@@ -74,7 +73,6 @@ module wb_clk
   // Clock out ports
   output        CLK_OUT1,
   output        CLK_OUT2,
-  output        CLK_OUT3,
   // Status and control signals
   input         RESET,
   output        LOCKED
@@ -100,6 +98,7 @@ module wb_clk
   wire        clkfboutb_unused;
   wire        clkout0b_unused;
   wire        clkout1b_unused;
+  wire        clkout2_unused;
   wire        clkout2b_unused;
   wire        clkout3_unused;
   wire        clkout3b_unused;
@@ -127,10 +126,6 @@ module wb_clk
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKOUT2_DIVIDE       (50),
-    .CLKOUT2_PHASE        (0.000),
-    .CLKOUT2_DUTY_CYCLE   (0.500),
-    .CLKOUT2_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (5.000),
     .REF_JITTER1          (0.010))
   mmcm_adv_inst
@@ -141,7 +136,7 @@ module wb_clk
     .CLKOUT0B            (clkout0b_unused),
     .CLKOUT1             (clkout1),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2),
+    .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -185,10 +180,6 @@ module wb_clk
   BUFG clkout2_buf
    (.O   (CLK_OUT2),
     .I   (clkout1));
-
-  BUFG clkout3_buf
-   (.O   (CLK_OUT3),
-    .I   (clkout2));
 
 
 

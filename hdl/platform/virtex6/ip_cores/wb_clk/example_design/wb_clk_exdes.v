@@ -66,7 +66,7 @@ module wb_clk_exdes
   // Reset that only drives logic in example design
   input         COUNTER_RESET,
   // High bits of counters driven by clocks
-  output [3:1]  COUNT,
+  output [2:1]  COUNT,
   // Status and control signals
   input         RESET,
   output        LOCKED
@@ -77,7 +77,7 @@ module wb_clk_exdes
   // Counter width
   localparam    C_W       = 16;
   // Number of counters
-  localparam    NUM_C     = 3;
+  localparam    NUM_C     = 2;
   genvar        count_gen;
   // When the clock goes out of lock, reset the counters
   wire          reset_int = !LOCKED || RESET || COUNTER_RESET;
@@ -102,7 +102,6 @@ module wb_clk_exdes
     // Clock out ports
     .CLK_OUT1           (clk_int[1]),
     .CLK_OUT2           (clk_int[2]),
-    .CLK_OUT3           (clk_int[3]),
     // Status and control signals
     .RESET              (RESET),
     .LOCKED             (LOCKED));
@@ -111,7 +110,6 @@ module wb_clk_exdes
   //-----------------------------------------
   assign clk[1] = clk_int[1];
   assign clk[2] = clk_int[2];
-  assign clk[3] = clk_int[3];
 
 
   // Reset synchronizer

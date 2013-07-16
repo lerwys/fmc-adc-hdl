@@ -1,0 +1,14 @@
+# Output products list for <chipscope_ila_fifo>
+chipscope_ila_fifo.asy
+chipscope_ila_fifo.cdc
+chipscope_ila_fifo.ejp
+chipscope_ila_fifo.gise
+chipscope_ila_fifo.ncf
+chipscope_ila_fifo.ngc
+chipscope_ila_fifo.v
+chipscope_ila_fifo.veo
+chipscope_ila_fifo.xco
+chipscope_ila_fifo.xise
+chipscope_ila_fifo_flist.txt
+chipscope_ila_fifo_readme.txt
+chipscope_ila_fifo_xmdf.tcl

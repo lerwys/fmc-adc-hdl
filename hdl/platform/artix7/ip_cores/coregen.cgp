@@ -1,0 +1,22 @@
+# Date: Thu Jul 11 19:01:53 2013
+
+SET addpads = false
+SET asysymbol = true
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = false
+SET designentry = Verilog
+SET device = xc7a200t
+SET devicefamily = artix7
+SET flowvendor = Other
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET package = ffg1156
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET speedgrade = -2
+SET verilogsim = true
+SET vhdlsim = false
+SET workingdirectory = ./tmp/
+
+# CRC: 3c6bd0ce

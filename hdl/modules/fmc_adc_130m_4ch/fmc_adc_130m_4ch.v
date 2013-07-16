@@ -14,59 +14,70 @@
 //  Note: If using this firmware with Artix7 FPGA check tap resolution (IDELAY lines)
 module fmc_adc_130m_4ch(
 
-    input sys_clk,
-    input ref_clk, // 200MHz reference clock for IDELAYCTRL
-    input rst,
-    input trigger,
+  input sys_clk,
+  input ref_clk, // 200MHz reference clock for IDELAYCTRL
+  input rst,
+  input trigger,
 
-    input fmc_fpga_clk_p,
-    input fmc_fpga_clk_n,
+  input fmc_fpga_clk_p,
+  input fmc_fpga_clk_n,
 
-    input adc0_clk,
-    input [15:0]adc0_data_in,
-    input adc0_ov,
+  input adc0_clk,
+  output adc0_clk_out,
+  input [15:0]adc0_data_in,
+  input adc0_ov,
 
-    input adc1_clk,
-    input [15:0]adc1_data_in,
-    input adc1_ov,
+  input adc1_clk,
+  output adc1_clk_out,
+  input [15:0]adc1_data_in,
+  input adc1_ov,
 
-    input adc2_clk,
-    input [15:0]adc2_data_in,
-    input adc2_ov,
+  input adc2_clk,
+  output adc2_clk_out,
+  input [15:0]adc2_data_in,
+  input adc2_ov,
 
-    input adc3_clk,
-    input [15:0]adc3_data_in,
-    input adc3_ov,
+  input adc3_clk,
+  output adc3_clk_out,
+  input [15:0]adc3_data_in,
+  input adc3_ov,
 
-    input [4:0]adc0_delay_reg,
-    output [4:0]adc0_delay_reg_read,
-    input adc0_delay_load,
-    input [16:0]adc0_delay_select,
-    output adc0_delay_rdy,
+  input [4:0]adc0_delay_reg,
+  output [4:0]adc0_delay_reg_read,
+  input adc0_delay_load,
+  input [16:0]adc0_delay_select,
+  output adc0_delay_rdy,
 
-    input [4:0]adc1_delay_reg,
-    output [4:0]adc1_delay_reg_read,
-    input adc1_delay_load,
-    input [16:0]adc1_delay_select,
-    output adc1_delay_rdy,
+  input [4:0]adc1_delay_reg,
+  output [4:0]adc1_delay_reg_read,
+  input adc1_delay_load,
+  input [16:0]adc1_delay_select,
+  output adc1_delay_rdy,
 
-    input [4:0]adc2_delay_reg,
-    output [4:0]adc2_delay_reg_read,
-    input adc2_delay_load,
-    input [16:0]adc2_delay_select,
-    output adc2_delay_rdy,
+  input [4:0]adc2_delay_reg,
+  output [4:0]adc2_delay_reg_read,
+  input adc2_delay_load,
+  input [16:0]adc2_delay_select,
+  output adc2_delay_rdy,
 
-    input [4:0]adc3_delay_reg,
-    output [4:0]adc3_delay_reg_read,
-    input adc3_delay_load,
-    input [16:0]adc3_delay_select,
-    output adc3_delay_rdy,
+  input [4:0]adc3_delay_reg,
+  output [4:0]adc3_delay_reg_read,
+  input adc3_delay_load,
+  input [16:0]adc3_delay_select,
+  output adc3_delay_rdy,
 
-    output [127:0]data  // change this!!!
+  output [127:0]data,
 
-    );
+  // Chipscope icon inout
+  inout [35:0] icon_ctrl0_i,
+  inout [35:0] icon_ctrl1_i,
+  inout [35:0] icon_ctrl2_i,
+  inout [35:0] icon_ctrl3_i
+);
 
 parameter FPGA_DEVICE = "VIRTEX6";
+parameter USE_CHIPSCOPE_ICON = 1;
+parameter USE_CHIPSCOPE_ILA = 1;
 
 // REBUILD ALL CORES UNDER XILINX ISE 14.4
 
@@ -235,35 +246,49 @@ assign trig1[16:0] = adc1_reg[16:0];
 assign trig2[16:0] = adc2_reg[16:0];
 assign trig3[16:0] = adc3_reg[16:0];
 
-chipscope_icon icon_i (
-   .CONTROL0(ctrl0), // INOUT BUS [35:0]
-   .CONTROL1(ctrl1), // INOUT BUS [35:0]
-   .CONTROL2(ctrl2), // INOUT BUS [35:0]
-   .CONTROL3(ctrl3) // INOUT BUS [35:0]
-);
+generate
+  if (USE_CHIPSCOPE_ILA) begin
+    if (USE_CHIPSCOPE_ICON) begin
+      chipscope_icon icon_i (
+          .CONTROL0(ctrl0), // INOUT BUS [35:0]
+          .CONTROL1(ctrl1), // INOUT BUS [35:0]
+          .CONTROL2(ctrl2), // INOUT BUS [35:0]
+          .CONTROL3(ctrl3) // INOUT BUS [35:0]
+      );
+    end else begin
+      assign ctrl0 = icon_ctrl0_i;
+      assign ctrl1 = icon_ctrl1_i;
+      assign ctrl2 = icon_ctrl2_i;
+      assign ctrl3 = icon_ctrl3_i;
+    end;
 
-chipscope_ila_w17_trigger adc0_ila (
-    .CONTROL(ctrl0), // INOUT BUS [35:0]
-    .CLK(adc0_clk_out), // IN
-    .TRIG0(trig0) // IN BUS [16:0]
-);
+    chipscope_ila_w17_trigger adc0_ila (
+        .CONTROL(ctrl0), // INOUT BUS [35:0]
+        .CLK(adc0_clk), // IN
+          //.CLK(ref_clk), // IN
+        .TRIG0(trig0) // IN BUS [15:0]
+    );
 
-chipscope_ila_w17_trigger adc1_ila (
-    .CONTROL(ctrl1), // INOUT BUS [35:0]
-    .CLK(adc1_clk_out), // IN
-    .TRIG0(trig1) // IN BUS [16:0]
-);
+    chipscope_ila_w17_trigger adc1_ila (
+        .CONTROL(ctrl1), // INOUT BUS [35:0]
+        .CLK(adc1_clk), // IN
+         //.CLK(ref_clk), // IN
+        .TRIG0(trig1) // IN BUS [15:0]
+    );
 
-chipscope_ila_w17_trigger adc2_ila (
-    .CONTROL(ctrl2), // INOUT BUS [35:0]
-    .CLK(adc2_clk_out), // IN
-    .TRIG0(trig2) // IN BUS [16:0]
-);
+    chipscope_ila_w17_trigger adc2_ila (
+        .CONTROL(ctrl2), // INOUT BUS [35:0]
+        .CLK(adc2_clk), // IN
+         //.CLK(ref_clk), // IN
+        .TRIG0(trig2) // IN BUS [15:0]
+    );
 
-chipscope_ila_w17_trigger adc3_ila (
-    .CONTROL(ctrl3), // INOUT BUS [35:0]
-    .CLK(adc3_clk_out), // IN
-    .TRIG0(trig3) // IN BUS [16:0]
-);
+    chipscope_ila_w17_trigger adc3_ila (
+        .CONTROL(ctrl3), // INOUT BUS [35:0]
+        .CLK(adc3_clk), // IN
+        .TRIG0(trig3) // IN BUS [15:0]
+    );
+  end;
+endgenerate
 
 endmodule

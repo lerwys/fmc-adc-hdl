@@ -14,68 +14,73 @@
 //  Note: If using this firmware with Artix7 FPGA check tap resolution (IDELAY lines)
 module fmc_adc_250m_4ch(
 
-                input sys_clk,
-                input ref_clk, // 200MHz reference clock for IDELAYCTRL
-                input rst,
-                input trigger,
+  input sys_clk,
+  input ref_clk, // 200MHz reference clock for IDELAYCTRL
+  input rst,
+  input trigger,
 
-                input adc0_clk_p,
-                input adc0_clk_n,
-                input [7:0]adc0_data_in_p,
-                input [7:0]adc0_data_in_n,
+  input adc0_clk_p,
+  input adc0_clk_n,
+  input [7:0]adc0_data_in_p,
+  input [7:0]adc0_data_in_n,
 
-                input adc1_clk_p,
-                input adc1_clk_n,
-                input [7:0]adc1_data_in_p,
-                input [7:0]adc1_data_in_n,
+  input adc1_clk_p,
+  input adc1_clk_n,
+  input [7:0]adc1_data_in_p,
+  input [7:0]adc1_data_in_n,
 
-                input adc2_clk_p,
-                input adc2_clk_n,
-                input [7:0]adc2_data_in_p,
-                input [7:0]adc2_data_in_n,
+  input adc2_clk_p,
+  input adc2_clk_n,
+  input [7:0]adc2_data_in_p,
+  input [7:0]adc2_data_in_n,
 
-                input adc3_clk_p,
-                input adc3_clk_n,
-                input [7:0]adc3_data_in_p,
-                input [7:0]adc3_data_in_n,
+  input adc3_clk_p,
+  input adc3_clk_n,
+  input [7:0]adc3_data_in_p,
+  input [7:0]adc3_data_in_n,
 
-                input [4:0]adc0_delay_reg,
-                output [4:0]adc0_delay_reg_read,
-                input adc0_delay_load,
-                input [16:0]adc0_delay_select,
-                output adc0_delay_rdy,
+  input [4:0]adc0_delay_reg,
+  output [4:0]adc0_delay_reg_read,
+  input adc0_delay_load,
+  input [16:0]adc0_delay_select,
+  output adc0_delay_rdy,
 
-                input [4:0]adc1_delay_reg,
-                output [4:0]adc1_delay_reg_read,
-                input adc1_delay_load,
-                input [16:0]adc1_delay_select,
-                output adc1_delay_rdy,
+  input [4:0]adc1_delay_reg,
+  output [4:0]adc1_delay_reg_read,
+  input adc1_delay_load,
+  input [16:0]adc1_delay_select,
+  output adc1_delay_rdy,
 
-                input [4:0]adc2_delay_reg,
-                output [4:0]adc2_delay_reg_read,
-                input adc2_delay_load,
-                input [16:0]adc2_delay_select,
-                output adc2_delay_rdy,
+  input [4:0]adc2_delay_reg,
+  output [4:0]adc2_delay_reg_read,
+  input adc2_delay_load,
+  input [16:0]adc2_delay_select,
+  output adc2_delay_rdy,
 
-                input [4:0]adc3_delay_reg,
-                output [4:0]adc3_delay_reg_read,
-                input adc3_delay_load,
-                input [16:0]adc3_delay_select,
-                output adc3_delay_rdy,
+  input [4:0]adc3_delay_reg,
+  output [4:0]adc3_delay_reg_read,
+  input adc3_delay_load,
+  input [16:0]adc3_delay_select,
+  output adc3_delay_rdy,
 
-                output [127:0]data
+  output [127:0]data,
 
-    );
+  // Chipscope icon inout
+  inout [35:0] icon_ctrl0_i,
+  inout [35:0] icon_ctrl1_i,
+  inout [35:0] icon_ctrl2_i,
+  inout [35:0] icon_ctrl3_i
+);
 
 parameter FPGA_DEVICE = "VIRTEX6";
 parameter FPGA_BOARD = "ML605";
+parameter USE_CHIPSCOPE_ICON = 1;
+parameter USE_CHIPSCOPE_ILA = 1;
 
 wire adc0_clk;
 wire adc1_clk;
 wire adc2_clk;
 wire adc3_clk;
-
-// REBUILD ALL CORES UNDER XILINX ISE 14.4
 
 wire [15:0]adc0_d_ddr;
 
@@ -176,7 +181,7 @@ islaInterface #(
 wire [15:0]adc3_d_ddr;
 
 generate
-  if (FPGA_BOARD == "ML605") begin: ADC_CH3_ISLA_ML605  //KC705 does not support channel 3, only ML605
+  if (FPGA_BOARD == "ML605" || FPGA_BOARD == "AFC") begin //KC705 does not support channel 3, only ML605
 
     islaInterface #(
             .IDELAY_SIGNAL_GROUP("adc3_data_delay_group"),
@@ -238,7 +243,7 @@ always@(posedge adc2_clk)
         adc2_reg[15:0] <= adc2_d_ddr[15:0];
 
 generate
-  if (FPGA_BOARD == "ML605") begin: ADC_CH3_ML605  //KC705 does not support channel 3, only ML605
+  if (FPGA_BOARD == "ML605" || FPGA_BOARD == "AFC") begin  //KC705 does not support channel 3, only ML605 and AFC
     always@(posedge adc3_clk)
           adc3_reg[15:0] <= adc3_d_ddr[15:0];
   end
@@ -339,42 +344,51 @@ assign trig1[15:0] = adc1_reg[15:0];
 assign trig2[15:0] = adc2_reg[15:0];
 assign trig3[15:0] = adc3_reg[15:0];
 
-chipscope_icon icon_i (
-    .CONTROL0(ctrl0), // INOUT BUS [35:0]
-    .CONTROL1(ctrl1), // INOUT BUS [35:0]
-    .CONTROL2(ctrl2), // INOUT BUS [35:0]
-    .CONTROL3(ctrl3) // INOUT BUS [35:0]
-);
-
-chipscope_ila_w16_trigger adc0_ila (
-    .CONTROL(ctrl0), // INOUT BUS [35:0]
-    .CLK(adc0_clk), // IN
-      //.CLK(ref_clk), // IN
-    .TRIG0(trig0) // IN BUS [15:0]
-);
-
-chipscope_ila_w16_trigger adc1_ila (
-    .CONTROL(ctrl1), // INOUT BUS [35:0]
-    .CLK(adc1_clk), // IN
-     //.CLK(ref_clk), // IN
-    .TRIG0(trig1) // IN BUS [15:0]
-);
-
-chipscope_ila_w16_trigger adc2_ila (
-    .CONTROL(ctrl2), // INOUT BUS [35:0]
-    .CLK(adc2_clk), // IN
-     //.CLK(ref_clk), // IN
-    .TRIG0(trig2) // IN BUS [15:0]
-);
-
 generate
-  if (FPGA_BOARD == "ML605") begin: ADC_CH3_CHIPSCOPE_ML605  //KC705 does not support channel 3, only ML605
-    chipscope_ila_w16_trigger adc3_ila (
-        .CONTROL(ctrl3), // INOUT BUS [35:0]
-        .CLK(adc3_clk), // IN
-        .TRIG0(trig3) // IN BUS [15:0]
+  if (USE_CHIPSCOPE_ILA) begin
+    if (USE_CHIPSCOPE_ICON) begin
+      chipscope_icon icon_i (
+          .CONTROL0(ctrl0), // INOUT BUS [35:0]
+          .CONTROL1(ctrl1), // INOUT BUS [35:0]
+          .CONTROL2(ctrl2), // INOUT BUS [35:0]
+          .CONTROL3(ctrl3) // INOUT BUS [35:0]
+      );
+    end else begin
+      assign ctrl0 = icon_ctrl0_i;
+      assign ctrl1 = icon_ctrl1_i;
+      assign ctrl2 = icon_ctrl2_i;
+      assign ctrl3 = icon_ctrl3_i;
+    end;
+
+    chipscope_ila_w16_trigger adc0_ila (
+        .CONTROL(ctrl0), // INOUT BUS [35:0]
+        .CLK(adc0_clk), // IN
+          //.CLK(ref_clk), // IN
+        .TRIG0(trig0) // IN BUS [15:0]
     );
-  end
+
+    chipscope_ila_w16_trigger adc1_ila (
+        .CONTROL(ctrl1), // INOUT BUS [35:0]
+        .CLK(adc1_clk), // IN
+         //.CLK(ref_clk), // IN
+        .TRIG0(trig1) // IN BUS [15:0]
+    );
+
+    chipscope_ila_w16_trigger adc2_ila (
+        .CONTROL(ctrl2), // INOUT BUS [35:0]
+        .CLK(adc2_clk), // IN
+         //.CLK(ref_clk), // IN
+        .TRIG0(trig2) // IN BUS [15:0]
+    );
+
+    if (FPGA_BOARD == "ML605" || FPGA_BOARD == "AFC") begin  //KC705 does not support channel 3, only ML605
+      chipscope_ila_w16_trigger adc3_ila (
+          .CONTROL(ctrl3), // INOUT BUS [35:0]
+          .CLK(adc3_clk), // IN
+          .TRIG0(trig3) // IN BUS [15:0]
+      );
+    end;
+  end;
 endgenerate
 
 endmodule

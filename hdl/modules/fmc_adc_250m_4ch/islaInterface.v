@@ -84,7 +84,7 @@ assign adc0_delay_reg_read[4:0] = adc0_read_reg[0];
 
 generate
   // Clock signal
-  if (FPGA_DEVICE == "VIRTEX6") begin : CLOCK_INST_DEVICE_VIRTEX6
+  if (FPGA_DEVICE == "VIRTEX6") begin
       IBUFDS #(
         .DIFF_TERM("TRUE"), // Differential Termination
         .IBUF_LOW_PWR("FALSE"), // Low power="TRUE", Highest performance="FALSE"
@@ -132,7 +132,7 @@ wire [7:0]w_adc0_d;
 
 // LVDS data lines to single ended
 generate
-        for (i = 0; i < 8; i = i + 1) begin: ADC_LVDS
+        for (i = 0; i < 8; i = i + 1) begin
          IBUFDS #(
         .DIFF_TERM("TRUE"),   // Differential Termination
           .IOSTANDARD("LVDS_25") // Specify the input I/O standard
@@ -145,7 +145,7 @@ generate
 endgenerate
 
 generate
-        for (i = 0; i < 8; i = i + 1) begin: ADC_LVDS_INV
+        for (i = 0; i < 8; i = i + 1) begin
                 if (IDELAY_LVDS_INV[i] == 1) begin
                         assign adc0_d[i] = !w_adc0_d[i];
                 end
@@ -176,8 +176,8 @@ end
 
 // data shifting
 generate
-  for (i = 0; i < 8; i = i + 1) begin: ADC0_DELAY_DDR_DATA
-    if (FPGA_DEVICE == "VIRTEX6") begin: ADC_VIRTEX6_DELAY_DATA_DEVICE
+  for (i = 0; i < 8; i = i + 1) begin
+    if (FPGA_DEVICE == "VIRTEX6") begin
         (* IODELAY_GROUP = IDELAY_SIGNAL_GROUP *) // Specifies group name
                                                   //for associated IDELAYs/ODELAYs and IDELAYCTRL
         IODELAYE1 #(
@@ -262,7 +262,7 @@ endgenerate
 
 // DDR data management
 generate
-  for (i = 0; i < 8; i = i + 1) begin: ADC_DDR_DATA
+  for (i = 0; i < 8; i = i + 1) begin
     IDDR #(
       .DDR_CLK_EDGE("OPPOSITE_EDGE"), // "OPPOSITE_EDGE", "SAME_EDGE"
                                                   //    or "SAME_EDGE_PIPELINED"
@@ -283,7 +283,7 @@ generate
 endgenerate
 
 generate
-  if (FPGA_DEVICE == "VIRTEX6") begin: ADC_IDDR_VIRTEX6
+  if (FPGA_DEVICE == "VIRTEX6") begin
     // BUFG and BUFR/BUFIO are not guaranteed to be phase-matched,
     // as they drive independently clock nets. Hence, a FIFO is needed to employ
     // a clock domain crossing.
@@ -339,7 +339,7 @@ generate
 
     assign adc0_clk = adc0_bufg_clk;
   end
-  else if (FPGA_DEVICE == "7SERIES") begin: ADC_IDDR_7SERIES
+  else if (FPGA_DEVICE == "7SERIES") begin
     // This is a global clock already. Just connect directly to output
     assign adc0_clk = adc0_ddr_clk;
     assign adc0_d_ddr = adc0_d_ddr_int;

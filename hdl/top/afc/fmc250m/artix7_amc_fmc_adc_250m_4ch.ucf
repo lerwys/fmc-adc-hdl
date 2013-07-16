@@ -1,0 +1,503 @@
+#--------------------------------
+#       Kintex7 AMC Board
+#--------------------------------
+//NET  "sys_clk_i_p" LOC = AG14 |IOSTANDARD="LVDS"; # FIN1_CLK2_P or SDRAM_CLK1 ak7
+//NET  "sys_clk_i_n" LOC = AH14 |IOSTANDARD="LVDS"; // aL7
+
+NET  "sys_clk_i_p" LOC = AK7 |IOSTANDARD="DIFF_SSTL15" | IN_TERM = "UNTUNED_SPLIT_50"; # FIN1_CLK2_P or SDRAM_CLK1 ak7
+NET  "sys_clk_i_n" LOC = AL7 |IOSTANDARD="DIFF_SSTL15" | IN_TERM = "UNTUNED_SPLIT_50";
+
+//NET  "rs232_txd_o"  LOC = V27 |IOSTANDARD="LVCMOS25";
+//NET  "rs232_rxd_i"  LOC = V26 |IOSTANDARD="LVCMOS25";
+NET  "rs232_txd_o"  LOC = V26 |IOSTANDARD="LVCMOS25";
+NET  "rs232_rxd_i"  LOC = V27 |IOSTANDARD="LVCMOS25";
+##--------------------------------
+##       FMC Connector HPC1
+##--------------------------------
+#NET  "fmc1_prsnt_i"  LOC =   |IOSTANDARD="LVCMOS25"; // connected to CPU
+#NET  "fmc1_pg_m2c_i" LOC =   |IOSTANDARD="LVCMOS25"; // connected to CPU
+// Trigger
+NET "fmc1_trig_dir_o" LOC = R3 |IOSTANDARD="LVCMOS25"; # LA27_P
+NET "fmc1_trig_term_o" LOC = R2  |IOSTANDARD="LVCMOS25"; # LA27_N
+//NET "fmc1_trig_val_o_p" LOC = U1  |IOSTANDARD="LVDS_25"; # LA33_P
+//NET "fmc1_trig_val_o_n" LOC = U2  |IOSTANDARD="LVDS_25"; # LA33_N
+NET "fmc1_trig_val_o_n" LOC = U1  |IOSTANDARD="LVDS_25"; # LA33_P
+NET "fmc1_trig_val_o_p" LOC = U2  |IOSTANDARD="LVDS_25"; # LA33_N
+// ADC ISLA
+NET "fmc1_spi_adc_cs[0]" LOC = H2  |IOSTANDARD="LVCMOS25"; # LA10_N
+NET "fmc1_spi_adc_cs[1]" LOC = J3  |IOSTANDARD="LVCMOS25"; # LA09_N
+NET "fmc1_spi_adc_cs[2]" LOC = G2 |IOSTANDARD="LVCMOS25"; # LA10_P
+NET "fmc1_spi_adc_cs[3]" LOC = J4  |IOSTANDARD="LVCMOS25"; # LA09_P
+NET "fmc1_spi_adc_sclk_o" LOC = H9  |IOSTANDARD="LVCMOS25"; # LA14_P
+NET "fmc1_spi_adc_mosi_o" LOC = H8  |IOSTANDARD="LVCMOS25"; # LA14_N
+NET "fmc1_spi_adc_miso_i" LOC = H3  |IOSTANDARD="LVCMOS25"; # LA05_N
+NET "fmc1_adc_clkdivrst_o_p" LOC = R1  |IOSTANDARD="LVDS_25"; # LA32_P
+NET "fmc1_adc_clkdivrst_o_n" LOC = P1  |IOSTANDARD="LVDS_25"; # LA32_N
+NET "fmc1_adc_resetn_o" LOC = K25 |IOSTANDARD="LVCMOS25"; # HA13_P
+NET "fmc1_adc_sleep_o" LOC = H33  |IOSTANDARD="LVCMOS25"; # HA12_N
+// Si571 clock gen
+NET "fmc1_si571_scl_pad" LOC = K5 |IOSTANDARD="LVCMOS25"; # LA06_P
+NET "fmc1_si571_sda_pad"  LOC = L5 |IOSTANDARD="LVCMOS25"; # LA06_N
+NET "fmc1_si571_oe_o" LOC = H4 |IOSTANDARD="LVCMOS25"; # LA05_P
+// AD9510 clock distribution PLL
+NET "fmc1_spi_ad9510_cs" LOC = G25 |IOSTANDARD="LVCMOS25"; # HA21_P
+NET "fmc1_spi_ad9510_sclk_o" LOC = H24 |IOSTANDARD="LVCMOS25"; # HA22_P
+NET "fmc1_spi_ad9510_mosi_o" LOC = G24 |IOSTANDARD="LVCMOS25"; # HA21_N
+NET "fmc1_spi_ad9510_miso_i" LOC = J23 |IOSTANDARD="LVCMOS25"; # HA23_P
+NET "fmc1_pll_function_o" LOC = H27 |IOSTANDARD="LVCMOS25"; # HA18_N
+NET "fmc1_pll_status_i" LOC = G27 |IOSTANDARD="LVCMOS25"; # HA18_P
+// Clock reference selection (TS3USB221)
+NET "fmc1_clk_sel_o" LOC = J24  |IOSTANDARD="LVCMOS25"; # HA22_N
+// EEPROM (multiplexer PCA9548) - handled by CPU
+//NET "fmc1_eeprom_scl_pad" LOC =  |IOSTANDARD="LVCMOS25"; # SCL C30
+//NET "fmc1_eeprom_sda_pad" LOC =  |IOSTANDARD="LVCMOS25"; # SDA C31
+// AMC7823 FMC monitor
+NET "fmc1_spi_amc7823_cs" LOC = M1 |IOSTANDARD="LVCMOS25"; # LA30_N
+NET "fmc1_spi_amc7823_sclk_o" LOC = U6 |IOSTANDARD="LVCMOS25"; # LA31_P
+NET "fmc1_spi_amc7823_mosi_o" LOC = U7 |IOSTANDARD="LVCMOS25"; # LA31_N
+NET "fmc1_spi_amc7823_miso_i" LOC = N1 |IOSTANDARD="LVCMOS25"; # LA30_P
+NET "fmc1_mon_dev_i" LOC = T7 |IOSTANDARD="LVCMOS25"; # LA28_N
+// LEDs
+NET "fmc1_led1_o" LOC = P8 |IOSTANDARD="LVCMOS25"; # LA29_P
+NET "fmc1_led2_o" LOC = M11 |IOSTANDARD="LVCMOS25"; # LA24_N
+NET "fmc1_led3_o" LOC = M10 |IOSTANDARD="LVCMOS25"; # LA24_P
+#NET  "board_led1_o" LOC = AB8 |IOSTANDARD=LVCMOS18; # Bank  33 VCCO - VCC1V5_FPGA - IO_L2N_T0_33
+#NET  "board_led2_o" LOC = AA8 |IOSTANDARD=LVCMOS18; # Bank  33 VCCO - VCC1V5_FPGA - IO_L2P_T0_33
+#NET  "board_led3_o" LOC = AC9 |IOSTANDARD=LVCMOS18; # Bank  33 VCCO - VCC1V5_FPGA - IO_L3N_T0_DQS_33
+#--------------------------------
+#       FMC Connector HPC1
+#        ISLA ADC lines
+#--------------------------------
+NET "fmc1_adc0_clk_p" LOC = J29  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA00_CC_P
+NET "fmc1_adc0_clk_n" LOC = H29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA00_CC_N
+NET "fmc1_adc0_data_in_p[0]" LOC = L28  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA01_CC_P
+NET "fmc1_adc0_data_in_n[0]" LOC = K28  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA01_CC_N
+//NET "fmc1_adc0_data_in_p[1]" LOC = L34  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_P
+//NET "fmc1_adc0_data_in_n[1]" LOC = L33  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_N
+NET "fmc1_adc0_data_in_n[1]" LOC = L34  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_P
+NET "fmc1_adc0_data_in_p[1]" LOC = L33  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_N
+//NET "fmc1_adc0_data_in_p[2]" LOC = H34  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA05_P
+//NET "fmc1_adc0_data_in_n[2]" LOC = J33  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA05_N
+NET "fmc1_adc0_data_in_n[2]" LOC = H34  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA05_P
+NET "fmc1_adc0_data_in_p[2]" LOC = J33  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA05_N
+//NET "fmc1_adc0_data_in_p[3]" LOC = J31  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_P
+//NET "fmc1_adc0_data_in_n[3]" LOC = K31  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_N
+NET "fmc1_adc0_data_in_n[3]" LOC = J31  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_P
+NET "fmc1_adc0_data_in_p[3]" LOC = K31  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_N
+NET "fmc1_adc0_data_in_p[4]" LOC = K30  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA03_P
+NET "fmc1_adc0_data_in_n[4]" LOC = J30  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA03_N
+//NET "fmc1_adc0_data_in_p[5]" LOC = J34  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_P
+//NET "fmc1_adc0_data_in_n[5]" LOC = K33  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_N
+NET "fmc1_adc0_data_in_n[5]" LOC = J34  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_P
+NET "fmc1_adc0_data_in_p[5]" LOC = K33  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_N
+//NET "fmc1_adc0_data_in_p[6]" LOC = K32  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_P
+//NET "fmc1_adc0_data_in_n[6]" LOC = L32  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_N
+NET "fmc1_adc0_data_in_n[6]" LOC = K32  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_P
+NET "fmc1_adc0_data_in_p[6]" LOC = L32  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_N
+//NET "fmc1_adc0_data_in_p[7]" LOC = K27  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_P
+//NET "fmc1_adc0_data_in_n[7]" LOC = L27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_N
+NET "fmc1_adc0_data_in_n[7]" LOC = K27  |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_P
+NET "fmc1_adc0_data_in_p[7]" LOC = L27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_N
+
+NET "fmc1_adc1_clk_p" LOC = J6 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA01_CC_P
+NET "fmc1_adc1_clk_n" LOC = J5 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA01_CC_N
+// commented locations are swapped
+NET "fmc1_adc1_data_in_n[0]" LOC = J1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_P
+NET "fmc1_adc1_data_in_p[0]" LOC = K1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_N
+//NET "fmc1_adc1_data_in_p[0]" LOC = J1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_P
+//NET "fmc1_adc1_data_in_n[0]" LOC = K1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_N
+//NET "fmc1_adc1_data_in_p[1]" LOC = G1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_P
+//NET "fmc1_adc1_data_in_n[1]" LOC = H1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_N
+NET "fmc1_adc1_data_in_n[1]" LOC = G1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_P
+NET "fmc1_adc1_data_in_p[1]" LOC = H1 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_N
+NET "fmc1_adc1_data_in_p[2]" LOC = F3 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA08_P
+NET "fmc1_adc1_data_in_n[2]" LOC = F2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA08_N
+NET "fmc1_adc1_data_in_p[3]" LOC = K3 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA07_P
+NET "fmc1_adc1_data_in_n[3]" LOC = K2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA07_N
+//NET "fmc1_adc1_data_in_p[4]" LOC = K8 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_P
+//NET "fmc1_adc1_data_in_n[4]" LOC = L8 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_N
+NET "fmc1_adc1_data_in_n[4]" LOC = K8 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_P
+NET "fmc1_adc1_data_in_p[4]" LOC = L8 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_N
+NET "fmc1_adc1_data_in_p[5]" LOC = G10 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA13_P
+NET "fmc1_adc1_data_in_n[5]" LOC = G9 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA13_N
+//NET "fmc1_adc1_data_in_p[6]" LOC = L2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_P
+//NET "fmc1_adc1_data_in_n[6]" LOC = M2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_N
+NET "fmc1_adc1_data_in_n[6]" LOC = L2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_P
+NET "fmc1_adc1_data_in_p[6]" LOC = M2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_N
+NET "fmc1_adc1_data_in_p[7]" LOC = L10 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA16_P
+NET "fmc1_adc1_data_in_n[7]" LOC = L9 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA16_N
+
+NET "fmc1_adc2_clk_p" LOC = P4 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA18_CC_P
+NET "fmc1_adc2_clk_n" LOC = P3 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA18_CC_N
+NET "fmc1_adc2_data_in_p[0]" LOC = T5 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA17_CC_P
+NET "fmc1_adc2_data_in_n[0]" LOC = T4 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA17_CC_N
+//NET "fmc1_adc2_data_in_p[1]" LOC = P10 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA20_P
+//NET "fmc1_adc2_data_in_n[1]" LOC = R10 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA20_N
+NET "fmc1_adc2_data_in_n[1]" LOC = P10 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA20_P
+NET "fmc1_adc2_data_in_p[1]" LOC = R10 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA20_N
+//NET "fmc1_adc2_data_in_p[2]" LOC = N2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_P
+//NET "fmc1_adc2_data_in_n[2]" LOC = N3 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_N
+NET "fmc1_adc2_data_in_n[2]" LOC = N2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_P
+NET "fmc1_adc2_data_in_p[2]" LOC = N3 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_N
+NET "fmc1_adc2_data_in_p[3]" LOC = U5 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA19_P
+NET "fmc1_adc2_data_in_n[3]" LOC = U4 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA19_N
+NET "fmc1_adc2_data_in_p[4]" LOC = M5 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA22_P
+NET "fmc1_adc2_data_in_n[4]" LOC = M4 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA22_N
+//NET "fmc1_adc2_data_in_p[5]" LOC = M6 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_P
+//NET "fmc1_adc2_data_in_n[5]" LOC = M7 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_N
+NET "fmc1_adc2_data_in_n[5]" LOC = M6 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_P
+NET "fmc1_adc2_data_in_p[5]" LOC = M7 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_N
+//NET "fmc1_adc2_data_in_p[6]" LOC = N7 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_P
+//NET "fmc1_adc2_data_in_n[6]" LOC = N8 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_N
+NET "fmc1_adc2_data_in_n[6]" LOC = N7 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_P
+NET "fmc1_adc2_data_in_p[6]" LOC = N8 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_N
+NET "fmc1_adc2_data_in_p[7]" LOC = T3 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA26_P
+NET "fmc1_adc2_data_in_n[7]" LOC = T2 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA26_N
+
+NET "fmc1_adc3_clk_p" LOC = V4 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB06_CC_P
+NET "fmc1_adc3_clk_n" LOC = W4 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB06_CC_N
+//NET "fmc1_adc3_data_in_p[0]" LOC = Y5 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB00_CC_P
+//NET "fmc1_adc3_data_in_n[0]" LOC = W5 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB00_CC_N
+NET "fmc1_adc3_data_in_n[0]" LOC = Y5 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB00_CC_P
+NET "fmc1_adc3_data_in_p[0]" LOC = W5 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB00_CC_N
+NET "fmc1_adc3_data_in_p[1]" LOC = W1 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB11_P
+NET "fmc1_adc3_data_in_n[1]" LOC = Y1 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB11_N
+NET "fmc1_adc3_data_in_p[2]" LOC = AC7 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB12_P
+NET "fmc1_adc3_data_in_n[2]" LOC = AC6 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB12_N
+NET "fmc1_adc3_data_in_p[3]" LOC = V7 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB10_P
+NET "fmc1_adc3_data_in_n[3]" LOC = V6 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB10_N
+NET "fmc1_adc3_data_in_p[4]" LOC = AC9 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB15_P
+NET "fmc1_adc3_data_in_n[4]" LOC = AC8 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB15_N
+NET "fmc1_adc3_data_in_p[5]" LOC = AC2 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB14_P
+NET "fmc1_adc3_data_in_n[5]" LOC = AC1 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB14_N
+NET "fmc1_adc3_data_in_p[6]" LOC = AB7 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB18_P
+NET "fmc1_adc3_data_in_n[6]" LOC = AB6 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB18_N
+NET "fmc1_adc3_data_in_p[7]" LOC = AA5 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB17_CC_P
+NET "fmc1_adc3_data_in_n[7]" LOC = AA4 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB17_CC_N
+#--------------------------------
+#            Data
+#        HPC1
+#--------------------------------
+INST "fmc1_adc_250m_4ch_i/islaInterface_adc0_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y4;
+INST "fmc1_adc_250m_4ch_i/islaInterface_adc1_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X1Y4;
+INST "fmc1_adc_250m_4ch_i/islaInterface_adc2_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X1Y3;
+INST "fmc1_adc_250m_4ch_i/islaInterface_adc3_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X1Y2;
+
+#--------------------------------
+#       FMC Connector HPC2
+#--------------------------------
+#NET  "fmc2_prsnt_i"  LOC =   |IOSTANDARD="LVCMOS25"; // connected to CPU
+#NET  "fmc2_pg_m2c_i" LOC =   |IOSTANDARD="LVCMOS25"; // connected to CPU
+// Trigger
+NET "fmc2_trig_dir_o" LOC = AA27 |IOSTANDARD="LVCMOS25"; # LA27_P
+NET "fmc2_trig_term_o" LOC = AA28  |IOSTANDARD="LVCMOS25"; # LA27_N
+NET "fmc2_trig_val_o_p" LOC = V33 |IOSTANDARD="LVDS_25"; # LA33_P
+NET "fmc2_trig_val_o_n" LOC = V34 |IOSTANDARD="LVDS_25"; # LA33_N
+
+// ADC ISLA
+NET "fmc2_spi_adc_cs[0]" LOC = AG32 |IOSTANDARD="LVCMOS25"; # LA10_N
+NET "fmc2_spi_adc_cs[1]" LOC = AF25 |IOSTANDARD="LVCMOS25"; # LA09_N
+NET "fmc2_spi_adc_cs[2]" LOC = AH32 |IOSTANDARD="LVCMOS25"; # LA10_P
+NET "fmc2_spi_adc_cs[3]" LOC = AG25 |IOSTANDARD="LVCMOS25"; # LA09_P
+NET "fmc2_spi_adc_sclk_o" LOC = AF33 |IOSTANDARD="LVCMOS25"; # LA14_P
+NET "fmc2_spi_adc_mosi_o" LOC = AE33 |IOSTANDARD="LVCMOS25"; # LA14_N
+NET "fmc2_spi_adc_miso_i" LOC = AH33 |IOSTANDARD="LVCMOS25"; # LA05_N
+NET "fmc2_adc_clkdivrst_o_p" LOC = AA34 |IOSTANDARD="LVDS_25"; # LA32_P
+NET "fmc2_adc_clkdivrst_o_n" LOC = AB34 |IOSTANDARD="LVDS_25"; # LA32_N
+NET "fmc2_adc_resetn_o" LOC = AP28 |IOSTANDARD="LVCMOS25"; # HA13_P
+NET "fmc2_adc_sleep_o" LOC = AM29 |IOSTANDARD="LVCMOS25"; # HA12_N
+// Si571 clock gen
+NET "fmc2_si571_scl_pad" LOC = AE23 |IOSTANDARD="LVCMOS25"; # LA06_P
+NET "fmc2_si571_sda_pad" LOC = AF23 |IOSTANDARD="LVCMOS25"; # LA06_N
+NET "fmc2_si571_oe_o" LOC = AH34 |IOSTANDARD="LVCMOS25"; # LA05_P
+// AD9510 clock distribution PLL
+NET "fmc2_spi_ad9510_cs" LOC = AP29 |IOSTANDARD="LVCMOS25"; # HA21_P
+NET "fmc2_spi_ad9510_sclk_o" LOC = AM34 |IOSTANDARD="LVCMOS25"; # HA22_P
+NET "fmc2_spi_ad9510_mosi_o" LOC = AP30 |IOSTANDARD="LVCMOS25"; # HA21_N
+NET "fmc2_spi_ad9510_miso_i" LOC = AJ34 |IOSTANDARD="LVCMOS25"; # HA23_P
+NET "fmc2_pll_function_o" LOC = AN33 |IOSTANDARD="LVCMOS25"; # HA18_N
+NET "fmc2_pll_status_i" LOC = AP33 |IOSTANDARD="LVCMOS25"; # HA18_P
+// Clock reference selection (TS3USB221)
+NET "fmc2_clk_sel_o" LOC = AL34 |IOSTANDARD="LVCMOS25"; # HA22_N
+// EEPROM (multiplexer PCA9548) - handled by CPU
+//NET "fmc2_eeprom_scl_pad" LOC =  |IOSTANDARD="LVCMOS25"; # SCL C30
+//NET "fmc2_eeprom_sda_pad" LOC =  |IOSTANDARD="LVCMOS25"; # SDA C31
+// AMC7823 FMC monitor
+NET "fmc2_spi_amc7823_cs" LOC = W34 |IOSTANDARD="LVCMOS25"; # LA30_N
+NET "fmc2_spi_amc7823_sclk_o" LOC = V32 |IOSTANDARD="LVCMOS25"; # LA31_P
+NET "fmc2_spi_amc7823_mosi_o" LOC = V31 |IOSTANDARD="LVCMOS25"; # LA31_N
+NET "fmc2_spi_amc7823_miso_i" LOC = W33 |IOSTANDARD="LVCMOS25"; # LA30_P
+NET "fmc2_mon_dev_i" LOC = W28 |IOSTANDARD="LVCMOS25"; # LA28_N
+// LEDs
+NET "fmc2_led1_o" LOC = AC34 |IOSTANDARD="LVCMOS25"; # LA29_P
+NET "fmc2_led2_o" LOC = Y33 |IOSTANDARD="LVCMOS25"; # LA24_N
+NET "fmc2_led3_o" LOC = Y32 |IOSTANDARD="LVCMOS25"; # LA24_P
+
+#--------------------------------
+#       FMC Connector HPC2
+#        ISLA ADC lines
+#--------------------------------
+// commented locations are swapped
+//NET "fmc2_adc0_clk_p" LOC = AM30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA00_CC_P
+//NET "fmc2_adc0_clk_n" LOC = AL30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA00_CC_N
+NET "fmc2_adc0_clk_n" LOC = AM30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA00_CC_P
+NET "fmc2_adc0_clk_p" LOC = AL30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA00_CC_N
+NET "fmc2_adc0_data_in_p[0]" LOC = AL28 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA01_CC_P
+NET "fmc2_adc0_data_in_n[0]" LOC = AL29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA01_CC_N
+//NET "fmc2_adc0_data_in_p[1]" LOC = AK25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_P
+//NET "fmc2_adc0_data_in_n[1]" LOC = AJ25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_N
+NET "fmc2_adc0_data_in_n[1]" LOC = AK25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_P
+NET "fmc2_adc0_data_in_p[1]" LOC = AJ25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA04_N
+NET "fmc2_adc0_data_in_p[2]" LOC = AL25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA05_P
+NET "fmc2_adc0_data_in_n[2]" LOC = AM25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA05_N
+//NET "fmc2_adc0_data_in_p[3]" LOC = AK26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_P
+//NET "fmc2_adc0_data_in_n[3]" LOC = AJ26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_N
+NET "fmc2_adc0_data_in_n[3]" LOC = AK26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_P
+NET "fmc2_adc0_data_in_p[3]" LOC = AJ26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA09_N
+NET "fmc2_adc0_data_in_p[4]" LOC = AM26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA03_P
+NET "fmc2_adc0_data_in_n[4]" LOC = AN26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA03_N
+//NET "fmc2_adc0_data_in_p[5]" LOC = AP31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_P
+//NET "fmc2_adc0_data_in_n[5]" LOC = AN31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_N
+NET "fmc2_adc0_data_in_n[5]" LOC = AP31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_P
+NET "fmc2_adc0_data_in_p[5]" LOC = AN31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA02_N
+//NET "fmc2_adc0_data_in_p[6]" LOC = AN32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_P
+//NET "fmc2_adc0_data_in_n[6]" LOC = AM31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_N
+NET "fmc2_adc0_data_in_n[6]" LOC = AN32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_P
+NET "fmc2_adc0_data_in_p[6]" LOC = AM31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA07_N
+//NET "fmc2_adc0_data_in_p[7]" LOC = AM32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_P
+//NET "fmc2_adc0_data_in_n[7]" LOC = AL32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_N
+NET "fmc2_adc0_data_in_n[7]" LOC = AM32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_P
+NET "fmc2_adc0_data_in_p[7]" LOC = AL32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // HA06_N
+
+//NET "fmc2_adc1_clk_p" LOC = AF30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA01_CC_P
+//NET "fmc2_adc1_clk_n" LOC = AF29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA01_CC_N
+NET "fmc2_adc1_clk_n" LOC = AF30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA01_CC_P
+NET "fmc2_adc1_clk_p" LOC = AF29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA01_CC_N
+//NET "fmc2_adc1_data_in_p[0]" LOC = AC27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_P
+//NET "fmc2_adc1_data_in_n[0]" LOC = AC26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_N
+NET "fmc2_adc1_data_in_n[0]" LOC = AC27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_P
+NET "fmc2_adc1_data_in_p[0]" LOC = AC26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA04_N
+//NET "fmc2_adc1_data_in_p[1]" LOC = AH24 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_P
+//NET "fmc2_adc1_data_in_n[1]" LOC = AG24 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_N
+NET "fmc2_adc1_data_in_n[1]" LOC = AH24 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_P
+NET "fmc2_adc1_data_in_p[1]" LOC = AG24 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA03_N
+NET "fmc2_adc1_data_in_p[2]" LOC = AD25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA08_P
+NET "fmc2_adc1_data_in_n[2]" LOC = AE25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA08_N
+//NET "fmc2_adc1_data_in_p[3]" LOC = AH27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA07_P
+//NET "fmc2_adc1_data_in_n[3]" LOC = AG27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA07_N
+NET "fmc2_adc1_data_in_n[3]" LOC = AH27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA07_P
+NET "fmc2_adc1_data_in_p[3]" LOC = AG27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA07_N
+//NET "fmc2_adc1_data_in_p[4]" LOC = AF27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_P
+//NET "fmc2_adc1_data_in_n[4]" LOC = AE27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_N
+NET "fmc2_adc1_data_in_n[4]" LOC = AF27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_P
+NET "fmc2_adc1_data_in_p[4]" LOC = AE27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA12_N
+//NET "fmc2_adc1_data_in_p[5]" LOC = AG34 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA13_P
+//NET "fmc2_adc1_data_in_n[5]" LOC = AF34 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA13_N
+NET "fmc2_adc1_data_in_n[5]" LOC = AG34 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA13_P
+NET "fmc2_adc1_data_in_p[5]" LOC = AF34 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA13_N
+//NET "fmc2_adc1_data_in_p[6]" LOC = AE30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_P
+//NET "fmc2_adc1_data_in_n[6]" LOC = AD30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_N
+NET "fmc2_adc1_data_in_n[6]" LOC = AE30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_P
+NET "fmc2_adc1_data_in_p[6]" LOC = AD30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA11_N
+NET "fmc2_adc1_data_in_p[7]" LOC = AD33 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA16_P
+NET "fmc2_adc1_data_in_n[7]" LOC = AD34 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA16_N
+
+NET "fmc2_adc2_clk_p" LOC = W30 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA18_CC_P
+NET "fmc2_adc2_clk_n" LOC = W31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA18_CC_N
+//NET "fmc2_adc2_data_in_p[0]" LOC = AB32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA17_CC_P
+//NET "fmc2_adc2_data_in_n[0]" LOC = AB31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA17_CC_N
+NET "fmc2_adc2_data_in_n[0]" LOC = AB32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA17_CC_P
+NET "fmc2_adc2_data_in_p[0]" LOC = AB31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA17_CC_N
+NET "fmc2_adc2_data_in_p[1]" LOC = AB24 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA20_P
+NET "fmc2_adc2_data_in_n[1]" LOC = AB25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA20_N
+//NET "fmc2_adc2_data_in_p[2]" LOC = Y25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_P
+//NET "fmc2_adc2_data_in_n[2]" LOC = W25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_N
+NET "fmc2_adc2_data_in_n[2]" LOC = Y25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_P
+NET "fmc2_adc2_data_in_p[2]" LOC = W25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA23_N
+//NET "fmc2_adc2_data_in_p[3]" LOC = AB27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA19_P
+//NET "fmc2_adc2_data_in_n[3]" LOC = AB26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA19_N
+NET "fmc2_adc2_data_in_n[3]" LOC = AB27 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA19_P
+NET "fmc2_adc2_data_in_p[3]" LOC = AB26 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA19_N
+//NET "fmc2_adc2_data_in_p[4]" LOC = AA25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA22_P
+//NET "fmc2_adc2_data_in_n[4]" LOC = AA24 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA22_N
+NET "fmc2_adc2_data_in_n[4]" LOC = AA25 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA22_P
+NET "fmc2_adc2_data_in_p[4]" LOC = AA24 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA22_N
+//NET "fmc2_adc2_data_in_p[5]" LOC = AA33 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_P
+//NET "fmc2_adc2_data_in_n[5]" LOC = AA32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_N
+NET "fmc2_adc2_data_in_n[5]" LOC = AA33 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_P
+NET "fmc2_adc2_data_in_p[5]" LOC = AA32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA21_N
+//NET "fmc2_adc2_data_in_p[6]" LOC = AB29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_P
+//NET "fmc2_adc2_data_in_n[6]" LOC = AA29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_N
+NET "fmc2_adc2_data_in_n[6]" LOC = AB29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_P
+NET "fmc2_adc2_data_in_p[6]" LOC = AA29 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA25_N
+//NET "fmc2_adc2_data_in_p[7]" LOC = AC32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA26_P
+//NET "fmc2_adc2_data_in_n[7]" LOC = AC31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA26_N
+NET "fmc2_adc2_data_in_n[7]" LOC = AC32 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA26_P
+NET "fmc2_adc2_data_in_p[7]" LOC = AC31 |IOSTANDARD="LVDS_25" |DIFF_TERM="TRUE"; // LA26_N
+
+NET "fmc2_adc3_clk_p" LOC = R30 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB06_CC_P
+NET "fmc2_adc3_clk_n" LOC = P30 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB06_CC_N
+NET "fmc2_adc3_data_in_p[0]" LOC = U29 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB00_CC_P
+NET "fmc2_adc3_data_in_n[0]" LOC = T29 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB00_CC_N
+//NET "fmc2_adc3_data_in_p[1]" LOC = R27 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB11_P
+//NET "fmc2_adc3_data_in_n[1]" LOC = T27 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB11_N
+NET "fmc2_adc3_data_in_n[1]" LOC = R27 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB11_P
+NET "fmc2_adc3_data_in_p[1]" LOC = T27 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB11_N
+NET "fmc2_adc3_data_in_p[2]" LOC = N31 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB12_P
+NET "fmc2_adc3_data_in_n[2]" LOC = M32 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB12_N
+//NET "fmc2_adc3_data_in_p[3]" LOC = T25 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB10_P
+//NET "fmc2_adc3_data_in_n[3]" LOC = U25 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB10_N
+NET "fmc2_adc3_data_in_n[3]" LOC = T25 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB10_P
+NET "fmc2_adc3_data_in_p[3]" LOC = U25 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB10_N
+NET "fmc2_adc3_data_in_p[4]" LOC = U30 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB15_P
+NET "fmc2_adc3_data_in_n[4]" LOC = T30 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB15_N
+NET "fmc2_adc3_data_in_p[5]" LOC = R31 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB14_P
+NET "fmc2_adc3_data_in_n[5]" LOC = P31 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB14_N
+NET "fmc2_adc3_data_in_p[6]" LOC = N29 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB18_P
+NET "fmc2_adc3_data_in_n[6]" LOC = M29 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB18_N
+//NET "fmc2_adc3_data_in_p[7]" LOC = P29 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB17_CC_P
+//NET "fmc2_adc3_data_in_n[7]" LOC = P28 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB17_CC_N
+NET "fmc2_adc3_data_in_n[7]" LOC = P29 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB17_CC_P
+NET "fmc2_adc3_data_in_p[7]" LOC = P28 | IOSTANDARD="LVDS_25" | DIFF_TERM="TRUE"; // HB17_CC_N
+
+#--------------------------------
+#             Data
+#         HPC2
+#--------------------------------
+INST "fmc2_adc_250m_4ch_i/islaInterface_adc0_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y0;
+INST "fmc2_adc_250m_4ch_i/islaInterface_adc1_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y1;
+INST "fmc2_adc_250m_4ch_i/islaInterface_adc2_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y2;
+INST "fmc2_adc_250m_4ch_i/islaInterface_adc3_i/IDELAYCTRL_adc0_inst" LOC = IDELAYCTRL_X0Y3;
+
+#--------------------------------
+#          Area constraints
+#             HPC2
+#--------------------------------
+#INST "fmc2_adc_250m_4ch_i/adc0_reg_*" AREA_GROUP = "ADC0_AREA";
+#AREA_GROUP "ADC0_AREA" RANGE = SLICE_X0Y15:SLICE_X7Y28;
+#
+#INST "fmc2_adc_250m_4ch_i/adc1_reg_*" AREA_GROUP = "ADC1_AREA";
+#AREA_GROUP "ADC1_AREA" RANGE = SLICE_X0Y65:SLICE_X7Y81;
+#
+#INST "fmc2_adc_250m_4ch_i/adc2_reg_*" AREA_GROUP = "ADC2_AREA";
+#AREA_GROUP "ADC2_AREA" RANGE = SLICE_X0Y116:SLICE_X7Y128;
+#
+#INST "fmc2_adc_250m_4ch_i/adc3_reg_*" AREA_GROUP = "ADC3_AREA";
+#AREA_GROUP "ADC3_AREA" RANGE = SLICE_X0Y175:SLICE_X7Y190;
+
+#--------------------------------
+#       DIFF TERM
+#--------------------------------
+NET "sys_clk_i_p" DIFF_TERM = TRUE;
+NET "sys_clk_i_n" DIFF_TERM = TRUE;
+
+NET "fmc1_trig_val_o_p" DIFF_TERM = TRUE;
+NET "fmc1_trig_val_o_n" DIFF_TERM = TRUE;
+
+NET "fmc1_adc_clkdivrst_o_p" DIFF_TERM = TRUE;
+NET "fmc1_adc_clkdivrst_o_n" DIFF_TERM = TRUE;
+
+NET "fmc2_trig_val_o_p" DIFF_TERM = TRUE;
+NET "fmc2_trig_val_o_n" DIFF_TERM = TRUE;
+
+NET "fmc2_adc_clkdivrst_o_p" DIFF_TERM = TRUE;
+NET "fmc2_adc_clkdivrst_o_n" DIFF_TERM = TRUE;
+
+#--------------------------------
+#       Timing constraints
+#--------------------------------
+#--------------------------------
+#             Clocks
+#--------------------------------
+NET "sys_clk_i_p" TNM_NET = sys_clk_i_p;
+TIMESPEC TS_sys_clk_i_p = PERIOD "sys_clk_i_p" 125 MHz HIGH 50% INPUT_JITTER 50 ps;
+
+// FMC1
+// real jitter is about 22ps peak-to-peak
+NET "fmc1_adc0_clk_p" TNM_NET = fmc1_adc0_clk_p;
+TIMESPEC TS_fmc1_adc0_clk_p = PERIOD "fmc1_adc0_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+NET "fmc1_adc1_clk_p" TNM_NET = fmc1_adc1_clk_p;
+TIMESPEC TS_fmc1_adc1_clk_p = PERIOD "fmc1_adc1_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+NET "fmc1_adc2_clk_p" TNM_NET = fmc1_adc2_clk_p;
+TIMESPEC TS_fmc1_adc2_clk_p = PERIOD "fmc1_adc2_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+NET "fmc1_adc3_clk_p" TNM_NET = fmc1_adc3_clk_p;
+TIMESPEC TS_fmc1_adc3_clk_p = PERIOD "fmc1_adc3_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+// FMC2
+NET "fmc2_adc0_clk_p" TNM_NET = fmc2_adc0_clk_p;
+TIMESPEC TS_fmc2_adc0_clk_p = PERIOD "fmc2_adc0_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+NET "fmc2_adc1_clk_p" TNM_NET = fmc2_adc1_clk_p;
+TIMESPEC TS_fmc2_adc1_clk_p = PERIOD "fmc2_adc1_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+NET "fmc2_adc2_clk_p" TNM_NET = fmc2_adc2_clk_p;
+TIMESPEC TS_fmc2_adc2_clk_p = PERIOD "fmc2_adc2_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+NET "fmc2_adc3_clk_p" TNM_NET = fmc2_adc3_clk_p;
+TIMESPEC TS_fmc2_adc3_clk_p = PERIOD "fmc2_adc3_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+
+#--------------------------------
+#          Area constraints
+#--------------------------------
+#INST "fmc_adc_250m_4ch_i/adc0_reg_*" AREA_GROUP = "ADC0_AREA";
+#AREA_GROUP "ADC0_AREA" RANGE = SLICE_X0Y218:SLICE_X7Y234;
+#//AREA_GROUP "ADC0_AREA" RANGE = SLICE_X0Y309:SLICE_X3Y324;
+#
+#INST "fmc_adc_250m_4ch_i/adc1_reg_*" AREA_GROUP = "ADC1_AREA";
+#AREA_GROUP "ADC1_AREA" RANGE = SLICE_X157Y218:SLICE_X163Y234;
+#
+#INST "fmc_adc_250m_4ch_i/adc2_reg_*" AREA_GROUP = "ADC2_AREA";
+#AREA_GROUP "ADC2_AREA" RANGE = SLICE_X157Y168:SLICE_X163Y181;
+#
+#INST "fmc_adc_250m_4ch_i/adc3_reg_*" AREA_GROUP = "ADC3_AREA";
+#AREA_GROUP "ADC3_AREA" RANGE = SLICE_X157Y110:SLICE_X163Y124;
+
+#--------------------------------
+#          Data constraints
+#--------------------------------
+#// can't use data constraints
+#// Xilinx will always generate errors, since IDELAY components are used (not DCM)
+#// including 50ps jitter, for 250MHz clock
+
+// FMC1
+INST "fmc1_adc0_data_in_p<*>" TNM = fmc1_adc0_data;
+INST "fmc1_adc1_data_in_p<*>" TNM = fmc1_adc1_data;
+INST "fmc1_adc2_data_in_p<*>" TNM = fmc1_adc2_data;
+INST "fmc1_adc3_data_in_p<*>" TNM = fmc1_adc3_data;
+
+// FMC2
+INST "fmc2_adc0_data_in_p<*>" TNM = fmc2_adc0_data;
+INST "fmc2_adc1_data_in_p<*>" TNM = fmc2_adc1_data;
+INST "fmc2_adc2_data_in_p<*>" TNM = fmc2_adc2_data;
+INST "fmc2_adc3_data_in_p<*>" TNM = fmc2_adc3_data;
+
+// settings for 250MHz clock
+
+// FMC1
+TIMEGRP "fmc1_adc0_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc0_clk_p" RISING;
+TIMEGRP "fmc1_adc0_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc0_clk_p" FALLING;
+
+TIMEGRP "fmc1_adc1_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc1_clk_p" RISING;
+TIMEGRP "fmc1_adc1_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc1_clk_p" FALLING;
+
+TIMEGRP "fmc1_adc2_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc2_clk_p" RISING;
+TIMEGRP "fmc1_adc2_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc2_clk_p" FALLING;
+
+TIMEGRP "fmc1_adc3_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc3_clk_p" RISING;
+TIMEGRP "fmc1_adc3_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc1_adc3_clk_p" FALLING;
+
+// FMC2
+TIMEGRP "fmc2_adc0_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc0_clk_p" RISING;
+TIMEGRP "fmc2_adc0_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc0_clk_p" FALLING;
+
+TIMEGRP "fmc2_adc1_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc1_clk_p" RISING;
+TIMEGRP "fmc2_adc1_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc1_clk_p" FALLING;
+
+TIMEGRP "fmc2_adc2_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc2_clk_p" RISING;
+TIMEGRP "fmc2_adc2_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc2_clk_p" FALLING;
+
+TIMEGRP "fmc2_adc3_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc3_clk_p" RISING;
+TIMEGRP "fmc2_adc3_data" OFFSET = IN -0.15 ns VALID 1.85 ns BEFORE "fmc2_adc3_clk_p" FALLING;

@@ -5,12 +5,11 @@ def __dirs():
 		"modules/fmc_adc_250m_4ch",
 		"modules/rs232_syscon",
 		"modules/wb_spi_bidir",
-        "ip_cores/general-cores",
-        "ip_cores/dsp-cores"
+        	"ip_cores/general-cores",
+	        "ip_cores/dsp-cores"
 	      ]
 	if (target == "xilinx" and syn_device[0:4].upper()=="XC6V"):
-		dirs.extend(["platform/virtex6/ip_cores"]);
-		dirs.extend(["platform/virtex6/chipscope"]);
+		dirs.extend(["platform/virtex6/ip_cores", "platform/virtex6/chipscope"]);
 	elif (target == "xilinx" and syn_device[0:4].upper()=="XC7K"):
 		dirs.extend(["platform/kintex7/ip_cores"]);
 	elif (target == "xilinx" and syn_device[0:4].upper()=="XC7A"):

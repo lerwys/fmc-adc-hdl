@@ -249,7 +249,7 @@ wire [DSP_REF_NUM_BITS-1:0] dsp_monit_amp_ch0;
 wire [DSP_REF_NUM_BITS-1:0] dsp_monit_amp_ch1;
 wire [DSP_REF_NUM_BITS-1:0] dsp_monit_amp_ch2;
 wire [DSP_REF_NUM_BITS-1:0] dsp_monit_amp_ch3;
-                                         ;
+
 wire [DSP_POS_NUM_BITS-1:0] dsp_x_tbt    ;
 wire [DSP_POS_NUM_BITS-1:0] dsp_y_tbt    ;
 wire [DSP_POS_NUM_BITS-1:0] dsp_q_tbt    ;
@@ -265,6 +265,11 @@ wire [DSP_POS_NUM_BITS-1:0] dsp_y_monit  ;
 wire [DSP_POS_NUM_BITS-1:0] dsp_q_monit  ;
 wire [DSP_POS_NUM_BITS-1:0] dsp_sum_monit;
 
+wire [DSP_POS_NUM_BITS-1:0] dsp_x_monit_1  ;
+wire [DSP_POS_NUM_BITS-1:0] dsp_y_monit_1  ;
+wire [DSP_POS_NUM_BITS-1:0] dsp_q_monit_1  ;
+wire [DSP_POS_NUM_BITS-1:0] dsp_sum_monit_1;
+
 wire dsp_tbt_decim_q_ch01_incorrect     ;
 wire dsp_tbt_decim_q_ch23_incorrect     ;
 wire dsp_fofb_decim_q_01_missing        ;
@@ -272,6 +277,7 @@ wire dsp_fofb_decim_q_23_missing        ;
 wire dsp_monit_cic_unexpected           ;
 wire dsp_monit_cfir_incorrect           ;
 wire dsp_monit_pfir_incorrect           ;
+wire dsp_monit_pos_1_incorrect          ;
 
 wire dsp_clk_ce_1                       ;
 wire dsp_clk_ce_2                       ;
@@ -281,7 +287,9 @@ wire dsp_clk_ce_1390000                 ;
 wire dsp_clk_ce_1112                    ;
 wire dsp_clk_ce_2224                    ;
 wire dsp_clk_ce_11120000                ;
+wire dsp_clk_ce_111200000               ;
 wire dsp_clk_ce_22240000                ;
+wire dsp_clk_ce_222400000               ;
 wire dsp_clk_ce_5000                    ;
 wire dsp_clk_ce_556                     ;
 wire dsp_clk_ce_2780000                 ;
@@ -848,9 +856,9 @@ wb_position_calc_core # (
   .adc_ch3_i                                (fmc_adc3_data_sync),
 
   // DSP config parameter signals
-  .kx                                       (dsp_kx),
-  .ky                                       (dsp_ky),
-  .ksum                                     (dsp_ksum),
+  .kx_i                                     (dsp_kx),
+  .ky_i                                     (dsp_ky),
+  .ksum_i                                   (dsp_ksum),
 
   .del_sig_div_fofb_thres_i                 (dsp_del_sig_div_thres),
   .del_sig_div_tbt_thres_i                  (dsp_del_sig_div_thres),
@@ -907,9 +915,15 @@ wb_position_calc_core # (
   .q_monit_o                                (dsp_q_monit),
   .sum_monit_o                              (dsp_sum_monit),
 
+  .x_monit_1_o                              (dsp_x_monit_1),
+  .y_monit_1_o                              (dsp_y_monit_1),
+  .q_monit_1_o                              (dsp_q_monit_1),
+  .sum_monit_1_o                            (dsp_sum_monit_1),
+
   .monit_cic_unexpected_o                   (dsp_monit_cic_unexpected),
   .monit_cfir_incorrect_o                   (dsp_monit_cfir_incorrect),
   .monit_pfir_incorrect_o                   (dsp_monit_pfir_incorrect),
+  .monit_pos_1_incorrect_o                  (dsp_monit_pos_1_incorrect),
 
   // Output to RFFE board
   .clk_swap_o                               (clk_rffe_swap),
@@ -920,10 +934,12 @@ wb_position_calc_core # (
   .clk_ce_1_o                               (dsp_clk_ce_1),
   .clk_ce_1112_o                            (dsp_clk_ce_1112),
   .clk_ce_11120000_o                        (dsp_clk_ce_11120000),
+  .clk_ce_111200000_o                       (dsp_clk_ce_111200000),
   .clk_ce_1390000_o                         (dsp_clk_ce_1390000),
   .clk_ce_2_o                               (dsp_clk_ce_2),
   .clk_ce_2224_o                            (dsp_clk_ce_2224),
   .clk_ce_22240000_o                        (dsp_clk_ce_22240000),
+  .clk_ce_222400000_o                       (dsp_clk_ce_222400000),
   .clk_ce_2780000_o                         (dsp_clk_ce_2780000),
   .clk_ce_35_o                              (dsp_clk_ce_35),
   .clk_ce_5000_o                            (dsp_clk_ce_5000),
@@ -1045,6 +1061,7 @@ assign TRIG_ILA1_0[2]                       = dsp_clk_ce_2224;
 assign TRIG_ILA1_0[3]                       = dsp_clk_ce_2780000; // not used
 assign TRIG_ILA1_0[4]                       = dsp_clk_ce_5560000;
 assign TRIG_ILA1_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA1_0[6]                       = dsp_clk_ce_222400000;
 
 assign TRIG_ILA1_1                          = dsp_bpf_ch0;
 assign TRIG_ILA1_2                          = dsp_bpf_ch2;
@@ -1075,6 +1092,7 @@ assign TRIG_ILA2_0[2]                       = dsp_clk_ce_2224;
 assign TRIG_ILA2_0[3]                       = dsp_clk_ce_2780000; // not used
 assign TRIG_ILA2_0[4]                       = dsp_clk_ce_5560000;
 assign TRIG_ILA2_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA2_0[6]                       = dsp_clk_ce_222400000;
 
 assign TRIG_ILA2_1                          = dsp_tbt_amp_ch0;
 assign TRIG_ILA2_2                          = dsp_tbt_amp_ch1;
@@ -1098,6 +1116,7 @@ assign TRIG_ILA3_0[2]                       = dsp_clk_ce_2224;
 assign TRIG_ILA3_0[3]                       = dsp_clk_ce_2780000; // not used
 assign TRIG_ILA3_0[4]                       = dsp_clk_ce_5560000;
 assign TRIG_ILA3_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA3_0[6]                       = dsp_clk_ce_222400000;
 
 assign TRIG_ILA3_1                          = dsp_x_tbt;
 assign TRIG_ILA3_2                          = dsp_y_tbt;
@@ -1121,6 +1140,7 @@ assign TRIG_ILA4_0[2]                       = dsp_clk_ce_2224;
 assign TRIG_ILA4_0[3]                       = dsp_clk_ce_2780000; // not used
 assign TRIG_ILA4_0[4]                       = dsp_clk_ce_5560000;
 assign TRIG_ILA4_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA4_0[6]                       = dsp_clk_ce_222400000;
 
 assign TRIG_ILA4_1                          = dsp_fofb_amp_ch0;
 assign TRIG_ILA4_2                          = dsp_fofb_amp_ch1;
@@ -1144,6 +1164,7 @@ assign TRIG_ILA5_0[2]                       = dsp_clk_ce_2224;
 assign TRIG_ILA5_0[3]                       = dsp_clk_ce_2780000; // not used
 assign TRIG_ILA5_0[4]                       = dsp_clk_ce_5560000;
 assign TRIG_ILA5_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA5_0[6]                       = dsp_clk_ce_222400000;
 
 assign TRIG_ILA5_1                          = dsp_x_fofb;
 assign TRIG_ILA5_2                          = dsp_y_fofb;
@@ -1167,13 +1188,14 @@ assign TRIG_ILA6_0[2]                       = dsp_clk_ce_2224;
 assign TRIG_ILA6_0[3]                       = dsp_clk_ce_2780000; // not used
 assign TRIG_ILA6_0[4]                       = dsp_clk_ce_5560000;
 assign TRIG_ILA6_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA6_0[6]                       = dsp_clk_ce_222400000;
 
 assign TRIG_ILA6_1                          = dsp_monit_amp_ch0;
 assign TRIG_ILA6_2                          = dsp_monit_amp_ch1;
 assign TRIG_ILA6_3                          = dsp_monit_amp_ch2;
 assign TRIG_ILA6_4                          = dsp_monit_amp_ch3;
 
-// Monitoring position data
+// Monitoring position data. Augment size of this ILA
 chipscope_ila_8192 cmp_chipscope_ila_8192_monit_pos_i (
   .CONTROL                                  (CONTROL7),
   .CLK                                      (adc_ref_clk2x),
@@ -1190,10 +1212,12 @@ assign TRIG_ILA7_0[2]                       = dsp_clk_ce_2224;
 assign TRIG_ILA7_0[3]                       = dsp_clk_ce_2780000; // not used
 assign TRIG_ILA7_0[4]                       = dsp_clk_ce_5560000;
 assign TRIG_ILA7_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA7_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA7_1                          = dsp_x_monit;
-assign TRIG_ILA7_2                          = dsp_y_monit;
-assign TRIG_ILA7_3                          = dsp_q_monit;
-assign TRIG_ILA7_4                          = dsp_sum_monit;
+assign TRIG_ILA7_1                          = dsp_x_monit_1;
+assign TRIG_ILA7_2                          = dsp_y_monit_1;
+assign TRIG_ILA7_3                          = dsp_q_monit_1;
+assign TRIG_ILA7_4[DSP_POS_NUM_BITS-1:0]    = dsp_sum_monit_1;
+assign TRIG_ILA7_4[DSP_POS_NUM_BITS]        = dsp_monit_pos_1_incorrect;
 
 endmodule

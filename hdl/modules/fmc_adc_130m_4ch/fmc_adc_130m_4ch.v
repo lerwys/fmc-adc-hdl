@@ -25,21 +25,25 @@ module fmc_adc_130m_4ch(
   input adc0_clk,
   output adc0_clk_out,
   input [15:0]adc0_data_in,
+  output [15:0] adc0_data_out,
   input adc0_ov,
 
   input adc1_clk,
   output adc1_clk_out,
   input [15:0]adc1_data_in,
+  output [15:0] adc1_data_out,
   input adc1_ov,
 
   input adc2_clk,
   output adc2_clk_out,
   input [15:0]adc2_data_in,
+  output [15:0] adc2_data_out,
   input adc2_ov,
 
   input adc3_clk,
   output adc3_clk_out,
   input [15:0]adc3_data_in,
+  output [15:0] adc3_data_out,
   input adc3_ov,
 
   input [4:0]adc0_delay_reg,
@@ -81,10 +85,10 @@ parameter USE_CHIPSCOPE_ILA = 1;
 
 // REBUILD ALL CORES UNDER XILINX ISE 14.4
 
-wire [16:0]adc0_data_out;
-wire [16:0]adc1_data_out;
-wire [16:0]adc2_data_out;
-wire [16:0]adc3_data_out;
+wire [16:0]adc0_data_out_int;
+wire [16:0]adc1_data_out_int;
+wire [16:0]adc2_data_out_int;
+wire [16:0]adc3_data_out_int;
 
 // On ML605 kit, all clock pins are assigned to MRCC pins. However, two of them
 // (fmc_adc1_clk and fmc_adc3_clk) are located in the outer left/right column
@@ -107,7 +111,7 @@ ltcInterface #(
     // LTC clock output (SDR)
     .adc0_clk_out(adc0_clk_out),
     // LTC data output (SDR)
-    .adc0_data_out(adc0_data_out),
+    .adc0_data_out(adc0_data_out_int),
     // Control signals for IDELAY
     .sys_clk(sys_clk),
     .ref_clk(ref_clk), // 200MHz
@@ -135,7 +139,7 @@ ltcInterface #(
     // LTC clock output (SDR)
     .adc0_clk_out(adc1_clk_out),
     // LTC data output (SDR)
-    .adc0_data_out(adc1_data_out),
+    .adc0_data_out(adc1_data_out_int),
     // Control signals for IDELAY
     .sys_clk(sys_clk),
     .ref_clk(ref_clk), // 200MHz
@@ -163,7 +167,7 @@ ltcInterface #(
     // LTC clock output (SDR)
     .adc0_clk_out(adc2_clk_out),
     // LTC data output (SDR)
-    .adc0_data_out(adc2_data_out),
+    .adc0_data_out(adc2_data_out_int),
     // Control signals for IDELAY
     .sys_clk(sys_clk),
     .ref_clk(ref_clk), // 200MHz
@@ -191,7 +195,7 @@ ltcInterface #(
     // LTC clock output (SDR)
     .adc0_clk_out(adc3_clk_out),
     // LTC data output (SDR)
-    .adc0_data_out(adc3_data_out),
+    .adc0_data_out(adc3_data_out_int),
     // Control signals for IDELAY
     .sys_clk(sys_clk),
     .ref_clk(ref_clk), // 200MHz
@@ -216,16 +220,22 @@ reg [16:0]adc3_reg = 0;
 
 // now only for chipscope
 always@(posedge adc0_clk_out)
-  adc0_reg[15:0] <= adc0_data_out[15:0];
+  adc0_reg[15:0] <= adc0_data_out_int[15:0];
 
 always@(posedge adc1_clk_out)
-  adc1_reg[15:0] <= adc1_data_out[15:0];
+  adc1_reg[15:0] <= adc1_data_out_int[15:0];
 
 always@(posedge adc2_clk_out)
-  adc2_reg[15:0] <= adc2_data_out[15:0];
+  adc2_reg[15:0] <= adc2_data_out_int[15:0];
 
 always@(posedge adc3_clk_out)
-  adc3_reg[15:0] <= adc3_data_out[15:0];
+  adc3_reg[15:0] <= adc3_data_out_int[15:0];
+
+// Output adc data
+assign adc0_data_out = adc0_reg[15:0];
+assign adc1_data_out = adc1_reg[15:0];
+assign adc2_data_out = adc2_reg[15:0];
+assign adc3_data_out = adc3_reg[15:0];
 
 // ===============================================
 //                   Chipscope

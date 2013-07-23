@@ -1,0 +1,14 @@
+# Output products list for <dds_adc_input>
+dds_adc_input/doc/dds_compiler_v5_0_readme.txt
+dds_adc_input/doc/dds_compiler_v5_0_vinfo.html
+dds_adc_input/doc/ds794_dds_compiler.pdf
+dds_adc_input.asy
+dds_adc_input.gise
+dds_adc_input.ngc
+dds_adc_input.vhd
+dds_adc_input.vho
+dds_adc_input.xco
+dds_adc_input.xise
+dds_adc_input_flist.txt
+dds_adc_input_xmdf.tcl
+demo_tb/tb_dds_adc_input.vhd

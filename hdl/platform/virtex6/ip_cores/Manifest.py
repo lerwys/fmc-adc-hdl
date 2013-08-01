@@ -1,6 +1,6 @@
 files = [
-#"chipscope_icon.ngc",
-#"chipscope_icon.v",
+"chipscope_icon.ngc",
+"chipscope_icon.v",
 #"chipscope_ila.ngc",
 #"chipscope_ila.v",
 	 "dds_adc_input.ngc",

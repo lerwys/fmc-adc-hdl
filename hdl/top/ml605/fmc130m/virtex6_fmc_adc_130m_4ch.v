@@ -244,6 +244,19 @@ wire [24:0] dsp_ksum;
 
 wire [25:0] dsp_del_sig_div_thres;
 
+wire [29:0] dsp_dds_config_valid_ch0;
+wire [29:0] dsp_dds_config_valid_ch1;
+wire [29:0] dsp_dds_config_valid_ch2;
+wire [29:0] dsp_dds_config_valid_ch3;
+wire [29:0] dsp_dds_pinc_ch0;
+wire [29:0] dsp_dds_pinc_ch1;
+wire [29:0] dsp_dds_pinc_ch2;
+wire [29:0] dsp_dds_pinc_ch3;
+wire [29:0] dsp_dds_poff_ch0;
+wire [29:0] dsp_dds_poff_ch1;
+wire [29:0] dsp_dds_poff_ch2;
+wire [29:0] dsp_dds_poff_ch3;
+
 wire [NUM_ADC_BITS-1:0] dsp_adc_ch0_dbg_data;
 wire [NUM_ADC_BITS-1:0] dsp_adc_ch1_dbg_data;
 wire [NUM_ADC_BITS-1:0] dsp_adc_ch2_dbg_data;
@@ -276,10 +289,20 @@ wire [DSP_REF_NUM_BITS-1:0] dsp_tbt_amp_ch1;
 wire [DSP_REF_NUM_BITS-1:0] dsp_tbt_amp_ch2;
 wire [DSP_REF_NUM_BITS-1:0] dsp_tbt_amp_ch3;
 
+wire [DSP_REF_NUM_BITS-1:0] dsp_tbt_pha_ch0;
+wire [DSP_REF_NUM_BITS-1:0] dsp_tbt_pha_ch1;
+wire [DSP_REF_NUM_BITS-1:0] dsp_tbt_pha_ch2;
+wire [DSP_REF_NUM_BITS-1:0] dsp_tbt_pha_ch3;
+
 wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_amp_ch0;
 wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_amp_ch1;
 wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_amp_ch2;
 wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_amp_ch3;
+
+wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_pha_ch0;
+wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_pha_ch1;
+wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_pha_ch2;
+wire [DSP_REF_NUM_BITS-1:0] dsp_fofb_pha_ch3;
 
 wire [DSP_REF_NUM_BITS-1:0] dsp_monit_amp_ch0;
 wire [DSP_REF_NUM_BITS-1:0] dsp_monit_amp_ch1;
@@ -366,6 +389,9 @@ wire [35:0] CONTROL6;
 wire [35:0] CONTROL7;
 wire [35:0] CONTROL8;
 wire [35:0] CONTROL9;
+wire [35:0] CONTROL10;
+wire [35:0] CONTROL11;
+wire [35:0] CONTROL12;
 
 // Chipscope ILA 0 signals
 wire [31:0] TRIG_ILA0_0;
@@ -429,8 +455,23 @@ wire [31:0] TRIG_ILA8_2;
 wire [31:0] TRIG_ILA8_3;
 wire [31:0] TRIG_ILA8_4;
 
+// Chipscope ILA 9 signals
+wire [7:0] TRIG_ILA9_0;
+wire [31:0] TRIG_ILA9_1;
+wire [31:0] TRIG_ILA9_2;
+wire [31:0] TRIG_ILA9_3;
+wire [31:0] TRIG_ILA9_4;
+
+// Chipscope ILA 10 signals
+wire [7:0] TRIG_ILA10_0;
+wire [31:0] TRIG_ILA10_1;
+wire [31:0] TRIG_ILA10_2;
+wire [31:0] TRIG_ILA10_3;
+wire [31:0] TRIG_ILA10_4;
+
 // Chipscope VIO signals
 wire [255:0] vio_out;
+wire [255:0] vio_out_dsp_config;
 
 fmc_adc_130m_4ch #(
         .FPGA_DEVICE(FPGA_DEVICE),
@@ -1056,6 +1097,19 @@ wb_position_calc_core # (
   .del_sig_div_tbt_thres_i                  (dsp_del_sig_div_thres),
   .del_sig_div_monit_thres_i                (dsp_del_sig_div_thres),
 
+  .dds_config_valid_ch0_i                   (dsp_dds_config_valid_ch0),
+  .dds_config_valid_ch1_i                   (dsp_dds_config_valid_ch1),
+  .dds_config_valid_ch2_i                   (dsp_dds_config_valid_ch2),
+  .dds_config_valid_ch3_i                   (dsp_dds_config_valid_ch3),
+  .dds_pinc_ch0_i                           (dsp_dds_pinc_ch0        ),
+  .dds_pinc_ch1_i                           (dsp_dds_pinc_ch1        ),
+  .dds_pinc_ch2_i                           (dsp_dds_pinc_ch2        ),
+  .dds_pinc_ch3_i                           (dsp_dds_pinc_ch3        ),
+  .dds_poff_ch0_i                           (dsp_dds_poff_ch0        ),
+  .dds_poff_ch1_i                           (dsp_dds_poff_ch1        ),
+  .dds_poff_ch2_i                           (dsp_dds_poff_ch2        ),
+  .dds_poff_ch3_i                           (dsp_dds_poff_ch3        ),
+
   // Position calculation at various rates
   .adc_ch0_dbg_data_o                       (dsp_adc_ch0_data),
   .adc_ch1_dbg_data_o                       (dsp_adc_ch1_data),
@@ -1079,6 +1133,11 @@ wb_position_calc_core # (
   .tbt_amp_ch2_o                            (dsp_tbt_amp_ch2),
   .tbt_amp_ch3_o                            (dsp_tbt_amp_ch3),
 
+  .tbt_pha_ch0_o                            (dsp_tbt_pha_ch0),
+  .tbt_pha_ch1_o                            (dsp_tbt_pha_ch1),
+  .tbt_pha_ch2_o                            (dsp_tbt_pha_ch2),
+  .tbt_pha_ch3_o                            (dsp_tbt_pha_ch3),
+
   .fofb_decim_q_01_missing_o                (dsp_fofb_decim_q_01_missing),
   .fofb_decim_q_23_missing_o                (dsp_fofb_decim_q_23_missing),
 
@@ -1086,6 +1145,11 @@ wb_position_calc_core # (
   .fofb_amp_ch1_o                           (dsp_fofb_amp_ch1),
   .fofb_amp_ch2_o                           (dsp_fofb_amp_ch2),
   .fofb_amp_ch3_o                           (dsp_fofb_amp_ch3),
+
+  .fofb_pha_ch0_o                           (dsp_fofb_pha_ch0),
+  .fofb_pha_ch1_o                           (dsp_fofb_pha_ch1),
+  .fofb_pha_ch2_o                           (dsp_fofb_pha_ch2),
+  .fofb_pha_ch3_o                           (dsp_fofb_pha_ch3),
 
   .monit_amp_ch0_o                          (dsp_monit_amp_ch0),
   .monit_amp_ch1_o                          (dsp_monit_amp_ch1),
@@ -1204,7 +1268,7 @@ rs232_syscon_top_1_0 i_rs232_syscon_top_1_0 (
 );
 
 // Chipscope Analysis
-chipscope_icon_10_port cmp_chipscope_icon_10_i (
+chipscope_icon_13_port cmp_chipscope_icon_13_i (
    .CONTROL0                                (CONTROL0),
    .CONTROL1                                (CONTROL1),
    .CONTROL2                                (CONTROL2),
@@ -1214,7 +1278,10 @@ chipscope_icon_10_port cmp_chipscope_icon_10_i (
    .CONTROL6                                (CONTROL6),
    .CONTROL7                                (CONTROL7),
    .CONTROL8                                (CONTROL8),
-   .CONTROL9                                (CONTROL9)
+   .CONTROL9                                (CONTROL9),
+   .CONTROL10                               (CONTROL10),
+   .CONTROL11                               (CONTROL11),
+   .CONTROL12                               (CONTROL12)
   );
 
 chipscope_ila cmp_chipscope_ila_0_adc_i (
@@ -1241,7 +1308,7 @@ assign TRIG_ILA0_1                          = {dsp_adc_ch3_data,
 // Mix and BPF data
 chipscope_ila_4096 cmp_chipscope_ila_4096_bpf_mix_i (
   .CONTROL                                  (CONTROL1),
-  //.CLK                                      (adc_ref_clk2x),
+//  .CLK                                      (adc_ref_clk2x),
   .CLK                                      (adc_ref_clk),
   .TRIG0                                    (TRIG_ILA1_0),
   .TRIG1                                    (TRIG_ILA1_1),
@@ -1250,21 +1317,21 @@ chipscope_ila_4096 cmp_chipscope_ila_4096_bpf_mix_i (
   .TRIG4                                    (TRIG_ILA1_4)
 );
 
-//assign TRIG_ILA1_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA1_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA1_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA1_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA1_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA1_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA1_0[6]                       = dsp_clk_ce_222400000;
+assign TRIG_ILA1_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA1_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA1_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA1_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA1_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA1_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA1_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA1_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA1_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA1_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA1_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA1_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA1_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA1_0[6]                       = dsp_clk_ce_111200000;
+//assign TRIG_ILA1_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA1_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA1_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA1_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA1_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA1_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA1_0[6]                       = dsp_clk_ce_111200000;
 
 assign TRIG_ILA1_1                          = dsp_bpf_ch0;
 assign TRIG_ILA1_2                          = dsp_bpf_ch2;
@@ -1283,21 +1350,21 @@ chipscope_ila_4096 cmp_chipscope_ila_4096_tbt_amp_i (
   .TRIG4                                    (TRIG_ILA2_4)
 );
 
-assign TRIG_ILA2_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA2_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA2_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA2_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA2_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA2_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA2_0[6]                       = dsp_clk_ce_111200000;
+assign TRIG_ILA2_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA2_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA2_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA2_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA2_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA2_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA2_0[6]                       = dsp_clk_ce_222400000;
 
-//assign TRIG_ILA2_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA2_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA2_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA2_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA2_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA2_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA2_0[6]                       = dsp_clk_ce_222400000;
+//assign TRIG_ILA2_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA2_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA2_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA2_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA2_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA2_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA2_0[6]                       = dsp_clk_ce_111200000;
 
 assign TRIG_ILA2_1                          = dsp_tbt_amp_ch0;
 assign TRIG_ILA2_2                          = dsp_tbt_amp_ch1;
@@ -1316,21 +1383,21 @@ chipscope_ila_4096 cmp_chipscope_ila_4096_tbt_pos_i (
   .TRIG4                                    (TRIG_ILA3_4)
 );
 
-//assign TRIG_ILA3_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA3_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA3_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA3_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA3_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA3_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA3_0[6]                       = dsp_clk_ce_222400000;
+assign TRIG_ILA3_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA3_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA3_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA3_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA3_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA3_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA3_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA3_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA3_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA3_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA3_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA3_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA3_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA3_0[6]                       = dsp_clk_ce_111200000;
+//assign TRIG_ILA3_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA3_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA3_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA3_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA3_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA3_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA3_0[6]                       = dsp_clk_ce_111200000;
 
 assign TRIG_ILA3_1                          = dsp_x_tbt;
 assign TRIG_ILA3_2                          = dsp_y_tbt;
@@ -1349,21 +1416,21 @@ chipscope_ila_4096 cmp_chipscope_ila_4096_fofb_amp_i (
   .TRIG4                                    (TRIG_ILA4_4)
 );
 
-//assign TRIG_ILA4_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA4_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA4_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA4_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA4_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA4_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA4_0[6]                       = dsp_clk_ce_222400000;
+assign TRIG_ILA4_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA4_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA4_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA4_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA4_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA4_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA4_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA4_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA4_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA4_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA4_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA4_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA4_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA4_0[6]                       = dsp_clk_ce_111200000;
+//assign TRIG_ILA4_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA4_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA4_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA4_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA4_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA4_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA4_0[6]                       = dsp_clk_ce_111200000;
 
 assign TRIG_ILA4_1                          = dsp_fofb_amp_ch0;
 assign TRIG_ILA4_2                          = dsp_fofb_amp_ch1;
@@ -1382,21 +1449,21 @@ chipscope_ila_4096 cmp_chipscope_ila_4096_fofb_pos_i (
   .TRIG4                                    (TRIG_ILA5_4)
 );
 
-//assign TRIG_ILA5_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA5_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA5_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA5_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA5_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA5_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA5_0[6]                       = dsp_clk_ce_222400000;
+assign TRIG_ILA5_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA5_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA5_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA5_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA5_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA5_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA5_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA5_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA5_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA5_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA5_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA5_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA5_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA5_0[6]                       = dsp_clk_ce_111200000;
+//assign TRIG_ILA5_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA5_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA5_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA5_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA5_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA5_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA5_0[6]                       = dsp_clk_ce_111200000;
 
 assign TRIG_ILA5_1                          = dsp_x_fofb;
 assign TRIG_ILA5_2                          = dsp_y_fofb;
@@ -1415,21 +1482,21 @@ chipscope_ila_4096 cmp_chipscope_ila_4096_monit_amp_i (
   .TRIG4                                    (TRIG_ILA6_4)
 );
 
-//assign TRIG_ILA6_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA6_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA6_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA6_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA6_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA6_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA6_0[6]                       = dsp_clk_ce_222400000;
+assign TRIG_ILA6_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA6_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA6_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA6_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA6_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA6_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA6_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA6_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA6_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA6_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA6_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA6_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA6_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA6_0[6]                       = dsp_clk_ce_111200000;
+//assign TRIG_ILA6_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA6_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA6_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA6_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA6_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA6_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA6_0[6]                       = dsp_clk_ce_111200000;
 
 assign TRIG_ILA6_1                          = dsp_monit_amp_ch0;
 assign TRIG_ILA6_2                          = dsp_monit_amp_ch1;
@@ -1448,28 +1515,28 @@ chipscope_ila_4096 cmp_chipscope_ila_4096_monit_pos_i (
   .TRIG4                                    (TRIG_ILA7_4)
 );
 
-//assign TRIG_ILA7_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA7_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA7_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA7_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA7_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA7_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA7_0[6]                       = dsp_clk_ce_222400000;
+assign TRIG_ILA7_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA7_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA7_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA7_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA7_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA7_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA7_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA7_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA7_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA7_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA7_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA7_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA7_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA7_0[6]                       = dsp_clk_ce_111200000;
+//assign TRIG_ILA7_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA7_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA7_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA7_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA7_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA7_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA7_0[6]                       = dsp_clk_ce_111200000;
 
-assign TRIG_ILA7_1                          = dsp_monit_amp_ch0;
-assign TRIG_ILA7_2                          = dsp_monit_amp_ch1;
-assign TRIG_ILA7_3                          = dsp_monit_amp_ch2;
-assign TRIG_ILA7_4                          = dsp_monit_amp_ch3;
+assign TRIG_ILA7_1                          = dsp_x_monit;
+assign TRIG_ILA7_2                          = dsp_y_monit;
+assign TRIG_ILA7_3                          = dsp_q_monit;
+assign TRIG_ILA7_4                          = dsp_sum_monit;
 
-// Monitoring position data. Augment size of this ILA
+// Monitoring position data.
 chipscope_ila_32768 cmp_chipscope_ila_32768_monit_pos_1_i (
   .CONTROL                                  (CONTROL8),
 //  .CLK                                      (adc_ref_clk2x),
@@ -1481,30 +1548,96 @@ chipscope_ila_32768 cmp_chipscope_ila_32768_monit_pos_1_i (
   .TRIG4                                    (TRIG_ILA8_4)
 );
 
-//assign TRIG_ILA8_0[0]                       = dsp_clk_ce_2;
-//assign TRIG_ILA8_0[1]                       = dsp_clk_ce_70;
-//assign TRIG_ILA8_0[2]                       = dsp_clk_ce_2224;
-//assign TRIG_ILA8_0[3]                       = dsp_clk_ce_2780000; // not used
-//assign TRIG_ILA8_0[4]                       = dsp_clk_ce_5560000;
-//assign TRIG_ILA8_0[5]                       = dsp_clk_ce_22240000;
-//assign TRIG_ILA8_0[6]                       = dsp_clk_ce_222400000;
+assign TRIG_ILA8_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA8_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA8_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA8_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA8_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA8_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA8_0[6]                       = dsp_clk_ce_222400000;
 
-assign TRIG_ILA8_0[0]                       = dsp_clk_ce_1;
-assign TRIG_ILA8_0[1]                       = dsp_clk_ce_35;
-assign TRIG_ILA8_0[2]                       = dsp_clk_ce_1112;
-assign TRIG_ILA8_0[3]                       = dsp_clk_ce_1390000;
-assign TRIG_ILA8_0[4]                       = dsp_clk_ce_2780000; // not used
-assign TRIG_ILA8_0[5]                       = dsp_clk_ce_11120000;
-assign TRIG_ILA8_0[6]                       = dsp_clk_ce_111200000;
+//assign TRIG_ILA8_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA8_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA8_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA8_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA8_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA8_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA8_0[6]                       = dsp_clk_ce_111200000;
 
 assign TRIG_ILA8_1                          = dsp_x_monit_1;
 assign TRIG_ILA8_2                          = dsp_y_monit_1;
 assign TRIG_ILA8_3                          = dsp_q_monit_1;
 assign TRIG_ILA8_4                          = dsp_sum_monit_1;
 
+// TBT Phase data
+chipscope_ila_4096 cmp_chipscope_ila_4096_tbt_pha_i (
+  .CONTROL                                  (CONTROL9),
+//  .CLK                                      (adc_ref_clk2x),
+  .CLK                                      (adc_ref_clk),
+  .TRIG0                                    (TRIG_ILA9_0),
+  .TRIG1                                    (TRIG_ILA9_1),
+  .TRIG2                                    (TRIG_ILA9_2),
+  .TRIG3                                    (TRIG_ILA9_3),
+  .TRIG4                                    (TRIG_ILA9_4)
+);
+
+assign TRIG_ILA9_0[0]                       = dsp_clk_ce_2;
+assign TRIG_ILA9_0[1]                       = dsp_clk_ce_70;
+assign TRIG_ILA9_0[2]                       = dsp_clk_ce_2224;
+assign TRIG_ILA9_0[3]                       = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA9_0[4]                       = dsp_clk_ce_5560000;
+assign TRIG_ILA9_0[5]                       = dsp_clk_ce_22240000;
+assign TRIG_ILA9_0[6]                       = dsp_clk_ce_222400000;
+
+//assign TRIG_ILA9_0[0]                       = dsp_clk_ce_1;
+//assign TRIG_ILA9_0[1]                       = dsp_clk_ce_35;
+//assign TRIG_ILA9_0[2]                       = dsp_clk_ce_1112;
+//assign TRIG_ILA9_0[3]                       = dsp_clk_ce_1390000;
+//assign TRIG_ILA9_0[4]                       = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA9_0[5]                       = dsp_clk_ce_11120000;
+//assign TRIG_ILA9_0[6]                       = dsp_clk_ce_111200000;
+
+assign TRIG_ILA9_1                          = dsp_tbt_pha_ch0;
+assign TRIG_ILA9_2                          = dsp_tbt_pha_ch1;
+assign TRIG_ILA9_3                          = dsp_tbt_pha_ch2;
+assign TRIG_ILA9_4                          = dsp_tbt_pha_ch3;
+
+// FOFB Phase data
+chipscope_ila_4096 cmp_chipscope_ila_4096_fofb_pha_i (
+  .CONTROL                                  (CONTROL10),
+//  .CLK                                      (adc_ref_clk2x),
+  .CLK                                      (adc_ref_clk),
+  .TRIG0                                    (TRIG_ILA10_0),
+  .TRIG1                                    (TRIG_ILA10_1),
+  .TRIG2                                    (TRIG_ILA10_2),
+  .TRIG3                                    (TRIG_ILA10_3),
+  .TRIG4                                    (TRIG_ILA10_4)
+);
+
+assign TRIG_ILA10_0[0]                      = dsp_clk_ce_2;
+assign TRIG_ILA10_0[1]                      = dsp_clk_ce_70;
+assign TRIG_ILA10_0[2]                      = dsp_clk_ce_2224;
+assign TRIG_ILA10_0[3]                      = dsp_clk_ce_2780000; // not used
+assign TRIG_ILA10_0[4]                      = dsp_clk_ce_5560000;
+assign TRIG_ILA10_0[5]                      = dsp_clk_ce_22240000;
+assign TRIG_ILA10_0[6]                      = dsp_clk_ce_222400000;
+
+//assign TRIG_ILA10_0[0]                      = dsp_clk_ce_1;
+//assign TRIG_ILA10_0[1]                      = dsp_clk_ce_35;
+//assign TRIG_ILA10_0[2]                      = dsp_clk_ce_1112;
+//assign TRIG_ILA10_0[3]                      = dsp_clk_ce_1390000;
+//assign TRIG_ILA10_0[4]                      = dsp_clk_ce_2780000; // not used
+//assign TRIG_ILA10_0[5]                      = dsp_clk_ce_11120000;
+//assign TRIG_ILA10_0[6]                      = dsp_clk_ce_111200000;
+
+assign TRIG_ILA10_1                         = dsp_fofb_pha_ch0;
+assign TRIG_ILA10_2                         = dsp_fofb_pha_ch1;
+assign TRIG_ILA10_3                         = dsp_fofb_pha_ch2;
+assign TRIG_ILA10_4                         = dsp_fofb_pha_ch3;
+
 // Controllable gain for test data
 chipscope_vio_256 cmp_chipscope_vio_256 (
-    .CONTROL                                (CONTROL9),
+    .CONTROL                                (CONTROL11),
     .ASYNC_OUT                              (vio_out)
 );
 
@@ -1524,15 +1657,35 @@ assign un_cross_gain_ca = vio_out[161:146];
 assign un_cross_gain_db = vio_out[177:162];
 
 assign un_cross_delay_1 = vio_out[193:178];
-//assign un_cross_delay_2 = vio_out[210:194];
 assign un_cross_delay_2 = vio_out[209:194];
 
-//assign un_cross_mode_1 = vio_out[212:211];
 assign un_cross_mode_1 = vio_out[211:210];
-//assign un_cross_mode_2 = vio_out[214:213];
 assign un_cross_mode_2 = vio_out[213:212];
 
-//assign un_cross_div_f = vio_out[230:215];
 assign un_cross_div_f = vio_out[229:214];
 
+// Controllable gain for test data
+chipscope_vio_256 cmp_chipscope_vio_256_dsp_config (
+    .CONTROL                                (CONTROL12),
+    .ASYNC_OUT                              (vio_out_dsp_config)
+);
+
+assign dsp_dds_pinc_ch0 = vio_out_dsp_config[29:0];
+assign dsp_dds_pinc_ch1 = vio_out_dsp_config[59:30];
+assign dsp_dds_pinc_ch2 = vio_out_dsp_config[89:60];
+assign dsp_dds_pinc_ch3 = vio_out_dsp_config[119:90];
+assign dsp_dds_poff_ch0 = vio_out_dsp_config[149:120];
+assign dsp_dds_poff_ch1 = vio_out_dsp_config[179:150];
+assign dsp_dds_poff_ch2 = vio_out_dsp_config[209:180];
+assign dsp_dds_poff_ch3 = vio_out_dsp_config[239:210];
+
+assign dsp_dds_config_valid_ch0 = vio_out_dsp_config[240];
+assign dsp_dds_config_valid_ch1 = vio_out_dsp_config[241];
+assign dsp_dds_config_valid_ch2 = vio_out_dsp_config[242];
+assign dsp_dds_config_valid_ch3 = vio_out_dsp_config[243];
+
+// edge detect for dds config.... not actually needed as
+// long as we deassert valid not too much after
+
 endmodule
+

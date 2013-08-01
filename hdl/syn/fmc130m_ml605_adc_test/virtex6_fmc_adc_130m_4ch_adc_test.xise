@@ -861,12 +861,8 @@
     <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/ddc_bpm_476_066.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="Implementation" xil_pn:seqID="172"/>
     </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/dds_cmplr_v5_0_ca0550aac85c1501.ngc" xil_pn:type="FILE_NGC">
-      <association xil_pn:name="Implementation" xil_pn:seqID="173"/>
-    </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/dds_cmplr_v5_0_ca0550aac85c1501.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="Implementation" xil_pn:seqID="174"/>
-    </file>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/dds_cmplr_v5_0_ca0550aac85c1501.ngc" xil_pn:type="FILE_NGC"/>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/dds_cmplr_v5_0_ca0550aac85c1501.vhd" xil_pn:type="FILE_VHDL"/>
     <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/dv_gn_v4_0_7887f22978e0003d.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="Implementation" xil_pn:seqID="175"/>
     </file>
@@ -885,18 +881,10 @@
     <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fifo_generator_virtex6_8_4_784d0e5148f6dbe1.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="Implementation" xil_pn:seqID="180"/>
     </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_0c61ac74cf3e5cc7.ngc" xil_pn:type="FILE_NGC">
-      <association xil_pn:name="Implementation" xil_pn:seqID="181"/>
-    </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_0c61ac74cf3e5cc7.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="Implementation" xil_pn:seqID="182"/>
-    </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_95e3c24666ebc2c9.ngc" xil_pn:type="FILE_NGC">
-      <association xil_pn:name="Implementation" xil_pn:seqID="183"/>
-    </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_95e3c24666ebc2c9.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="Implementation" xil_pn:seqID="184"/>
-    </file>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_0c61ac74cf3e5cc7.ngc" xil_pn:type="FILE_NGC"/>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_0c61ac74cf3e5cc7.vhd" xil_pn:type="FILE_VHDL"/>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_95e3c24666ebc2c9.ngc" xil_pn:type="FILE_NGC"/>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_95e3c24666ebc2c9.vhd" xil_pn:type="FILE_VHDL"/>
     <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_966cc03d206c1a0c.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="Implementation" xil_pn:seqID="185"/>
     </file>
@@ -909,12 +897,8 @@
     <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_ef8269b30b0e0deb.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="Implementation" xil_pn:seqID="188"/>
     </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_f7e05b1a00abee12.ngc" xil_pn:type="FILE_NGC">
-      <association xil_pn:name="Implementation" xil_pn:seqID="189"/>
-    </file>
-    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_f7e05b1a00abee12.vhd" xil_pn:type="FILE_VHDL">
-      <association xil_pn:name="Implementation" xil_pn:seqID="190"/>
-    </file>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_f7e05b1a00abee12.ngc" xil_pn:type="FILE_NGC"/>
+    <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_f7e05b1a00abee12.vhd" xil_pn:type="FILE_VHDL"/>
     <file xil_pn:name="../../ip_cores/dsp-cores/hdl/modules/position_calc/generated/mult_11_2_6d8e463c710483da.ngc" xil_pn:type="FILE_NGC">
       <association xil_pn:name="Implementation" xil_pn:seqID="191"/>
     </file>

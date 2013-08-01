@@ -686,18 +686,20 @@ Parsing entity <cntr_11_0_3166d4cc5b09c744>.
 Parsing architecture <cntr_11_0_3166d4cc5b09c744_a> of entity <cntr_11_0_3166d4cc5b09c744>.
 Parsing entity <crdc_v5_0_19fb63dead3076ad>.
 Parsing architecture <crdc_v5_0_19fb63dead3076ad_a> of entity <crdc_v5_0_19fb63dead3076ad>.
-Parsing entity <dds_cmplr_v5_0_ca0550aac85c1501>.
-Parsing architecture <dds_cmplr_v5_0_ca0550aac85c1501_a> of entity <dds_cmplr_v5_0_ca0550aac85c1501>.
-Parsing entity <fr_cmplr_v6_3_0c61ac74cf3e5cc7>.
-Parsing architecture <fr_cmplr_v6_3_0c61ac74cf3e5cc7_a> of entity <fr_cmplr_v6_3_0c61ac74cf3e5cc7>.
-Parsing entity <fr_cmplr_v6_3_95e3c24666ebc2c9>.
-Parsing architecture <fr_cmplr_v6_3_95e3c24666ebc2c9_a> of entity <fr_cmplr_v6_3_95e3c24666ebc2c9>.
+Parsing entity <dds_cmplr_v5_0_757016b8a434f5d8>.
+Parsing architecture <dds_cmplr_v5_0_757016b8a434f5d8_a> of entity <dds_cmplr_v5_0_757016b8a434f5d8>.
+Parsing entity <fr_cmplr_v6_3_427173487ade39a1>.
+Parsing architecture <fr_cmplr_v6_3_427173487ade39a1_a> of entity <fr_cmplr_v6_3_427173487ade39a1>.
+Parsing entity <fr_cmplr_v6_3_518400b39fb6cdb9>.
+Parsing architecture <fr_cmplr_v6_3_518400b39fb6cdb9_a> of entity <fr_cmplr_v6_3_518400b39fb6cdb9>.
 Parsing entity <fr_cmplr_v6_3_966cc03d206c1a0c>.
 Parsing architecture <fr_cmplr_v6_3_966cc03d206c1a0c_a> of entity <fr_cmplr_v6_3_966cc03d206c1a0c>.
+Parsing entity <fr_cmplr_v6_3_a41d007fd40e7497>.
+Parsing architecture <fr_cmplr_v6_3_a41d007fd40e7497_a> of entity <fr_cmplr_v6_3_a41d007fd40e7497>.
+Parsing entity <fr_cmplr_v6_3_d835bd2112f47abf>.
+Parsing architecture <fr_cmplr_v6_3_d835bd2112f47abf_a> of entity <fr_cmplr_v6_3_d835bd2112f47abf>.
 Parsing entity <fr_cmplr_v6_3_ef8269b30b0e0deb>.
 Parsing architecture <fr_cmplr_v6_3_ef8269b30b0e0deb_a> of entity <fr_cmplr_v6_3_ef8269b30b0e0deb>.
-Parsing entity <fr_cmplr_v6_3_f7e05b1a00abee12>.
-Parsing architecture <fr_cmplr_v6_3_f7e05b1a00abee12_a> of entity <fr_cmplr_v6_3_f7e05b1a00abee12>.
 Parsing entity <mult_11_2_6d8e463c710483da>.
 Parsing architecture <mult_11_2_6d8e463c710483da_a> of entity <mult_11_2_6d8e463c710483da>.
 Parsing package <conv_pkg>.
@@ -720,8 +722,18 @@ Parsing entity <xlregister>.
 Parsing architecture <behavior> of entity <xlregister>.
 Parsing entity <reinterpret_b62f4240f0>.
 Parsing architecture <behavior> of entity <reinterpret_b62f4240f0>.
+Parsing entity <xlceprobe>.
+Parsing architecture <behavior> of entity <xlceprobe>.
+Parsing entity <mux_a2121d82da>.
+Parsing architecture <behavior> of entity <mux_a2121d82da>.
+Parsing entity <counter_41314d726b>.
+Parsing architecture <behavior> of entity <counter_41314d726b>.
+Parsing entity <xlusamp>.
+Parsing architecture <struct> of entity <xlusamp>.
 Parsing entity <constant_6293007044>.
 Parsing architecture <behavior> of entity <constant_6293007044>.
+Parsing entity <xldds_compiler_6ef2934d572b7cd1757292caa5710be5>.
+Parsing architecture <behavior> of entity <xldds_compiler_6ef2934d572b7cd1757292caa5710be5>.
 Parsing entity <constant_963ed6358a>.
 Parsing architecture <behavior> of entity <constant_963ed6358a>.
 Parsing entity <xldsamp>.
@@ -768,24 +780,18 @@ Parsing entity <relational_367321bc0c>.
 Parsing architecture <behavior> of entity <relational_367321bc0c>.
 Parsing entity <relational_6c27b93bb1>.
 Parsing architecture <behavior> of entity <relational_6c27b93bb1>.
-Parsing entity <xlfir_compiler_65e3dc2de4cbc4151d5f0ef80691da61>.
-Parsing architecture <behavior> of entity <xlfir_compiler_65e3dc2de4cbc4151d5f0ef80691da61>.
+Parsing entity <xlfir_compiler_1dd9f35d7dcd9f893d99ee871ea21024>.
+Parsing architecture <behavior> of entity <xlfir_compiler_1dd9f35d7dcd9f893d99ee871ea21024>.
 Parsing entity <xlcic_compiler_f8e45ed45c0be88ce1d78d69ce0c1bbd>.
 Parsing architecture <behavior> of entity <xlcic_compiler_f8e45ed45c0be88ce1d78d69ce0c1bbd>.
-Parsing entity <xlfir_compiler_0056cabdbc14829b23232c505569667a>.
-Parsing architecture <behavior> of entity <xlfir_compiler_0056cabdbc14829b23232c505569667a>.
+Parsing entity <xlfir_compiler_89a8e066ed5ac2da6aa25a1c95609ee1>.
+Parsing architecture <behavior> of entity <xlfir_compiler_89a8e066ed5ac2da6aa25a1c95609ee1>.
 Parsing entity <reinterpret_4bf1ad328a>.
 Parsing architecture <behavior> of entity <reinterpret_4bf1ad328a>.
+Parsing entity <xlfir_compiler_6d145a00472f9003e5f9a2aeba87666d>.
+Parsing architecture <behavior> of entity <xlfir_compiler_6d145a00472f9003e5f9a2aeba87666d>.
 Parsing entity <xlfir_compiler_7b42571465e0fc6f89e7bb14ed540bde>.
 Parsing architecture <behavior> of entity <xlfir_compiler_7b42571465e0fc6f89e7bb14ed540bde>.
-Parsing entity <xlceprobe>.
-Parsing architecture <behavior> of entity <xlceprobe>.
-Parsing entity <mux_a2121d82da>.
-Parsing architecture <behavior> of entity <mux_a2121d82da>.
-Parsing entity <counter_41314d726b>.
-Parsing architecture <behavior> of entity <counter_41314d726b>.
-Parsing entity <xlusamp>.
-Parsing architecture <struct> of entity <xlusamp>.
 Parsing entity <mux_f062741975>.
 Parsing architecture <behavior> of entity <mux_f062741975>.
 Parsing entity <xlcounter_free>.
@@ -816,16 +822,20 @@ Parsing entity <xldivider_generator_9bc6b5677974555f6235feeceb7f929f>.
 Parsing architecture <behavior> of entity <xldivider_generator_9bc6b5677974555f6235feeceb7f929f>.
 Parsing entity <xladdsub>.
 Parsing architecture <behavior> of entity <xladdsub>.
-Parsing entity <xlfir_compiler_e4504dd7727542cfe5745c45e736c3a5>.
-Parsing architecture <behavior> of entity <xlfir_compiler_e4504dd7727542cfe5745c45e736c3a5>.
-Parsing entity <xldds_compiler_ab6bf36aaf63155698be9359a11e3f1c>.
-Parsing architecture <behavior> of entity <xldds_compiler_ab6bf36aaf63155698be9359a11e3f1c>.
+Parsing entity <xlfir_compiler_a5803cfd3adc5cc68ebf21435caf3993>.
+Parsing architecture <behavior> of entity <xlfir_compiler_a5803cfd3adc5cc68ebf21435caf3993>.
 Parsing entity <bpf_entity_d31c4af409>.
 Parsing architecture <structural> of entity <bpf_entity_d31c4af409>.
+Parsing entity <tdm_dds_ch01_cosine_entity_4b8bfc9243>.
+Parsing architecture <structural> of entity <tdm_dds_ch01_cosine_entity_4b8bfc9243>.
+Parsing entity <dds_sub_entity_a4b6b880f6>.
+Parsing architecture <structural> of entity <dds_sub_entity_a4b6b880f6>.
 Parsing entity <tddm_fofb_amp0_entity_fd74c6ad6e>.
 Parsing architecture <structural> of entity <tddm_fofb_amp0_entity_fd74c6ad6e>.
 Parsing entity <tddm_fofb_amp_4ch_entity_2cc521a83f>.
 Parsing architecture <structural> of entity <tddm_fofb_amp_4ch_entity_2cc521a83f>.
+Parsing entity <tddm_tbt_cordic1_entity_b60a69fd9b>.
+Parsing architecture <structural> of entity <tddm_tbt_cordic1_entity_b60a69fd9b>.
 Parsing entity <tddm_tbt_cordic0_entity_38de3613fe>.
 Parsing architecture <structural> of entity <tddm_tbt_cordic0_entity_38de3613fe>.
 Parsing entity <fofb_cordic_entity_fad57e49ce>.
@@ -904,6 +914,8 @@ Parsing entity <monit_amp_entity_44da74e268>.
 Parsing architecture <structural> of entity <monit_amp_entity_44da74e268>.
 Parsing entity <tddm_tbt_cordic_entity_5b94be40c5>.
 Parsing architecture <structural> of entity <tddm_tbt_cordic_entity_5b94be40c5>.
+Parsing entity <tddm_tbt_cordic1_entity_d3f44a687c>.
+Parsing architecture <structural> of entity <tddm_tbt_cordic1_entity_d3f44a687c>.
 Parsing entity <tddm_tbt_cordic_entity_18d3979a26>.
 Parsing architecture <structural> of entity <tddm_tbt_cordic_entity_18d3979a26>.
 Parsing entity <tbt_cordic_entity_232cb2e43e>.
@@ -991,39 +1003,33 @@ Parsing entity <default_clock_driver>.
 Parsing architecture <structural> of entity <default_clock_driver>.
 Parsing entity <ddc_bpm_476_066_cw>.
 Parsing architecture <structural> of entity <ddc_bpm_476_066_cw>.
-Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/dds_cmplr_v5_0_ca0550aac85c1501.vhd" into library work
-Parsing entity <dds_cmplr_v5_0_ca0550aac85c1501>.
-Parsing architecture <dds_cmplr_v5_0_ca0550aac85c1501_a> of entity <dds_cmplr_v5_0_ca0550aac85c1501>.
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/dv_gn_v4_0_7887f22978e0003d.vhd" into library work
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/dv_gn_v4_0_fc1ee041a30564f8.vhd" into library work
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/fifo_generator_virtex6_8_4_784d0e5148f6dbe1.vhd" into library work
 Parsing entity <fifo_generator_virtex6_8_4_784d0e5148f6dbe1>.
 Parsing architecture <fifo_generator_virtex6_8_4_784d0e5148f6dbe1_a> of entity <fifo_generator_virtex6_8_4_784d0e5148f6dbe1>.
-Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_0c61ac74cf3e5cc7.vhd" into library work
-Parsing entity <fr_cmplr_v6_3_0c61ac74cf3e5cc7>.
-Parsing architecture <fr_cmplr_v6_3_0c61ac74cf3e5cc7_a> of entity <fr_cmplr_v6_3_0c61ac74cf3e5cc7>.
-Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_95e3c24666ebc2c9.vhd" into library work
-Parsing entity <fr_cmplr_v6_3_95e3c24666ebc2c9>.
-Parsing architecture <fr_cmplr_v6_3_95e3c24666ebc2c9_a> of entity <fr_cmplr_v6_3_95e3c24666ebc2c9>.
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_966cc03d206c1a0c.vhd" into library work
 Parsing entity <fr_cmplr_v6_3_966cc03d206c1a0c>.
 Parsing architecture <fr_cmplr_v6_3_966cc03d206c1a0c_a> of entity <fr_cmplr_v6_3_966cc03d206c1a0c>.
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_ef8269b30b0e0deb.vhd" into library work
 Parsing entity <fr_cmplr_v6_3_ef8269b30b0e0deb>.
 Parsing architecture <fr_cmplr_v6_3_ef8269b30b0e0deb_a> of entity <fr_cmplr_v6_3_ef8269b30b0e0deb>.
-Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/fr_cmplr_v6_3_f7e05b1a00abee12.vhd" into library work
-Parsing entity <fr_cmplr_v6_3_f7e05b1a00abee12>.
-Parsing architecture <fr_cmplr_v6_3_f7e05b1a00abee12_a> of entity <fr_cmplr_v6_3_f7e05b1a00abee12>.
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/mult_11_2_6d8e463c710483da.vhd" into library work
 Parsing entity <mult_11_2_6d8e463c710483da>.
 Parsing architecture <mult_11_2_6d8e463c710483da_a> of entity <mult_11_2_6d8e463c710483da>.
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/position_calc/generated/nonleaf_results.vhd" into library work
 Parsing entity <bpf_entity_d31c4af409>.
 Parsing architecture <structural> of entity <bpf_entity_d31c4af409>.
+Parsing entity <tdm_dds_ch01_cosine_entity_4b8bfc9243>.
+Parsing architecture <structural> of entity <tdm_dds_ch01_cosine_entity_4b8bfc9243>.
+Parsing entity <dds_sub_entity_a4b6b880f6>.
+Parsing architecture <structural> of entity <dds_sub_entity_a4b6b880f6>.
 Parsing entity <tddm_fofb_amp0_entity_fd74c6ad6e>.
 Parsing architecture <structural> of entity <tddm_fofb_amp0_entity_fd74c6ad6e>.
 Parsing entity <tddm_fofb_amp_4ch_entity_2cc521a83f>.
 Parsing architecture <structural> of entity <tddm_fofb_amp_4ch_entity_2cc521a83f>.
+Parsing entity <tddm_tbt_cordic1_entity_b60a69fd9b>.
+Parsing architecture <structural> of entity <tddm_tbt_cordic1_entity_b60a69fd9b>.
 Parsing entity <tddm_tbt_cordic0_entity_38de3613fe>.
 Parsing architecture <structural> of entity <tddm_tbt_cordic0_entity_38de3613fe>.
 Parsing entity <fofb_cordic_entity_fad57e49ce>.
@@ -1102,6 +1108,8 @@ Parsing entity <monit_amp_entity_44da74e268>.
 Parsing architecture <structural> of entity <monit_amp_entity_44da74e268>.
 Parsing entity <tddm_tbt_cordic_entity_5b94be40c5>.
 Parsing architecture <structural> of entity <tddm_tbt_cordic_entity_5b94be40c5>.
+Parsing entity <tddm_tbt_cordic1_entity_d3f44a687c>.
+Parsing architecture <structural> of entity <tddm_tbt_cordic1_entity_d3f44a687c>.
 Parsing entity <tddm_tbt_cordic_entity_18d3979a26>.
 Parsing architecture <structural> of entity <tddm_tbt_cordic_entity_18d3979a26>.
 Parsing entity <tbt_cordic_entity_232cb2e43e>.
@@ -1201,8 +1209,18 @@ Parsing entity <xlregister>.
 Parsing architecture <behavior> of entity <xlregister>.
 Parsing entity <reinterpret_b62f4240f0>.
 Parsing architecture <behavior> of entity <reinterpret_b62f4240f0>.
+Parsing entity <xlceprobe>.
+Parsing architecture <behavior> of entity <xlceprobe>.
+Parsing entity <mux_a2121d82da>.
+Parsing architecture <behavior> of entity <mux_a2121d82da>.
+Parsing entity <counter_41314d726b>.
+Parsing architecture <behavior> of entity <counter_41314d726b>.
+Parsing entity <xlusamp>.
+Parsing architecture <struct> of entity <xlusamp>.
 Parsing entity <constant_6293007044>.
 Parsing architecture <behavior> of entity <constant_6293007044>.
+Parsing entity <xldds_compiler_6ef2934d572b7cd1757292caa5710be5>.
+Parsing architecture <behavior> of entity <xldds_compiler_6ef2934d572b7cd1757292caa5710be5>.
 Parsing entity <constant_963ed6358a>.
 Parsing architecture <behavior> of entity <constant_963ed6358a>.
 Parsing entity <xldsamp>.
@@ -1249,24 +1267,18 @@ Parsing entity <relational_367321bc0c>.
 Parsing architecture <behavior> of entity <relational_367321bc0c>.
 Parsing entity <relational_6c27b93bb1>.
 Parsing architecture <behavior> of entity <relational_6c27b93bb1>.
-Parsing entity <xlfir_compiler_65e3dc2de4cbc4151d5f0ef80691da61>.
-Parsing architecture <behavior> of entity <xlfir_compiler_65e3dc2de4cbc4151d5f0ef80691da61>.
+Parsing entity <xlfir_compiler_1dd9f35d7dcd9f893d99ee871ea21024>.
+Parsing architecture <behavior> of entity <xlfir_compiler_1dd9f35d7dcd9f893d99ee871ea21024>.
 Parsing entity <xlcic_compiler_f8e45ed45c0be88ce1d78d69ce0c1bbd>.
 Parsing architecture <behavior> of entity <xlcic_compiler_f8e45ed45c0be88ce1d78d69ce0c1bbd>.
-Parsing entity <xlfir_compiler_0056cabdbc14829b23232c505569667a>.
-Parsing architecture <behavior> of entity <xlfir_compiler_0056cabdbc14829b23232c505569667a>.
+Parsing entity <xlfir_compiler_89a8e066ed5ac2da6aa25a1c95609ee1>.
+Parsing architecture <behavior> of entity <xlfir_compiler_89a8e066ed5ac2da6aa25a1c95609ee1>.
 Parsing entity <reinterpret_4bf1ad328a>.
 Parsing architecture <behavior> of entity <reinterpret_4bf1ad328a>.
+Parsing entity <xlfir_compiler_6d145a00472f9003e5f9a2aeba87666d>.
+Parsing architecture <behavior> of entity <xlfir_compiler_6d145a00472f9003e5f9a2aeba87666d>.
 Parsing entity <xlfir_compiler_7b42571465e0fc6f89e7bb14ed540bde>.
 Parsing architecture <behavior> of entity <xlfir_compiler_7b42571465e0fc6f89e7bb14ed540bde>.
-Parsing entity <xlceprobe>.
-Parsing architecture <behavior> of entity <xlceprobe>.
-Parsing entity <mux_a2121d82da>.
-Parsing architecture <behavior> of entity <mux_a2121d82da>.
-Parsing entity <counter_41314d726b>.
-Parsing architecture <behavior> of entity <counter_41314d726b>.
-Parsing entity <xlusamp>.
-Parsing architecture <struct> of entity <xlusamp>.
 Parsing entity <mux_f062741975>.
 Parsing architecture <behavior> of entity <mux_f062741975>.
 Parsing entity <xlcounter_free>.
@@ -1297,10 +1309,8 @@ Parsing entity <xldivider_generator_9bc6b5677974555f6235feeceb7f929f>.
 Parsing architecture <behavior> of entity <xldivider_generator_9bc6b5677974555f6235feeceb7f929f>.
 Parsing entity <xladdsub>.
 Parsing architecture <behavior> of entity <xladdsub>.
-Parsing entity <xlfir_compiler_e4504dd7727542cfe5745c45e736c3a5>.
-Parsing architecture <behavior> of entity <xlfir_compiler_e4504dd7727542cfe5745c45e736c3a5>.
-Parsing entity <xldds_compiler_ab6bf36aaf63155698be9359a11e3f1c>.
-Parsing architecture <behavior> of entity <xldds_compiler_ab6bf36aaf63155698be9359a11e3f1c>.
+Parsing entity <xlfir_compiler_a5803cfd3adc5cc68ebf21435caf3993>.
+Parsing architecture <behavior> of entity <xlfir_compiler_a5803cfd3adc5cc68ebf21435caf3993>.
 Parsing VHDL file "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/dsp-cores/hdl/modules/wb_un_cross/cross_uncross_core/un_cross_top.vhd" into library work
 Parsing entity <un_cross_top>.
 Parsing architecture <rtl> of entity <un_cross_top>.
@@ -1409,9 +1419,9 @@ Parsing architecture <xilinx> of entity <blk_mem_gen_v4_1_xst>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 248: Port icon_ctrl0_i is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 319: Port CLKFBOUTB is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 717: Port acmp6 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 250: Port icon_ctrl0_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 321: Port CLKFBOUTB is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 721: Port acmp6 is not connected to this instance
 
 Elaborating module <virtex6_fmc_adc_130m_4ch_adc_test>.
 
@@ -1505,7 +1515,7 @@ WARNING:HDLCompiler:758 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/general-c
 Back to verilog to continue elaboration
 
 Elaborating module <MMCM_BASE(BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT_F=8.0,CLKFBOUT_PHASE=0.0,CLKIN1_PERIOD=8.882,CLKOUT0_DIVIDE_F=8.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT0_PHASE=0.0,CLKOUT1_PHASE=0.0,CLKOUT1_DIVIDE=4,CLOCK_HOLD="FALSE",DIVCLK_DIVIDE=1,REF_JITTER1=0.01,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 368: Assignment to adc_ref_clk2x ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 370: Assignment to adc_ref_clk2x ignored, since the identifier is never used
 Going to vhdl side to elaborate module generic_async_fifo
 
 Elaborating entity <generic_async_fifo> (architecture <syn>) with generics from library <work>.
@@ -1575,34 +1585,34 @@ Elaborating entity <i2c_master_bit_ctrl> (architecture <structural>) from librar
 INFO:HDLCompiler:679 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_bit_ctrl.vhd" Line 561. Case statement is complete. others clause is never selected
 INFO:HDLCompiler:679 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_byte_ctrl.vhd" Line 354. Case statement is complete. others clause is never selected
 Back to verilog to continue elaboration
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 481: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 482: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 483: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 483: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 484: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 485: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
 
 Elaborating module <spi_bidir_top>.
 
 Elaborating module <spi_bidir_clgen>.
 
 Elaborating module <spi_bidir_shift>.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 516: Size mismatch in connection of port <wb_adr_i>. Formal port size is 6-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 527: Size mismatch in connection of port <ss_pad_o>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 518: Size mismatch in connection of port <wb_adr_i>. Formal port size is 6-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 529: Size mismatch in connection of port <ss_pad_o>. Formal port size is 8-bit while actual signal size is 1-bit.
 Going to vhdl side to elaborate module i2c_master_top
 
 Elaborating entity <i2c_master_top> (architecture <structural>) with generics from library <work>.
 INFO:HDLCompiler:679 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_top.vhd" Line 204. Case statement is complete. others clause is never selected
 WARNING:HDLCompiler:758 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_top.vhd" Line 75: Replacing existing netlist i2c_master_top(structural)
 Back to verilog to continue elaboration
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 546: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 547: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 548: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 550: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 551: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 552: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
 Going to vhdl side to elaborate module i2c_master_top
 
 Elaborating entity <i2c_master_top> (architecture <structural>) with generics from library <work>.
 INFO:HDLCompiler:679 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/ip_cores/general-cores/modules/wishbone/wb_i2c_master/i2c_master_top.vhd" Line 204. Case statement is complete. others clause is never selected
 Back to verilog to continue elaboration
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 581: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 582: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 583: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 585: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 586: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 587: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
 
 Elaborating module <IOBUFDS(DIFF_TERM="FALSE",IBUF_LOW_PWR="FALSE",IOSTANDARD="BLVDS_25")>.
 Going to vhdl side to elaborate module wb_fmc_130m_4ch_csr
@@ -1614,19 +1624,19 @@ WARNING:HDLCompiler:1127 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m
 WARNING:HDLCompiler:1127 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/wb_gen/fmc_130m_4ch_regs.vhd" Line 203: Assignment to allones ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/wb_gen/fmc_130m_4ch_regs.vhd" Line 204: Assignment to allzeros ignored, since the identifier is never used
 Back to verilog to continue elaboration
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 624: Size mismatch in connection of port <wb_addr_i>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 637: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_fmc_status_firmware_id_i>. Formal port size is 29-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 642: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_trigger_reserved_i>. Formal port size is 29-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 649: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_adc_reserved_i>. Formal port size is 28-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 655: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_clk_distrib_reserved_i>. Formal port size is 28-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 661: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_monitor_reserved_i>. Formal port size is 28-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 669: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_fpga_ctrl_reserved_i>. Formal port size is 26-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 676: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay0_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 682: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay1_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 688: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay2_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 694: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay3_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 704: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_dcm_adc_status0_i>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 706: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_dcm_reserved_i>. Formal port size is 27-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 628: Size mismatch in connection of port <wb_addr_i>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 641: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_fmc_status_firmware_id_i>. Formal port size is 29-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 646: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_trigger_reserved_i>. Formal port size is 29-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 653: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_adc_reserved_i>. Formal port size is 28-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 659: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_clk_distrib_reserved_i>. Formal port size is 28-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 665: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_monitor_reserved_i>. Formal port size is 28-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 673: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_fpga_ctrl_reserved_i>. Formal port size is 26-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 680: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay0_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 686: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay1_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 692: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay2_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 698: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_idelay3_cal_reserved_i>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 708: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_dcm_adc_status0_i>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 710: Size mismatch in connection of port <wb_fmc_130m_4ch_csr_dcm_reserved_i>. Formal port size is 27-bit while actual signal size is 32-bit.
 
 Elaborating module <addr_decode>.
 
@@ -1684,17 +1694,17 @@ Going to vhdl side to elaborate module chipscope_ila_131072
 
 Elaborating entity <chipscope_ila_131072> (architecture <chipscope_ila_131072_a>) from library <work>.
 Back to verilog to continue elaboration
-WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 130: Net <wb_err1> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 140: Net <wb_err3> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 145: Net <wb_err4> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 150: Net <wb_err5> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 703: Net <adc_done_reg> does not have a driver.
-WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 252: Input port trigger is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 477: Input port arst_i is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 512: Input port mosi_pad_i is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 542: Input port arst_i is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 577: Input port arst_i is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 717: Input port data_out6[31] is not connected on this instance
+WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 132: Net <wb_err1> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 142: Net <wb_err3> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 147: Net <wb_err4> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 152: Net <wb_err5> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 707: Net <adc_done_reg> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 254: Input port trigger is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 479: Input port arst_i is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 514: Input port mosi_pad_i is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 546: Input port arst_i is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 581: Input port arst_i is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" Line 721: Input port data_out6[31] is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -1718,78 +1728,78 @@ WARNING:Xst:2898 - Port 'data_out13', unconnected in block instance 'i_addr_deco
 WARNING:Xst:2898 - Port 'data_out14', unconnected in block instance 'i_addr_decode', is tied to GND.
 WARNING:Xst:2898 - Port 'data_out15', unconnected in block instance 'i_addr_decode', is tied to GND.
 WARNING:Xst:2898 - Port 'data_out16', unconnected in block instance 'i_addr_decode', is tied to GND.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <wr_count_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <rd_count_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <wr_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <wr_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <rd_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <rd_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 377: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <wr_count_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <rd_count_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <wr_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <wr_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <rd_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <rd_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 398: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <wr_count_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <rd_count_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <wr_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <wr_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <rd_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <rd_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 419: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <wr_count_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <rd_count_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <wr_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <wr_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <rd_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <rd_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 440: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 477: Output port <wb_inta_o> of the instance <wb_i2c_master_i_si571> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 512: Output port <wb_int_o> of the instance <wb_spi_bidir_i_ad9510> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 512: Output port <mosi_out_en> of the instance <wb_spi_bidir_i_ad9510> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 542: Output port <wb_inta_o> of the instance <wb_i2c_master_i_eeprom> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 577: Output port <wb_inta_o> of the instance <wb_i2c_master_i_lm75> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 621: Output port <wb_fmc_130m_4ch_csr_fpga_ctrl_fmc_fifo_rst_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 621: Output port <wb_fmc_130m_4ch_csr_dcm_adc_en_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 621: Output port <wb_fmc_130m_4ch_csr_dcm_adc_phase_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 621: Output port <wb_fmc_130m_4ch_csr_dcm_adc_reset_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp6> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp7> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp8> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp9> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp10> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp11> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp12> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp13> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp14> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp15> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 717: Output port <acmp16> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 736: Output port <LOCKED> of the instance <wb_clk_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <wr_count_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <rd_count_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <wr_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <wr_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <rd_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <rd_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 379: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch0_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <wr_count_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <rd_count_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <wr_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <wr_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <rd_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <rd_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 400: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch1_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <wr_count_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <rd_count_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <wr_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <wr_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <rd_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <rd_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 421: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch2_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <wr_count_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <rd_count_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <wr_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <wr_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <wr_almost_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <wr_almost_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <rd_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <rd_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <rd_almost_empty_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 442: Output port <rd_almost_full_o> of the instance <generic_async_fifo_ch3_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 479: Output port <wb_inta_o> of the instance <wb_i2c_master_i_si571> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 514: Output port <wb_int_o> of the instance <wb_spi_bidir_i_ad9510> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 514: Output port <mosi_out_en> of the instance <wb_spi_bidir_i_ad9510> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 546: Output port <wb_inta_o> of the instance <wb_i2c_master_i_eeprom> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 581: Output port <wb_inta_o> of the instance <wb_i2c_master_i_lm75> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 625: Output port <wb_fmc_130m_4ch_csr_fpga_ctrl_fmc_fifo_rst_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 625: Output port <wb_fmc_130m_4ch_csr_dcm_adc_en_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 625: Output port <wb_fmc_130m_4ch_csr_dcm_adc_phase_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 625: Output port <wb_fmc_130m_4ch_csr_dcm_adc_reset_o> of the instance <wb_fmc_130m_4ch_csr_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp6> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp7> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp8> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp9> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp10> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp11> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp12> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp13> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp14> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp15> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 721: Output port <acmp16> of the instance <i_addr_decode> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/lerwys/Repos/fmc-adc-hdl/hdl/top/ml605/fmc130m_adc_test/virtex6_fmc_adc_130m_4ch_adc_test.v" line 740: Output port <LOCKED> of the instance <wb_clk_i> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <wb_err1> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <wb_err3> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <wb_err4> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <wb_err5> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <adc_done_reg> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 1-bit tristate buffer for signal <si571_scl_pad> created at line 499
-    Found 1-bit tristate buffer for signal <si571_sda_pad> created at line 502
-    Found 1-bit tristate buffer for signal <eeprom_scl_pad> created at line 564
-    Found 1-bit tristate buffer for signal <eeprom_sda_pad> created at line 567
-    Found 1-bit tristate buffer for signal <lm75_scl_pad> created at line 599
-    Found 1-bit tristate buffer for signal <lm75_sda_pad> created at line 602
+    Found 1-bit tristate buffer for signal <si571_scl_pad> created at line 501
+    Found 1-bit tristate buffer for signal <si571_sda_pad> created at line 504
+    Found 1-bit tristate buffer for signal <eeprom_scl_pad> created at line 568
+    Found 1-bit tristate buffer for signal <eeprom_sda_pad> created at line 571
+    Found 1-bit tristate buffer for signal <lm75_scl_pad> created at line 603
+    Found 1-bit tristate buffer for signal <lm75_sda_pad> created at line 606
     Summary:
 	inferred   6 Tristate(s).
 Unit <virtex6_fmc_adc_130m_4ch_adc_test> synthesized.
@@ -5266,7 +5276,7 @@ FindSrcOfAsyncThruGates : 500 (1)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                                                                                                                                                            | Buffer(FF name)                                                                                                                                                                                                                                                                                                                                                                 | Load  |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(cmp_chipscope_ila_131072_0_adc_i/XST_VCC:P)                                                                                                                                                                                                                                                                                                        | NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_SBRAM_3/I_B36KGT0.G_RAMB36[42].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_SBRAM_3/I_B36KGT0.G_RAMB36[42].u_ramb36/U_RAMB36)| 1040  |
+cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(cmp_chipscope_ila_131072_0_adc_i/XST_VCC:P)                                                                                                                                                                                                                                                                                                        | NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_SBRAM_0/I_B36KGT0.G_RAMB36[17].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_SBRAM_0/I_B36KGT0.G_RAMB36[17].u_ramb36/U_RAMB36)| 1040  |
 cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N11(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)  | 124   |
 cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/N11(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36)| 124   |
 cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/N11(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.U_SBRAM_2/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36)| 124   |
@@ -5787,7 +5797,7 @@ cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TR
 cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/N0(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36)  | 72    |
 cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/N0(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36)  | 72    |
 cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/N0(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cmp_chipscope_ila_131072_0_adc_i/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_EQ_112K_OR_128K.u_sBRAM_1/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36)  | 72    |
-i_rs232_syscon_top_1_0/i_rs232_syscon/Mcount_rd_digit_count_lut<3>(XST_GND:G)                                                                                                                                                                                                                                                                                                                                             | NONE(generic_async_fifo_ch3_i/wrapped_gen/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM18.ram)                                                                                                                                                                                                                | 48    |
+i_rs232_syscon_top_1_0/i_rs232_syscon/Mcount_rd_digit_count_lut<3>(XST_GND:G)                                                                                                                                                                                                                                                                                                                                             | NONE(fmc_adc_130m_4ch_i/ltcInterface_adc3_i/ADC_IDDR_VIRTEX6.async_fifo/wrapped_gen/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM18.ram)                                                                                                                                                                      | 48    |
 N1(XST_VCC:P)                                                                                                                                                                                                                                                                                                                                                                                                             | NONE(fmc_adc_130m_4ch_i/ltcInterface_adc3_i/CLOCK_INST_DEVICE_VIRTEX6.BUFR_inst)                                                                                                                                                                                                                                                                                                | 4     |
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
@@ -5798,7 +5808,7 @@ Speed Grade: -1
    Minimum period: 6.934ns (Maximum Frequency: 144.217MHz)
    Minimum input arrival time before clock: 4.810ns
    Maximum output required time after clock: 1.678ns
-   Maximum combinational path delay: 0.003ns
+   Maximum combinational path delay: 0.411ns
 
 =========================================================================
 
@@ -5875,7 +5885,7 @@ NGDBUILD Design Results Summary:
   Number of warnings:   2
 
 Writing NGD file "virtex6_fmc_adc_130m_4ch_adc_test.ngd" ...
-Total REAL time to NGDBUILD completion:  22 sec
+Total REAL time to NGDBUILD completion:  24 sec
 Total CPU time to NGDBUILD completion:   22 sec
 
 Writing NGDBUILD log file "virtex6_fmc_adc_130m_4ch_adc_test.bld"...
@@ -5913,20 +5923,20 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 52 secs 
-Total CPU  time at the beginning of Placer: 51 secs 
+Total REAL time at the beginning of Placer: 55 secs 
+Total CPU  time at the beginning of Placer: 52 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:dfea68c8) REAL time: 1 mins 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:f0c3a93f) REAL time: 1 mins 5 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:4ed409e2) REAL time: 1 mins 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:9f986f97) REAL time: 1 mins 6 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:a1a7fc8d) REAL time: 1 mins 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:7233cdb5) REAL time: 1 mins 6 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:a1a7fc8d) REAL time: 1 mins 1 secs 
+Phase 4.37  Local Placement Optimization (Checksum:7233cdb5) REAL time: 1 mins 6 secs 
 
 Phase 5.2  Initial Placement for Architecture Specific Features
 
@@ -6089,40 +6099,40 @@ AREA_GROUP "CLKAG_fmc_adc_130m_4ch_i/ltcInterface_adc2_i/adc0_clk_bufr_out" RANG
 CLOCKREGION_X0Y2;
 
 
-Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:ba89786f) REAL time: 1 mins 8 secs 
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:394b51d) REAL time: 1 mins 13 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:ba89786f) REAL time: 1 mins 8 secs 
+Phase 6.36  Local Placement Optimization (Checksum:394b51d) REAL time: 1 mins 13 secs 
 
 Phase 7.30  Global Clock Region Assignment
-Phase 7.30  Global Clock Region Assignment (Checksum:ba89786f) REAL time: 1 mins 8 secs 
+Phase 7.30  Global Clock Region Assignment (Checksum:394b51d) REAL time: 1 mins 13 secs 
 
 Phase 8.3  Local Placement Optimization
-Phase 8.3  Local Placement Optimization (Checksum:ba89786f) REAL time: 1 mins 9 secs 
+Phase 8.3  Local Placement Optimization (Checksum:394b51d) REAL time: 1 mins 13 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:ba89786f) REAL time: 1 mins 9 secs 
+Phase 9.5  Local Placement Optimization (Checksum:394b51d) REAL time: 1 mins 14 secs 
 
 Phase 10.8  Global Placement
-.........................................................
-......................................................................................................................................................................
-...........................................................
-........................
-Phase 10.8  Global Placement (Checksum:8a0ed76c) REAL time: 1 mins 22 secs 
+.....................................................
+.....................................................................................................................
+....................................................................
+.........
+Phase 10.8  Global Placement (Checksum:3dcd3bc2) REAL time: 1 mins 26 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:8a0ed76c) REAL time: 1 mins 22 secs 
+Phase 11.5  Local Placement Optimization (Checksum:3dcd3bc2) REAL time: 1 mins 26 secs 
 
 Phase 12.18  Placement Optimization
-Phase 12.18  Placement Optimization (Checksum:415833fa) REAL time: 1 mins 32 secs 
+Phase 12.18  Placement Optimization (Checksum:bd5b3266) REAL time: 1 mins 37 secs 
 
 Phase 13.5  Local Placement Optimization
-Phase 13.5  Local Placement Optimization (Checksum:415833fa) REAL time: 1 mins 32 secs 
+Phase 13.5  Local Placement Optimization (Checksum:bd5b3266) REAL time: 1 mins 37 secs 
 
 Phase 14.34  Placement Validation
-Phase 14.34  Placement Validation (Checksum:e1228e50) REAL time: 1 mins 33 secs 
+Phase 14.34  Placement Validation (Checksum:2181960f) REAL time: 1 mins 37 secs 
 
-Total REAL time to Placer completion: 1 mins 33 secs 
+Total REAL time to Placer completion: 1 mins 38 secs 
 Total CPU  time to Placer completion: 1 mins 36 secs 
 Running post-placement packing...
 Writing output files...
@@ -6136,10 +6146,10 @@ Slice Logic Utilization:
     Number used as Latches:                      3
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,194 out of 150,720    1%
-    Number used as logic:                    1,985 out of 150,720    1%
+  Number of Slice LUTs:                      2,202 out of 150,720    1%
+    Number used as logic:                    1,986 out of 150,720    1%
       Number using O6 output only:           1,421
-      Number using O5 output only:             132
+      Number using O5 output only:             133
       Number using O5 and O6:                  432
       Number used as ROM:                        0
     Number used as Memory:                     142 out of  58,400    1%
@@ -6152,17 +6162,17 @@ Slice Logic Utilization:
         Number using O6 output only:           137
         Number using O5 output only:             1
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     67
-      Number with same-slice register load:     57
+    Number used exclusively as route-thrus:     74
+      Number with same-slice register load:     64
       Number with same-slice carry load:        10
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,182 out of  37,680    3%
-  Number of LUT Flip Flop pairs used:        3,143
-    Number with an unused Flip Flop:         1,014 out of   3,143   32%
-    Number with an unused LUT:                 949 out of   3,143   30%
-    Number of fully used LUT-FF pairs:       1,180 out of   3,143   37%
+  Number of occupied Slices:                 1,142 out of  37,680    3%
+  Number of LUT Flip Flop pairs used:        3,118
+    Number with an unused Flip Flop:           997 out of   3,118   31%
+    Number with an unused LUT:                 916 out of   3,118   29%
+    Number of fully used LUT-FF pairs:       1,205 out of   3,118   38%
     Number of unique control sets:             213
     Number of slice register sites lost
       to control set restrictions:             732 out of 301,440    1%
@@ -6176,8 +6186,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       108 out of     600   18%
-    Number of LOCed IOBs:                      108 out of     108  100%
+  Number of bonded IOBs:                       109 out of     600   18%
+    Number of LOCed IOBs:                      109 out of     109  100%
     IOB Master Pads:                             1
     IOB Slave Pads:                              1
 
@@ -6218,7 +6228,7 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                7.84
 
 Peak Memory Usage:  1298 MB
-Total REAL time to MAP completion:  1 mins 38 secs 
+Total REAL time to MAP completion:  1 mins 44 secs 
 Total CPU time to MAP completion (all processors):   1 mins 41 secs 
 
 Mapping completed.
@@ -6261,10 +6271,10 @@ Slice Logic Utilization:
     Number used as Latches:                      3
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,194 out of 150,720    1%
-    Number used as logic:                    1,985 out of 150,720    1%
+  Number of Slice LUTs:                      2,202 out of 150,720    1%
+    Number used as logic:                    1,986 out of 150,720    1%
       Number using O6 output only:           1,421
-      Number using O5 output only:             132
+      Number using O5 output only:             133
       Number using O5 and O6:                  432
       Number used as ROM:                        0
     Number used as Memory:                     142 out of  58,400    1%
@@ -6277,17 +6287,17 @@ Slice Logic Utilization:
         Number using O6 output only:           137
         Number using O5 output only:             1
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     67
-      Number with same-slice register load:     57
+    Number used exclusively as route-thrus:     74
+      Number with same-slice register load:     64
       Number with same-slice carry load:        10
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,182 out of  37,680    3%
-  Number of LUT Flip Flop pairs used:        3,143
-    Number with an unused Flip Flop:         1,014 out of   3,143   32%
-    Number with an unused LUT:                 949 out of   3,143   30%
-    Number of fully used LUT-FF pairs:       1,180 out of   3,143   37%
+  Number of occupied Slices:                 1,142 out of  37,680    3%
+  Number of LUT Flip Flop pairs used:        3,118
+    Number with an unused Flip Flop:           997 out of   3,118   31%
+    Number with an unused LUT:                 916 out of   3,118   29%
+    Number of fully used LUT-FF pairs:       1,205 out of   3,118   38%
     Number of slice register sites lost
       to control set restrictions:               0 out of 301,440    0%
 
@@ -6300,8 +6310,8 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                       108 out of     600   18%
-    Number of LOCed IOBs:                      108 out of     108  100%
+  Number of bonded IOBs:                       109 out of     600   18%
+    Number of LOCed IOBs:                      109 out of     109  100%
     IOB Master Pads:                             1
     IOB Slave Pads:                              1
 
@@ -6344,35 +6354,35 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 19 secs 
-Finished initial Timing Analysis.  REAL time: 19 secs 
+Starting initial Timing Analysis.  REAL time: 21 secs 
+Finished initial Timing Analysis.  REAL time: 21 secs 
 
 Starting Router
 
 
-Phase  1  : 67994 unrouted;      REAL time: 23 secs 
+Phase  1  : 67987 unrouted;      REAL time: 25 secs 
 
-Phase  2  : 36389 unrouted;      REAL time: 26 secs 
+Phase  2  : 36376 unrouted;      REAL time: 28 secs 
 
-Phase  3  : 6706 unrouted;      REAL time: 1 mins 4 secs 
+Phase  3  : 6523 unrouted;      REAL time: 1 mins 7 secs 
 
-Phase  4  : 6732 unrouted; (Setup:80673, Hold:27200, Component Switching Limit:0)     REAL time: 1 mins 13 secs 
+Phase  4  : 6546 unrouted; (Setup:75818, Hold:29920, Component Switching Limit:0)     REAL time: 1 mins 15 secs 
 
 Updating file: virtex6_fmc_adc_130m_4ch_adc_test.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:80878, Hold:27193, Component Switching Limit:0)     REAL time: 1 mins 26 secs 
+Phase  5  : 0 unrouted; (Setup:72894, Hold:29772, Component Switching Limit:0)     REAL time: 1 mins 27 secs 
 
-Phase  6  : 0 unrouted; (Setup:80878, Hold:27193, Component Switching Limit:0)     REAL time: 1 mins 27 secs 
+Phase  6  : 0 unrouted; (Setup:72894, Hold:29772, Component Switching Limit:0)     REAL time: 1 mins 27 secs 
 
-Phase  7  : 0 unrouted; (Setup:80878, Hold:27193, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Phase  7  : 0 unrouted; (Setup:72894, Hold:29772, Component Switching Limit:0)     REAL time: 1 mins 32 secs 
 
-Phase  8  : 0 unrouted; (Setup:80878, Hold:27193, Component Switching Limit:0)     REAL time: 1 mins 31 secs 
+Phase  8  : 0 unrouted; (Setup:72894, Hold:29772, Component Switching Limit:0)     REAL time: 1 mins 32 secs 
 
-Phase  9  : 0 unrouted; (Setup:80878, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 32 secs 
+Phase  9  : 0 unrouted; (Setup:72894, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 32 secs 
 
-Phase 10  : 0 unrouted; (Setup:80878, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 34 secs 
+Phase 10  : 0 unrouted; (Setup:72894, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 34 secs 
 Total REAL time to Router completion: 1 mins 34 secs 
-Total CPU time to Router completion: 1 mins 36 secs 
+Total CPU time to Router completion: 1 mins 35 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -6390,41 +6400,41 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|         adc_ref_clk |BUFGCTRL_X0Y30| No   |  707 |  0.457     |  2.048      |
+|         adc_ref_clk |BUFGCTRL_X0Y30| No   |  703 |  0.462     |  2.048      |
 +---------------------+--------------+------+------+------------+-------------+
-|              wb_clk | BUFGCTRL_X0Y0| No   |  486 |  0.357     |  1.943      |
+|              wb_clk | BUFGCTRL_X0Y0| No   |  485 |  0.359     |  1.943      |
 +---------------------+--------------+------+------+------------+-------------+
-|    fmc_adc1_clk_out | BUFGCTRL_X0Y9| No   |   28 |  0.151     |  1.761      |
+|    fmc_adc1_clk_out | BUFGCTRL_X0Y9| No   |   29 |  0.263     |  1.892      |
 +---------------------+--------------+------+------+------------+-------------+
-|    fmc_adc0_clk_out | BUFGCTRL_X0Y3| No   |   26 |  0.204     |  1.888      |
+|    fmc_adc0_clk_out | BUFGCTRL_X0Y3| No   |   27 |  0.208     |  1.892      |
 +---------------------+--------------+------+------+------------+-------------+
-|    fmc_adc2_clk_out |BUFGCTRL_X0Y26| No   |   24 |  0.178     |  1.836      |
+|    fmc_adc2_clk_out |BUFGCTRL_X0Y26| No   |   29 |  0.292     |  1.966      |
 +---------------------+--------------+------+------+------------+-------------+
-|    fmc_adc3_clk_out | BUFGCTRL_X0Y1| No   |   27 |  0.295     |  1.891      |
+|    fmc_adc3_clk_out | BUFGCTRL_X0Y1| No   |   26 |  0.303     |  1.893      |
 +---------------------+--------------+------+------+------------+-------------+
 |fmc_adc_130m_4ch_i/l |              |      |      |            |             |
 |tcInterface_adc0_i/a |              |      |      |            |             |
-|    dc0_clk_bufr_out |  Regional Clk| No   |   16 |  0.180     |  1.044      |
+|    dc0_clk_bufr_out |  Regional Clk| No   |   15 |  0.184     |  1.040      |
 +---------------------+--------------+------+------+------------+-------------+
 |fmc_adc_130m_4ch_i/l |              |      |      |            |             |
 |tcInterface_adc3_i/a |              |      |      |            |             |
-|    dc0_clk_bufr_out |  Regional Clk| No   |   15 |  0.128     |  0.992      |
+|    dc0_clk_bufr_out |  Regional Clk| No   |   16 |  0.084     |  0.997      |
 +---------------------+--------------+------+------+------------+-------------+
 |fmc_adc_130m_4ch_i/l |              |      |      |            |             |
 |tcInterface_adc1_i/a |              |      |      |            |             |
-|    dc0_clk_bufr_out |  Regional Clk| No   |   16 |  0.121     |  0.982      |
+|    dc0_clk_bufr_out |  Regional Clk| No   |   12 |  0.156     |  1.048      |
 +---------------------+--------------+------+------+------------+-------------+
 |fmc_adc_130m_4ch_i/l |              |      |      |            |             |
 |tcInterface_adc2_i/a |              |      |      |            |             |
-|    dc0_clk_bufr_out |  Regional Clk| No   |   15 |  0.154     |  1.106      |
+|    dc0_clk_bufr_out |  Regional Clk| No   |   14 |  0.156     |  1.106      |
 +---------------------+--------------+------+------+------------+-------------+
-|         CONTROL0<0> |BUFGCTRL_X0Y29| No   |  582 |  0.456     |  2.048      |
+|         CONTROL0<0> |BUFGCTRL_X0Y29| No   |  582 |  0.411     |  2.048      |
 +---------------------+--------------+------+------+------------+-------------+
 |             ref_clk | BUFGCTRL_X0Y2| No   |    4 |  0.260     |  1.826      |
 +---------------------+--------------+------+------+------------+-------------+
 |cmp_chipscope_icon_1 |              |      |      |            |             |
 |_port_i/U0/iUPDATE_O |              |      |      |            |             |
-|                  UT |         Local|      |    1 |  0.000     |  0.718      |
+|                  UT |         Local|      |    1 |  0.000     |  0.635      |
 +---------------------+--------------+------+------+------------+-------------+
 |MMCM_BASE_inst_ML_NE |              |      |      |            |             |
 |                W_I1 |         Local|      |    3 |  0.000     |  2.424      |
@@ -6444,9 +6454,9 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |MMCM_PHASE_CALIBRATI |              |      |      |            |             |
 |ON_ML_LUT2_272_ML_NE |              |      |      |            |             |
-|               W_CLK |         Local|      |    1 |  0.000     |  0.336      |
+|               W_CLK |         Local|      |    1 |  0.000     |  0.343      |
 +---------------------+--------------+------+------+------------+-------------+
-|        CONTROL0<13> |         Local|      |    5 |  0.000     |  0.746      |
+|        CONTROL0<13> |         Local|      |    5 |  0.000     |  0.608      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -6457,7 +6467,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 80878 (Setup: 80878, Hold: 0, Component Switching Limit: 0)
+Timing Score: 72894 (Setup: 72894, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
 
@@ -6484,52 +6494,52 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TIMEGRP "fmc_adc1_data" OFFSET = IN -0.7  | SETUP       |    -2.584ns|     1.884ns|      16|       26925
-  ns VALID 7.6 ns BEFORE COMP         "fmc_ | HOLD        |     7.496ns|            |       0|           0
+* TIMEGRP "fmc_adc1_data" OFFSET = IN -0.7  | SETUP       |    -1.914ns|     1.214ns|      16|       25401
+  ns VALID 7.6 ns BEFORE COMP         "fmc_ | HOLD        |     7.502ns|            |       0|           0
   adc1_clk"                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-* TIMEGRP "fmc_adc0_data" OFFSET = IN -0.7  | SETUP       |    -1.692ns|     0.992ns|      16|       24987
-  ns VALID 7.6 ns BEFORE COMP         "fmc_ | HOLD        |     7.630ns|            |       0|           0
+* TIMEGRP "fmc_adc0_data" OFFSET = IN -0.7  | SETUP       |    -1.788ns|     1.088ns|      16|       24804
+  ns VALID 7.6 ns BEFORE COMP         "fmc_ | HOLD        |     7.745ns|            |       0|           0
   adc0_clk"                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 * TIMEGRP "fmc_adc3_data" OFFSET = IN -0.7  | SETUP       |    -1.686ns|     0.986ns|      16|       21518
   ns VALID 7.6 ns BEFORE COMP         "fmc_ | HOLD        |     7.435ns|            |       0|           0
   adc3_clk"                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-* TIMEGRP "fmc_adc2_data" OFFSET = IN -0.7  | SETUP       |    -0.648ns|    -0.052ns|      16|        7448
-  ns VALID 7.6 ns BEFORE COMP         "fmc_ | HOLD        |     4.922ns|            |       0|           0
+* TIMEGRP "fmc_adc2_data" OFFSET = IN -0.7  | SETUP       |    -0.205ns|    -0.495ns|       9|        1171
+  ns VALID 7.6 ns BEFORE COMP         "fmc_ | HOLD        |     3.593ns|            |       0|           0
   adc2_clk"                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_adc_ref_clk_w = PERIOD TIMEGRP "adc_re | SETUP       |     0.037ns|     8.845ns|       0|           0
-  f_clk_w" TS_fmc_adc0_clk HIGH 50%         | HOLD        |     0.019ns|            |       0|           0
+  TS_adc_ref_clk_w = PERIOD TIMEGRP "adc_re | SETUP       |     0.024ns|     8.858ns|       0|           0
+  f_clk_w" TS_fmc_adc0_clk HIGH 50%         | HOLD        |     0.020ns|            |       0|           0
    INPUT_JITTER 0.05 ns                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_wb_clk_i_clkout0 = PERIOD TIMEGRP "wb_ | SETUP       |     0.059ns|     9.941ns|       0|           0
+  clk_i_clkout0" TS_sys_clk_i_p * 0.5       | HOLD        |     0.049ns|            |       0|           0
+     HIGH 50% INPUT_JITTER 0.05 ns          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_wb_clk_i_clkout1 = PERIOD TIMEGRP "wb_ | MINPERIOD   |     0.239ns|     4.761ns|       0|           0
   clk_i_clkout1" TS_sys_clk_i_p HIGH        |             |            |            |        |            
     50% INPUT_JITTER 0.05 ns                |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_wb_clk_i_clkout0 = PERIOD TIMEGRP "wb_ | SETUP       |     0.478ns|     9.522ns|       0|           0
-  clk_i_clkout0" TS_sys_clk_i_p * 0.5       | HOLD        |     0.069ns|            |       0|           0
-     HIGH 50% INPUT_JITTER 0.05 ns          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
   TS_sys_clk_i_p = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     2.200ns|     2.800ns|       0|           0
   i_p" 200 MHz HIGH 50% INPUT_JITTER        |             |            |            |        |            
     0.05 ns                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_fmc_adc0_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     4.042ns|     4.840ns|       0|           0
-  0_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.077ns|            |       0|           0
+  TS_fmc_adc2_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     3.900ns|     4.982ns|       0|           0
+  2_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.062ns|            |       0|           0
   _JITTER 0.05 ns                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_fmc_adc3_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     4.525ns|     4.357ns|       0|           0
-  3_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.072ns|            |       0|           0
+  TS_fmc_adc0_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     4.217ns|     4.665ns|       0|           0
+  0_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.066ns|            |       0|           0
   _JITTER 0.05 ns                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_fmc_adc1_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     4.923ns|     3.959ns|       0|           0
-  1_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.044ns|            |       0|           0
+  TS_fmc_adc1_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     4.306ns|     4.576ns|       0|           0
+  1_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.081ns|            |       0|           0
   _JITTER 0.05 ns                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_fmc_adc2_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     5.050ns|     3.832ns|       0|           0
-  2_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.078ns|            |       0|           0
+  TS_fmc_adc3_clk = PERIOD TIMEGRP "fmc_adc | SETUP       |     4.626ns|     4.256ns|       0|           0
+  3_clk" 112.583 MHz HIGH 50%         INPUT | HOLD        |     0.031ns|            |       0|           0
   _JITTER 0.05 ns                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
@@ -6544,9 +6554,9 @@ Derived Constraints for TS_sys_clk_i_p
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_i_p                 |      5.000ns|      2.800ns|      4.761ns|            0|            0|            0|       744105|
+|TS_sys_clk_i_p                 |      5.000ns|      2.800ns|      4.971ns|            0|            0|            0|       744105|
 | TS_wb_clk_i_clkout1           |      5.000ns|      4.761ns|          N/A|            0|            0|            0|            0|
-| TS_wb_clk_i_clkout0           |     10.000ns|      9.522ns|          N/A|            0|            0|       744105|            0|
+| TS_wb_clk_i_clkout0           |     10.000ns|      9.941ns|          N/A|            0|            0|       744105|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 Derived Constraints for TS_fmc_adc0_clk
@@ -6555,8 +6565,8 @@ Derived Constraints for TS_fmc_adc0_clk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_fmc_adc0_clk                |      8.882ns|      4.840ns|      8.845ns|            0|            0|          420|        16522|
-| TS_adc_ref_clk_w              |      8.882ns|      8.845ns|          N/A|            0|            0|        16522|            0|
+|TS_fmc_adc0_clk                |      8.882ns|      4.665ns|      8.858ns|            0|            0|          420|        16522|
+| TS_adc_ref_clk_w              |      8.882ns|      8.858ns|          N/A|            0|            0|        16522|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 4 constraints not met.
@@ -6567,13 +6577,13 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 1 mins 40 secs 
-Total CPU time to PAR completion: 1 mins 42 secs 
+Total CPU time to PAR completion: 1 mins 41 secs 
 
-Peak Memory Usage:  1278 MB
+Peak Memory Usage:  1275 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 64 errors found.
+Timing: Completed - 57 errors found.
 
 Number of error messages: 0
 Number of warning messages: 1
@@ -6595,7 +6605,7 @@ Loading device for application Rf_Device from file '6vlx240t.nph' in environment
    "virtex6_fmc_adc_130m_4ch_adc_test" is an NCD, version 3.2, device
 xc6vlx240t, package ff1156, speed -1
 
-Analysis completed Tue Jul 23 10:17:49 2013
+Analysis completed Fri Jul 26 14:05:01 2013
 --------------------------------------------------------------------------------
 
 Generating Report ...

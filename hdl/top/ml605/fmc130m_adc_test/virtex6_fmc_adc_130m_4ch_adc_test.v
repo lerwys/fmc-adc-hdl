@@ -72,6 +72,8 @@ module virtex6_fmc_adc_130m_4ch_adc_test(
 
     output fmc_pll_function_o,
     input fmc_pll_status_i,
+    // fmc_pll_status_i loopback for debug
+    output fmc_pll_status_o,
 
     // AD9510 clock copy
     input fmc_fpga_clk_p,
@@ -531,6 +533,8 @@ spi_bidir_top wb_spi_bidir_i_ad9510 (
       .mosi_out_en(),
       .miso_pad_i(spi_ad9510_miso_i)
       );
+
+assign fmc_pll_status_o = fmc_pll_status_i;
 
 // =====================================
 //               24AA64T-I

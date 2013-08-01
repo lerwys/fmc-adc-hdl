@@ -8,6 +8,8 @@ NET "sys_clk_i_p"                             LOC = J9   | IOSTANDARD = LVDS_25;
 NET "rs232_rxd_i"                             LOC = J24  | IOSTANDARD = LVCMOS25; # 25 on U34
 NET "rs232_txd_o"                             LOC = J25  | IOSTANDARD = LVCMOS25; # 24 on U34
 
+NET "fmc_pll_status_o"                        LOC = V34  | IOSTANDARD = LVCMOS25; # USER_SMA_GPIO_P
+
 #--------------------------------
 #       FMC Connector HPC
 #--------------------------------

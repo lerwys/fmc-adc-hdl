@@ -8,6 +8,8 @@ NET "sys_clk_i_p"                             LOC = J9   | IOSTANDARD = LVDS_25;
 NET "rs232_rxd_i"                             LOC = J24  | IOSTANDARD = LVCMOS25; # 25 on U34
 NET "rs232_txd_o"                             LOC = J25  | IOSTANDARD = LVCMOS25; # 24 on U34
 
+NET "clk_swap_o"                              LOC = V34  | IOSTANDARD = LVCMOS25; # USER_SMA_GPIO_P
+
 #--------------------------------
 #       FMC Connector HPC
 #--------------------------------
@@ -67,9 +69,12 @@ NET "fmc_mon_dev_i"                           LOC = AJ27 | IOSTANDARD = "LVCMOS2
 NET "fmc_led1_o"                              LOC = AL28 | IOSTANDARD = "LVCMOS25"; # LA29_P
 NET "fmc_led2_o"                              LOC = AM30 | IOSTANDARD = "LVCMOS25"; # LA24_N
 NET "fmc_led3_o"                              LOC = AN30 | IOSTANDARD = "LVCMOS25"; # LA24_P
+
 NET "board_led1_o"                            LOC = AC22 | IOSTANDARD = "LVCMOS25" | DRIVE = 12 | SLEW = SLOW; // User led 0
 NET "board_led2_o"                            LOC = AC24 | IOSTANDARD = "LVCMOS25" | DRIVE = 12 | SLEW = SLOW; // User led 1
 NET "board_led3_o"                            LOC = AE22 | IOSTANDARD = "LVCMOS25" | DRIVE = 12 | SLEW = SLOW; // User led 2
+
+NET "mmcm_led_o"                              LOC = AP24 | IOSTANDARD = LVCMOS25 | DRIVE = 12 | SLEW = SLOW; //  GPIO_LED_C – DS16
 
 #--------------------------------
 #       FMC Connector HPC
@@ -179,16 +184,20 @@ TIMESPEC TS_sys_clk_i_p = PERIOD "sys_clk_i_p" 200 MHz HIGH 50% INPUT_JITTER 50 
 
 // real jitter is about 22ps peak-to-peak
 NET "fmc_adc0_clk_p" TNM_NET = fmc_adc0_clk_p;
-TIMESPEC TS_fmc_adc0_clk_p = PERIOD "fmc_adc0_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+TIMESPEC TS_fmc_adc0_clk_p = PERIOD "fmc_adc0_clk_p" 219.806 MHz HIGH 50% INPUT_JITTER 30 ps;
+//TIMESPEC TS_fmc_adc0_clk_p = PERIOD "fmc_adc0_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
 
 NET "fmc_adc1_clk_p" TNM_NET = fmc_adc1_clk_p;
-TIMESPEC TS_fmc_adc1_clk_p = PERIOD "fmc_adc1_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+TIMESPEC TS_fmc_adc1_clk_p = PERIOD "fmc_adc1_clk_p" 219.806 MHz HIGH 50% INPUT_JITTER 30 ps;
+//TIMESPEC TS_fmc_adc1_clk_p = PERIOD "fmc_adc1_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
 
 NET "fmc_adc2_clk_p" TNM_NET = fmc_adc2_clk_p;
-TIMESPEC TS_fmc_adc2_clk_p = PERIOD "fmc_adc2_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+TIMESPEC TS_fmc_adc2_clk_p = PERIOD "fmc_adc2_clk_p" 219.806 MHz HIGH 50% INPUT_JITTER 30 ps;
+//TIMESPEC TS_fmc_adc2_clk_p = PERIOD "fmc_adc2_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
 
 NET "fmc_adc3_clk_p" TNM_NET = fmc_adc3_clk_p;
-TIMESPEC TS_fmc_adc3_clk_p = PERIOD "fmc_adc3_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
+TIMESPEC TS_fmc_adc3_clk_p = PERIOD "fmc_adc3_clk_p" 219.806 MHz HIGH 50% INPUT_JITTER 30 ps;
+//TIMESPEC TS_fmc_adc3_clk_p = PERIOD "fmc_adc3_clk_p" 250 MHz HIGH 50% INPUT_JITTER 30 ps;
 
 #--------------------------------
 #             Data

@@ -23,21 +23,29 @@ module fmc_adc_250m_4ch(
   input adc0_clk_n,
   input [7:0]adc0_data_in_p,
   input [7:0]adc0_data_in_n,
+  output adc0_clk_out,
+  output [15:0] adc0_data_out,
 
   input adc1_clk_p,
   input adc1_clk_n,
   input [7:0]adc1_data_in_p,
   input [7:0]adc1_data_in_n,
+  output adc1_clk_out,
+  output [15:0] adc1_data_out,
 
   input adc2_clk_p,
   input adc2_clk_n,
   input [7:0]adc2_data_in_p,
   input [7:0]adc2_data_in_n,
+  output adc2_clk_out,
+  output [15:0] adc2_data_out,
 
   input adc3_clk_p,
   input adc3_clk_n,
   input [7:0]adc3_data_in_p,
   input [7:0]adc3_data_in_n,
+  output adc3_clk_out,
+  output [15:0] adc3_data_out,
 
   input [4:0]adc0_delay_reg,
   output [4:0]adc0_delay_reg_read,
@@ -248,6 +256,19 @@ generate
           adc3_reg[15:0] <= adc3_d_ddr[15:0];
   end
 endgenerate
+
+// Output assignments
+assign adc0_clk_out = adc0_clk;
+assign adc0_data_out = adc0_reg;
+
+assign adc1_clk_out = adc1_clk;
+assign adc1_data_out = adc1_reg;
+
+assign adc2_clk_out = adc2_clk;
+assign adc2_data_out = adc2_reg;
+
+assign adc3_clk_out = adc3_clk;
+assign adc3_data_out = adc3_reg;
 
 // clock sync 1:2 1 block ram 36k per adc
 /*
